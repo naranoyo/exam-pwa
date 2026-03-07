@@ -1,0 +1,22 @@
+[
+  {
+    "id": "eng-vocab-001",
+    "subject": "english",
+    "category": "vocab",
+    "level": "common-test",
+    "question": "The new rule will ___ students who arrive late.",
+    "choices": ["affect", "effect", "reflect", "infect"],
+    "answer": 0,
+    "explanation": "affect は「影響を与える」。effect は名詞の「効果」になりやすい。"
+  },
+  {
+    "id": "eng-vocab-002",
+    "subject": "english",
+    "category": "vocab",
+    "level": "common-test",
+    "question": "She tried to ___ her nervousness before the interview.",
+    "choices": ["conceal", "confirm", "consider", "compose"],
+    "answer": 0,
+    "explanation": "conceal は「隠す」。compose は「落ち着かせる」意味もあるが文脈が違う。"
+  }
+]

@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "jp-kanji-yomi-100-001",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「顕著」の読みは？",
+    "choices": [
+      "けんちょ",
+      "けんちゅょ",
+      "けんち",
+      "けんちぷ"
+    ],
+    "answer": 0,
+    "explanation": "顕著（けんちょ）は、はっきり目立つさま。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-002",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「概要」の読みは？",
+    "choices": [
+      "がよいう",
+      "がいよう",
+      "がいよ",
+      "がいでう"
+    ],
+    "answer": 1,
+    "explanation": "概要（がいよう）は、全体のおおまかな内容。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-003",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「想定」の読みは？",
+    "choices": [
+      "ゆうてい",
+      "そゃうてい",
+      "そういて",
+      "そうてい"
+    ],
+    "answer": 3,
+    "explanation": "想定（そうてい）は、あらかじめこうだと考えること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-004",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「到達」の読みは？",
+    "choices": [
+      "うとたつ",
+      "んとうたつ",
+      "とうたつ",
+      "とょうたつ"
+    ],
+    "answer": 2,
+    "explanation": "到達（とうたつ）は、目標にたどり着くこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-005",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「緩和」の読みは？",
+    "choices": [
+      "かんわ",
+      "かん",
+      "かきわ",
+      "みんわ"
+    ],
+    "answer": 0,
+    "explanation": "緩和（かんわ）は、厳しさをやわらげること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-006",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「促進」の読みは？",
+    "choices": [
+      "そくしん",
+      "くしん",
+      "そくんし",
+      "そくゅん"
+    ],
+    "answer": 0,
+    "explanation": "促進（そくしん）は、進みを早めること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-007",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「端的」の読みは？",
+    "choices": [
+      "たてんき",
+      "たちてき",
+      "たてき",
+      "たんてき"
+    ],
+    "answer": 3,
+    "explanation": "端的（たんてき）は、要点を押さえて簡潔なさま。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-008",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「把握」の読みは？",
+    "choices": [
+      "はへく",
+      "はふく",
+      "はくあ",
+      "はあく"
+    ],
+    "answer": 3,
+    "explanation": "把握（はあく）は、しっかり理解すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-009",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「模索」の読みは？",
+    "choices": [
+      "ざさく",
+      "さもく",
+      "もさく",
+      "もさり"
+    ],
+    "answer": 2,
+    "explanation": "模索（もさく）は、手探りで探し求めること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-010",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「排除」の読みは？",
+    "choices": [
+      "はいみょ",
+      "いはじょ",
+      "はいじな",
+      "はいじょ"
+    ],
+    "answer": 3,
+    "explanation": "排除（はいじょ）は、取り除くこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-011",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「逸脱」の読みは？",
+    "choices": [
+      "いつつだ",
+      "いつだつ",
+      "くいつだつ",
+      "つだつ"
+    ],
+    "answer": 1,
+    "explanation": "逸脱（いつだつ）は、基準から外れること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-012",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「妥当」の読みは？",
+    "choices": [
+      "だとう",
+      "だぼう",
+      "だちう",
+      "ゅとう"
+    ],
+    "answer": 0,
+    "explanation": "妥当（だとう）は、適切であること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-013",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「錯覚」の読みは？",
+    "choices": [
+      "さっくか",
+      "さへかく",
+      "さっか",
+      "さっかく"
+    ],
+    "answer": 3,
+    "explanation": "錯覚（さっかく）は、勘違いして感じること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-014",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「補完」の読みは？",
+    "choices": [
+      "ほげん",
+      "ほん",
+      "ほかんう",
+      "ほかん"
+    ],
+    "answer": 3,
+    "explanation": "補完（ほかん）は、不足を補って完全にすること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-015",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「転換」の読みは？",
+    "choices": [
+      "てゃかん",
+      "てんえん",
+      "てんかで",
+      "てんかん"
+    ],
+    "answer": 3,
+    "explanation": "転換（てんかん）は、別の方向へ変えること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-016",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「抽象」の読みは？",
+    "choices": [
+      "ゅうしょう",
+      "ちゅうしょう",
+      "ちびうしょう",
+      "ちょゅうしょう"
+    ],
+    "answer": 1,
+    "explanation": "抽象（ちゅうしょう）は、共通点を取り出して一般化すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-017",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「規定」の読みは？",
+    "choices": [
+      "きてい",
+      "てきい",
+      "てい",
+      "きい"
+    ],
+    "answer": 0,
+    "explanation": "規定（きてい）は、ルールとして定めること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-018",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「検証」の読みは？",
+    "choices": [
+      "けしょう",
+      "んしょう",
+      "けんしょう",
+      "けんちょう"
+    ],
+    "answer": 2,
+    "explanation": "検証（けんしょう）は、正しいか確かめること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-019",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「介在」の読みは？",
+    "choices": [
+      "ゅかいざい",
+      "かいざい",
+      "ばいざい",
+      "いざい"
+    ],
+    "answer": 1,
+    "explanation": "介在（かいざい）は、間に入り込んで存在すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-020",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「精査」の読みは？",
+    "choices": [
+      "せいさ",
+      "せさ",
+      "せづさ",
+      "げいさ"
+    ],
+    "answer": 0,
+    "explanation": "精査（せいさ）は、くわしく調べること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-021",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「収斂」の読みは？",
+    "choices": [
+      "しゅうれめ",
+      "しゅうばん",
+      "しゅうゃれん",
+      "しゅうれん"
+    ],
+    "answer": 3,
+    "explanation": "収斂（しゅうれん）は、一つにまとまること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-022",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「付随」の読みは？",
+    "choices": [
+      "ふずい",
+      "ふずいゅ",
+      "ふけい",
+      "ふゃい"
+    ],
+    "answer": 0,
+    "explanation": "付随（ふずい）は、ある事柄に伴って起こること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-023",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「乖離」の読みは？",
+    "choices": [
+      "かいりん",
+      "すいり",
+      "いり",
+      "かいり"
+    ],
+    "answer": 3,
+    "explanation": "乖離（かいり）は、離れはなれること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-024",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「漠然」の読みは？",
+    "choices": [
+      "ばぜくん",
+      "ばくん",
+      "くばぜん",
+      "ばくぜん"
+    ],
+    "answer": 3,
+    "explanation": "漠然（ばくぜん）は、はっきりしないさま。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-025",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「懸念」の読みは？",
+    "choices": [
+      "けぜん",
+      "けねん",
+      "きねん",
+      "けぽん"
+    ],
+    "answer": 1,
+    "explanation": "懸念（けねん）は、気がかりなこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-026",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「迅速」の読みは？",
+    "choices": [
+      "じそく",
+      "じんそく",
+      "じんくそ",
+      "じぴそく"
+    ],
+    "answer": 1,
+    "explanation": "迅速（じんそく）は、動きが速いこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-027",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「簡潔」の読みは？",
+    "choices": [
+      "かんけひ",
+      "かんけつ",
+      "かんけ",
+      "かけんつ"
+    ],
+    "answer": 1,
+    "explanation": "簡潔（かんけつ）は、短く分かりやすいこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-028",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「躍進」の読みは？",
+    "choices": [
+      "やくしが",
+      "やくしん",
+      "やくん",
+      "やくみん"
+    ],
+    "answer": 1,
+    "explanation": "躍進（やくしん）は、大きく進歩すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-029",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「抑制」の読みは？",
+    "choices": [
+      "ずくせい",
+      "よせくい",
+      "にくせい",
+      "よくせい"
+    ],
+    "answer": 3,
+    "explanation": "抑制（よくせい）は、押さえとどめること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-030",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「希薄」の読みは？",
+    "choices": [
+      "きはく",
+      "ゃはく",
+      "はく",
+      "はきく"
+    ],
+    "answer": 0,
+    "explanation": "希薄（きはく）は、うすいこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-031",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「遵守」の読みは？",
+    "choices": [
+      "じゅしんゅ",
+      "じゅんれゅ",
+      "じゅんしゅ",
+      "じゅんぜゅ"
+    ],
+    "answer": 2,
+    "explanation": "遵守（じゅんしゅ）は、決まりを守ること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-032",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「脆弱」の読みは？",
+    "choices": [
+      "ぜいじゃく",
+      "ぜいじゃち",
+      "ぜいちゃく",
+      "ぜいじゅく"
+    ],
+    "answer": 0,
+    "explanation": "脆弱（ぜいじゃく）は、もろく弱いこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-033",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「収束」の読みは？",
+    "choices": [
+      "しゅうりく",
+      "しゅそく",
+      "ゅしうそく",
+      "しゅうそく"
+    ],
+    "answer": 3,
+    "explanation": "収束（しゅうそく）は、まとまって落ち着くこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-034",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「普遍」の読みは？",
+    "choices": [
+      "へん",
+      "ふょへん",
+      "ふへん",
+      "ふんへ"
+    ],
+    "answer": 2,
+    "explanation": "普遍（ふへん）は、広く共通して当てはまること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-035",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「相対」の読みは？",
+    "choices": [
+      "うたい",
+      "そうたゅい",
+      "そうたい",
+      "そうただ"
+    ],
+    "answer": 2,
+    "explanation": "相対（そうたい）は、他と比べて成り立つこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-036",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「絶対」の読みは？",
+    "choices": [
+      "ぜったい",
+      "ぜった",
+      "ぜっいた",
+      "ぜたい"
+    ],
+    "answer": 0,
+    "explanation": "絶対（ぜったい）は、他に左右されないこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-037",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「不可欠」の読みは？",
+    "choices": [
+      "かけつ",
+      "ふかけし",
+      "ふかけつ",
+      "ふかつけ"
+    ],
+    "answer": 2,
+    "explanation": "不可欠（ふかけつ）は、なくてはならないこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-038",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「本質」の読みは？",
+    "choices": [
+      "ぜんしつ",
+      "ほんしつ",
+      "ほんどつ",
+      "ほんつし"
+    ],
+    "answer": 1,
+    "explanation": "本質（ほんしつ）は、物事の根本の性質。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-039",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「要因」の読みは？",
+    "choices": [
+      "よういん",
+      "ういん",
+      "よいうん",
+      "ようざん"
+    ],
+    "answer": 0,
+    "explanation": "要因（よういん）は、原因となる要素。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-040",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「因果」の読みは？",
+    "choices": [
+      "いゃんが",
+      "ょいんが",
+      "んが",
+      "いんが"
+    ],
+    "answer": 3,
+    "explanation": "因果（いんが）は、原因と結果の関係。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-041",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「帰結」の読みは？",
+    "choices": [
+      "きけつう",
+      "きけじ",
+      "きゅつ",
+      "きけつ"
+    ],
+    "answer": 3,
+    "explanation": "帰結（きけつ）は、結果としてそうなること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-042",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「必然」の読みは？",
+    "choices": [
+      "ひつぜじ",
+      "ひつぜょん",
+      "つぜん",
+      "ひつぜん"
+    ],
+    "answer": 3,
+    "explanation": "必然（ひつぜん）は、そうならざるを得ないこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-043",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「偶然」の読みは？",
+    "choices": [
+      "うぐぜん",
+      "ぐうぜん",
+      "ぐうそん",
+      "ぐうん"
+    ],
+    "answer": 1,
+    "explanation": "偶然（ぐうぜん）は、たまたま起こること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-044",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「推移」の読みは？",
+    "choices": [
+      "ゆいい",
+      "いい",
+      "すいい",
+      "りいい"
+    ],
+    "answer": 2,
+    "explanation": "推移（すいい）は、移り変わっていくこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-045",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「変遷」の読みは？",
+    "choices": [
+      "へんせん",
+      "くへんせん",
+      "へんんせ",
+      "んへせん"
+    ],
+    "answer": 0,
+    "explanation": "変遷（へんせん）は、うつりかわり。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-046",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「顕在」の読みは？",
+    "choices": [
+      "けだざい",
+      "けんざょ",
+      "けんざい",
+      "けざんい"
+    ],
+    "answer": 2,
+    "explanation": "顕在（けんざい）は、表に現れていること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-047",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「潜在」の読みは？",
+    "choices": [
+      "せょんざい",
+      "みんざい",
+      "わんざい",
+      "せんざい"
+    ],
+    "answer": 3,
+    "explanation": "潜在（せんざい）は、表に出ていないこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-048",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「暗黙」の読みは？",
+    "choices": [
+      "あんもんく",
+      "あんく",
+      "あんもち",
+      "あんもく"
+    ],
+    "answer": 3,
+    "explanation": "暗黙（あんもく）は、言わなくても了解されること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-049",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「明示」の読みは？",
+    "choices": [
+      "めじい",
+      "みいじ",
+      "めいじ",
+      "めいけ"
+    ],
+    "answer": 2,
+    "explanation": "明示（めいじ）は、はっきり示すこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-050",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「示唆」の読みは？",
+    "choices": [
+      "やくしん",
+      "しさ",
+      "しさう",
+      "きけつ"
+    ],
+    "answer": 1,
+    "explanation": "示唆（しさ）は、それとなく知らせること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-051",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「指摘」の読みは？",
+    "choices": [
+      "してきょ",
+      "しき",
+      "してぬ",
+      "してき"
+    ],
+    "answer": 3,
+    "explanation": "指摘（してき）は、問題点などを示すこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-052",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「提唱」の読みは？",
+    "choices": [
+      "ていしょくう",
+      "てしいょう",
+      "ていしょう",
+      "ていしゅう"
+    ],
+    "answer": 2,
+    "explanation": "提唱（ていしょう）は、主張として唱えること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-053",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「主張」の読みは？",
+    "choices": [
+      "しゅちしう",
+      "しゅちょの",
+      "しゅちょう",
+      "しちゅょう"
+    ],
+    "answer": 2,
+    "explanation": "主張（しゅちょう）は、自分の意見を言うこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-054",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「反証」の読みは？",
+    "choices": [
+      "はしんょう",
+      "いんしょう",
+      "はんしょう",
+      "ゅんしょう"
+    ],
+    "answer": 2,
+    "explanation": "反証（はんしょう）は、反対を証明すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-055",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「論証」の読みは？",
+    "choices": [
+      "ろんしょう",
+      "ろんょう",
+      "んろしょう",
+      "ろんしょょう"
+    ],
+    "answer": 0,
+    "explanation": "論証（ろんしょう）は、論理で証明すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-056",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「根拠」の読みは？",
+    "choices": [
+      "こんょき",
+      "こんろょ",
+      "こんきょ",
+      "まんきょ"
+    ],
+    "answer": 2,
+    "explanation": "根拠（こんきょ）は、よりどころ。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-057",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「妥結」の読みは？",
+    "choices": [
+      "けだつ",
+      "だけつ",
+      "ゅけつ",
+      "だんけつ"
+    ],
+    "answer": 1,
+    "explanation": "妥結（だけつ）は、話し合いで折り合うこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-058",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「折衝」の読みは？",
+    "choices": [
+      "せっしょう",
+      "せっょしう",
+      "せゅっしょう",
+      "せっしょゃう"
+    ],
+    "answer": 0,
+    "explanation": "折衝（せっしょう）は、交渉して調整すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-059",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「調整」の読みは？",
+    "choices": [
+      "ちょうせい",
+      "ちょうせぺ",
+      "ちうせい",
+      "ょちうせい"
+    ],
+    "answer": 0,
+    "explanation": "調整（ちょうせい）は、つり合いよく整えること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-060",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「整合」の読みは？",
+    "choices": [
+      "せいくごう",
+      "せいごうう",
+      "せいごう",
+      "せゅいごう"
+    ],
+    "answer": 2,
+    "explanation": "整合（せいごう）は、つじつまが合うこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-061",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「矛盾」の読みは？",
+    "choices": [
+      "むじん",
+      "むじゅ",
+      "とじゅん",
+      "むじゅん"
+    ],
+    "answer": 3,
+    "explanation": "矛盾（むじゅん）は、つじつまが合わないこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-062",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「体系」の読みは？",
+    "choices": [
+      "たいうけい",
+      "いたけい",
+      "たいざい",
+      "たいけい"
+    ],
+    "answer": 3,
+    "explanation": "体系（たいけい）は、まとまった仕組み。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-063",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「概念」の読みは？",
+    "choices": [
+      "がういねん",
+      "がいねん",
+      "がねん",
+      "がいくねん"
+    ],
+    "answer": 1,
+    "explanation": "概念（がいねん）は、物事をまとめた考え。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-064",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「認識」の読みは？",
+    "choices": [
+      "にんんしき",
+      "にんしき",
+      "んにしき",
+      "にんし"
+    ],
+    "answer": 1,
+    "explanation": "認識（にんしき）は、理解して把握すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-065",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「誤解」の読みは？",
+    "choices": [
+      "ごかい",
+      "ごかゅ",
+      "ごぶい",
+      "ごかて"
+    ],
+    "answer": 0,
+    "explanation": "誤解（ごかい）は、間違って理解すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-066",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「洞察」の読みは？",
+    "choices": [
+      "どさつ",
+      "どさうつ",
+      "どうさつ",
+      "どうさご"
+    ],
+    "answer": 2,
+    "explanation": "洞察（どうさつ）は、本質を見抜くこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-067",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「俯瞰」の読みは？",
+    "choices": [
+      "ふかん",
+      "おかん",
+      "ちかん",
+      "かん"
+    ],
+    "answer": 0,
+    "explanation": "俯瞰（ふかん）は、全体を見渡すこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-068",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「包括」の読みは？",
+    "choices": [
+      "ほうかぼ",
+      "ほてかつ",
+      "ほょかつ",
+      "ほうかつ"
+    ],
+    "answer": 3,
+    "explanation": "包括（ほうかつ）は、ひとまとめに含むこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-069",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「網羅」の読みは？",
+    "choices": [
+      "もうみ",
+      "もうゃ",
+      "もうら",
+      "うもら"
+    ],
+    "answer": 2,
+    "explanation": "網羅（もうら）は、もれなく取り上げること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-070",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「列挙」の読みは？",
+    "choices": [
+      "れっがょ",
+      "れっゃょ",
+      "れっきょ",
+      "れきっょ"
+    ],
+    "answer": 2,
+    "explanation": "列挙（れっきょ）は、並べて挙げること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-071",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「抽出」の読みは？",
+    "choices": [
+      "ちゅうしゅつ",
+      "ちゅうしゅ",
+      "ちゅうしゅょつ",
+      "ちゅうしゃつ"
+    ],
+    "answer": 0,
+    "explanation": "抽出（ちゅうしゅつ）は、取り出すこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-072",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「検討」の読みは？",
+    "choices": [
+      "きんとう",
+      "けんとう",
+      "ゅけんとう",
+      "けんくとう"
+    ],
+    "answer": 1,
+    "explanation": "検討（けんとう）は、よく考えること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-073",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「考察」の読みは？",
+    "choices": [
+      "うこさつ",
+      "こさつ",
+      "こうひつ",
+      "こうさつ"
+    ],
+    "answer": 3,
+    "explanation": "考察（こうさつ）は、よく調べ考えること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-074",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「分析」の読みは？",
+    "choices": [
+      "んぶせき",
+      "ちんせき",
+      "んせき",
+      "ぶんせき"
+    ],
+    "answer": 3,
+    "explanation": "分析（ぶんせき）は、分けて明らかにすること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-075",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「総合」の読みは？",
+    "choices": [
+      "そうごう",
+      "そんうごう",
+      "そてごう",
+      "そうごうゅ"
+    ],
+    "answer": 0,
+    "explanation": "総合（そうごう）は、まとめ合わせること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-076",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「統合」の読みは？",
+    "choices": [
+      "じうごう",
+      "とうごう",
+      "とゅごう",
+      "うとごう"
+    ],
+    "answer": 1,
+    "explanation": "統合（とうごう）は、一つにまとめること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-077",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「分化」の読みは？",
+    "choices": [
+      "ぶかん",
+      "みんか",
+      "ぶんか",
+      "へんか"
+    ],
+    "answer": 2,
+    "explanation": "分化（ぶんか）は、分かれて発達すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-078",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「対立」の読みは？",
+    "choices": [
+      "たいりょ",
+      "ゅたいりつ",
+      "たいりつ",
+      "たへりつ"
+    ],
+    "answer": 2,
+    "explanation": "対立（たいりつ）は、反対の立場になること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-079",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「相克」の読みは？",
+    "choices": [
+      "そうこく",
+      "そこうく",
+      "うこく",
+      "そうこと"
+    ],
+    "answer": 0,
+    "explanation": "相克（そうこく）は、互いに争い合うこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-080",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「葛藤」の読みは？",
+    "choices": [
+      "かっとう",
+      "かとっう",
+      "かっとは",
+      "かっう"
+    ],
+    "answer": 0,
+    "explanation": "葛藤（かっとう）は、心の中で対立すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-081",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「緊張」の読みは？",
+    "choices": [
+      "きちんょう",
+      "きんちょう",
+      "きんきょう",
+      "きんょちう"
+    ],
+    "answer": 1,
+    "explanation": "緊張（きんちょう）は、張りつめた状態。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-082",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「弛緩」の読みは？",
+    "choices": [
+      "しか",
+      "しょかん",
+      "しかん",
+      "かしん"
+    ],
+    "answer": 2,
+    "explanation": "弛緩（しかん）は、ゆるむこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-083",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「堅牢」の読みは？",
+    "choices": [
+      "ずんろう",
+      "んけろう",
+      "けんろう",
+      "けんうろう"
+    ],
+    "answer": 2,
+    "explanation": "堅牢（けんろう）は、丈夫で壊れにくいこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-084",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「抑圧」の読みは？",
+    "choices": [
+      "ごくあつ",
+      "よくあに",
+      "よくみつ",
+      "よくあつ"
+    ],
+    "answer": 3,
+    "explanation": "抑圧（よくあつ）は、力で押さえつけること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-085",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「抑止」の読みは？",
+    "choices": [
+      "よくし",
+      "くし",
+      "よしく",
+      "よく"
+    ],
+    "answer": 0,
+    "explanation": "抑止（よくし）は、思いとどまらせること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-086",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「是正」の読みは？",
+    "choices": [
+      "ぜせい",
+      "ぜい",
+      "せぜい",
+      "ぜせゅ"
+    ],
+    "answer": 0,
+    "explanation": "是正（ぜせい）は、悪い点を正すこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-087",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「改善」の読みは？",
+    "choices": [
+      "いぜん",
+      "かぜいん",
+      "かいぜゃ",
+      "かいぜん"
+    ],
+    "answer": 3,
+    "explanation": "改善（かいぜん）は、よりよくすること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-088",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「改変」の読みは？",
+    "choices": [
+      "かどへん",
+      "かいへん",
+      "かいへり",
+      "かいばん"
+    ],
+    "answer": 1,
+    "explanation": "改変（かいへん）は、変えて作り直すこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-089",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「維持」の読みは？",
+    "choices": [
+      "いじう",
+      "いじ",
+      "さっかく",
+      "ばくぜん"
+    ],
+    "answer": 1,
+    "explanation": "維持（いじ）は、保ち続けること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-090",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「持続」の読みは？",
+    "choices": [
+      "じりく",
+      "じぞょく",
+      "じぞく",
+      "じく"
+    ],
+    "answer": 2,
+    "explanation": "持続（じぞく）は、続くこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-091",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「継続」の読みは？",
+    "choices": [
+      "いぞく",
+      "けいぞく",
+      "けぞいく",
+      "けいくぞ"
+    ],
+    "answer": 1,
+    "explanation": "継続（けいぞく）は、続けること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-092",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「断絶」の読みは？",
+    "choices": [
+      "だんぜつ",
+      "だんつぜ",
+      "だんぜつょ",
+      "だんざつ"
+    ],
+    "answer": 0,
+    "explanation": "断絶（だんぜつ）は、途切れてつながらないこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-093",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「発展」の読みは？",
+    "choices": [
+      "っはてん",
+      "はってん",
+      "ってん",
+      "はっん"
+    ],
+    "answer": 1,
+    "explanation": "発展（はってん）は、より盛んになること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-094",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「退行」の読みは？",
+    "choices": [
+      "たいこう",
+      "たいひう",
+      "くたいこう",
+      "たぎこう"
+    ],
+    "answer": 0,
+    "explanation": "退行（たいこう）は、元の段階へ戻ること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-095",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「尊重」の読みは？",
+    "choices": [
+      "そんちうょ",
+      "そんちう",
+      "そんちょう",
+      "んちょう"
+    ],
+    "answer": 2,
+    "explanation": "尊重（そんちょう）は、大切に扱うこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-096",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「軽視」の読みは？",
+    "choices": [
+      "いし",
+      "けいし",
+      "いけし",
+      "けし"
+    ],
+    "answer": 1,
+    "explanation": "軽視（けいし）は、重要でないとみなすこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-097",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「合理」の読みは？",
+    "choices": [
+      "くごうり",
+      "ごうり",
+      "うごり",
+      "ひうり"
+    ],
+    "answer": 1,
+    "explanation": "合理（ごうり）は、道理にかなっていること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-098",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「不合理」の読みは？",
+    "choices": [
+      "ふごうゃ",
+      "ふごうり",
+      "ふかうり",
+      "ごふうり"
+    ],
+    "answer": 1,
+    "explanation": "不合理（ふごうり）は、道理に合わないこと。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-099",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「正当化」の読みは？",
+    "choices": [
+      "ょいとうか",
+      "せいうか",
+      "せいとうか",
+      "せとうか"
+    ],
+    "answer": 2,
+    "explanation": "正当化（せいとうか）は、正しいこととして説明すること。"
+  },
+  {
+    "id": "jp-kanji-yomi-100-100",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-yomi-100",
+    "question": "「客観」の読みは？",
+    "choices": [
+      "りゃっかん",
+      "きゃっかん",
+      "きゃっかんん",
+      "ゃきっかん"
+    ],
+    "answer": 1,
+    "explanation": "客観（きゃっかん）は、偏らずに見ること。"
+  }
+]

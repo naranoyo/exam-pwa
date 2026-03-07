@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "jp-kanji-imi-100-001",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「顕著」の意味は？",
+    "choices": [
+      "続くこと",
+      "はっきり目立つさま",
+      "くわしく調べること",
+      "分けて明らかにすること"
+    ],
+    "answer": 1,
+    "explanation": "顕著（けんちょ）は、はっきり目立つさま。"
+  },
+  {
+    "id": "jp-kanji-imi-100-002",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「概要」の意味は？",
+    "choices": [
+      "よく考えること",
+      "全体のおおまかな内容",
+      "自分の意見を言うこと",
+      "くわしく調べること"
+    ],
+    "answer": 1,
+    "explanation": "概要（がいよう）は、全体のおおまかな内容。"
+  },
+  {
+    "id": "jp-kanji-imi-100-003",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「想定」の意味は？",
+    "choices": [
+      "他に左右されないこと",
+      "話し合いで折り合うこと",
+      "悪い点を正すこと",
+      "あらかじめこうだと考えること"
+    ],
+    "answer": 3,
+    "explanation": "想定（そうてい）は、あらかじめこうだと考えること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-004",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「到達」の意味は？",
+    "choices": [
+      "まとめ合わせること",
+      "目標にたどり着くこと",
+      "それとなく知らせること",
+      "表に現れていること"
+    ],
+    "answer": 1,
+    "explanation": "到達（とうたつ）は、目標にたどり着くこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-005",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「緩和」の意味は？",
+    "choices": [
+      "全体のおおまかな内容",
+      "厳しさをやわらげること",
+      "押さえとどめること",
+      "よく調べ考えること"
+    ],
+    "answer": 1,
+    "explanation": "緩和（かんわ）は、厳しさをやわらげること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-006",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「促進」の意味は？",
+    "choices": [
+      "進みを早めること",
+      "くわしく調べること",
+      "保ち続けること",
+      "変えて作り直すこと"
+    ],
+    "answer": 0,
+    "explanation": "促進（そくしん）は、進みを早めること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-007",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「端的」の意味は？",
+    "choices": [
+      "うつりかわり",
+      "道理に合わないこと",
+      "まとめ合わせること",
+      "要点を押さえて簡潔なさま"
+    ],
+    "answer": 3,
+    "explanation": "端的（たんてき）は、要点を押さえて簡潔なさま。"
+  },
+  {
+    "id": "jp-kanji-imi-100-008",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「把握」の意味は？",
+    "choices": [
+      "自分の意見を言うこと",
+      "取り出すこと",
+      "しっかり理解すること",
+      "他に左右されないこと"
+    ],
+    "answer": 2,
+    "explanation": "把握（はあく）は、しっかり理解すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-009",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「模索」の意味は？",
+    "choices": [
+      "全体を見渡すこと",
+      "他に左右されないこと",
+      "ゆるむこと",
+      "手探りで探し求めること"
+    ],
+    "answer": 3,
+    "explanation": "模索（もさく）は、手探りで探し求めること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-010",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「排除」の意味は？",
+    "choices": [
+      "道理に合わないこと",
+      "物事をまとめた考え",
+      "うすいこと",
+      "取り除くこと"
+    ],
+    "answer": 3,
+    "explanation": "排除（はいじょ）は、取り除くこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-011",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「逸脱」の意味は？",
+    "choices": [
+      "反対の立場になること",
+      "主張として唱えること",
+      "問題点などを示すこと",
+      "基準から外れること"
+    ],
+    "answer": 3,
+    "explanation": "逸脱（いつだつ）は、基準から外れること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-012",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「妥当」の意味は？",
+    "choices": [
+      "本質を見抜くこと",
+      "問題点などを示すこと",
+      "適切であること",
+      "正しいこととして説明すること"
+    ],
+    "answer": 2,
+    "explanation": "妥当（だとう）は、適切であること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-013",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「錯覚」の意味は？",
+    "choices": [
+      "よりよくすること",
+      "心の中で対立すること",
+      "勘違いして感じること",
+      "動きが速いこと"
+    ],
+    "answer": 2,
+    "explanation": "錯覚（さっかく）は、勘違いして感じること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-014",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「補完」の意味は？",
+    "choices": [
+      "もれなく取り上げること",
+      "手探りで探し求めること",
+      "それとなく知らせること",
+      "不足を補って完全にすること"
+    ],
+    "answer": 3,
+    "explanation": "補完（ほかん）は、不足を補って完全にすること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-015",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「転換」の意味は？",
+    "choices": [
+      "ゆるむこと",
+      "基準から外れること",
+      "原因となる要素",
+      "別の方向へ変えること"
+    ],
+    "answer": 3,
+    "explanation": "転換（てんかん）は、別の方向へ変えること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-016",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「抽象」の意味は？",
+    "choices": [
+      "反対を証明すること",
+      "共通点を取り出して一般化すること",
+      "つじつまが合うこと",
+      "要点を押さえて簡潔なさま"
+    ],
+    "answer": 1,
+    "explanation": "抽象（ちゅうしょう）は、共通点を取り出して一般化すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-017",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「規定」の意味は？",
+    "choices": [
+      "一つにまとめること",
+      "ルールとして定めること",
+      "交渉して調整すること",
+      "力で押さえつけること"
+    ],
+    "answer": 1,
+    "explanation": "規定（きてい）は、ルールとして定めること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-018",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「検証」の意味は？",
+    "choices": [
+      "正しいか確かめること",
+      "はっきり示すこと",
+      "大切に扱うこと",
+      "要点を押さえて簡潔なさま"
+    ],
+    "answer": 0,
+    "explanation": "検証（けんしょう）は、正しいか確かめること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-019",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「介在」の意味は？",
+    "choices": [
+      "間に入り込んで存在すること",
+      "あらかじめこうだと考えること",
+      "他に左右されないこと",
+      "間違って理解すること"
+    ],
+    "answer": 0,
+    "explanation": "介在（かいざい）は、間に入り込んで存在すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-020",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「精査」の意味は？",
+    "choices": [
+      "ある事柄に伴って起こること",
+      "主張として唱えること",
+      "くわしく調べること",
+      "しっかり理解すること"
+    ],
+    "answer": 2,
+    "explanation": "精査（せいさ）は、くわしく調べること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-021",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「収斂」の意味は？",
+    "choices": [
+      "よりよくすること",
+      "一つにまとまること",
+      "反対を証明すること",
+      "正しいこととして説明すること"
+    ],
+    "answer": 1,
+    "explanation": "収斂（しゅうれん）は、一つにまとまること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-022",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「付随」の意味は？",
+    "choices": [
+      "よく調べ考えること",
+      "表に現れていること",
+      "あらかじめこうだと考えること",
+      "ある事柄に伴って起こること"
+    ],
+    "answer": 3,
+    "explanation": "付随（ふずい）は、ある事柄に伴って起こること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-023",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「乖離」の意味は？",
+    "choices": [
+      "元の段階へ戻ること",
+      "ゆるむこと",
+      "離れはなれること",
+      "まとまった仕組み"
+    ],
+    "answer": 2,
+    "explanation": "乖離（かいり）は、離れはなれること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-024",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「漠然」の意味は？",
+    "choices": [
+      "続けること",
+      "互いに争い合うこと",
+      "分けて明らかにすること",
+      "はっきりしないさま"
+    ],
+    "answer": 3,
+    "explanation": "漠然（ばくぜん）は、はっきりしないさま。"
+  },
+  {
+    "id": "jp-kanji-imi-100-025",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「懸念」の意味は？",
+    "choices": [
+      "主張として唱えること",
+      "変えて作り直すこと",
+      "気がかりなこと",
+      "もれなく取り上げること"
+    ],
+    "answer": 2,
+    "explanation": "懸念（けねん）は、気がかりなこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-026",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「迅速」の意味は？",
+    "choices": [
+      "つじつまが合うこと",
+      "短く分かりやすいこと",
+      "決まりを守ること",
+      "動きが速いこと"
+    ],
+    "answer": 3,
+    "explanation": "迅速（じんそく）は、動きが速いこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-027",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「簡潔」の意味は？",
+    "choices": [
+      "短く分かりやすいこと",
+      "より盛んになること",
+      "ある事柄に伴って起こること",
+      "表に出ていないこと"
+    ],
+    "answer": 0,
+    "explanation": "簡潔（かんけつ）は、短く分かりやすいこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-028",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「躍進」の意味は？",
+    "choices": [
+      "つじつまが合わないこと",
+      "取り出すこと",
+      "不足を補って完全にすること",
+      "大きく進歩すること"
+    ],
+    "answer": 3,
+    "explanation": "躍進（やくしん）は、大きく進歩すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-029",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「抑制」の意味は？",
+    "choices": [
+      "短く分かりやすいこと",
+      "ある事柄に伴って起こること",
+      "変えて作り直すこと",
+      "押さえとどめること"
+    ],
+    "answer": 3,
+    "explanation": "抑制（よくせい）は、押さえとどめること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-030",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「希薄」の意味は？",
+    "choices": [
+      "それとなく知らせること",
+      "うすいこと",
+      "別の方向へ変えること",
+      "はっきり目立つさま"
+    ],
+    "answer": 1,
+    "explanation": "希薄（きはく）は、うすいこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-031",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「遵守」の意味は？",
+    "choices": [
+      "決まりを守ること",
+      "よりよくすること",
+      "そうならざるを得ないこと",
+      "全体を見渡すこと"
+    ],
+    "answer": 0,
+    "explanation": "遵守（じゅんしゅ）は、決まりを守ること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-032",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「脆弱」の意味は？",
+    "choices": [
+      "取り出すこと",
+      "まとめ合わせること",
+      "もろく弱いこと",
+      "表に現れていること"
+    ],
+    "answer": 2,
+    "explanation": "脆弱（ぜいじゃく）は、もろく弱いこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-033",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「収束」の意味は？",
+    "choices": [
+      "まとまって落ち着くこと",
+      "取り除くこと",
+      "大きく進歩すること",
+      "つり合いよく整えること"
+    ],
+    "answer": 0,
+    "explanation": "収束（しゅうそく）は、まとまって落ち着くこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-034",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「普遍」の意味は？",
+    "choices": [
+      "広く共通して当てはまること",
+      "元の段階へ戻ること",
+      "要点を押さえて簡潔なさま",
+      "分かれて発達すること"
+    ],
+    "answer": 0,
+    "explanation": "普遍（ふへん）は、広く共通して当てはまること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-035",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「相対」の意味は？",
+    "choices": [
+      "要点を押さえて簡潔なさま",
+      "他と比べて成り立つこと",
+      "主張として唱えること",
+      "間に入り込んで存在すること"
+    ],
+    "answer": 1,
+    "explanation": "相対（そうたい）は、他と比べて成り立つこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-036",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「絶対」の意味は？",
+    "choices": [
+      "勘違いして感じること",
+      "なくてはならないこと",
+      "他に左右されないこと",
+      "話し合いで折り合うこと"
+    ],
+    "answer": 2,
+    "explanation": "絶対（ぜったい）は、他に左右されないこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-037",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「不可欠」の意味は？",
+    "choices": [
+      "保ち続けること",
+      "つり合いよく整えること",
+      "なくてはならないこと",
+      "短く分かりやすいこと"
+    ],
+    "answer": 2,
+    "explanation": "不可欠（ふかけつ）は、なくてはならないこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-038",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「本質」の意味は？",
+    "choices": [
+      "物事の根本の性質",
+      "並べて挙げること",
+      "不足を補って完全にすること",
+      "まとまった仕組み"
+    ],
+    "answer": 0,
+    "explanation": "本質（ほんしつ）は、物事の根本の性質。"
+  },
+  {
+    "id": "jp-kanji-imi-100-039",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「要因」の意味は？",
+    "choices": [
+      "ある事柄に伴って起こること",
+      "全体を見渡すこと",
+      "原因となる要素",
+      "よりよくすること"
+    ],
+    "answer": 2,
+    "explanation": "要因（よういん）は、原因となる要素。"
+  },
+  {
+    "id": "jp-kanji-imi-100-040",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「因果」の意味は？",
+    "choices": [
+      "一つにまとまること",
+      "原因と結果の関係",
+      "丈夫で壊れにくいこと",
+      "適切であること"
+    ],
+    "answer": 1,
+    "explanation": "因果（いんが）は、原因と結果の関係。"
+  },
+  {
+    "id": "jp-kanji-imi-100-041",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「帰結」の意味は？",
+    "choices": [
+      "結果としてそうなること",
+      "不足を補って完全にすること",
+      "気がかりなこと",
+      "ゆるむこと"
+    ],
+    "answer": 0,
+    "explanation": "帰結（きけつ）は、結果としてそうなること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-042",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「必然」の意味は？",
+    "choices": [
+      "そうならざるを得ないこと",
+      "ある事柄に伴って起こること",
+      "取り出すこと",
+      "まとめ合わせること"
+    ],
+    "answer": 0,
+    "explanation": "必然（ひつぜん）は、そうならざるを得ないこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-043",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「偶然」の意味は？",
+    "choices": [
+      "保ち続けること",
+      "大切に扱うこと",
+      "たまたま起こること",
+      "互いに争い合うこと"
+    ],
+    "answer": 2,
+    "explanation": "偶然（ぐうぜん）は、たまたま起こること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-044",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「推移」の意味は？",
+    "choices": [
+      "うすいこと",
+      "もろく弱いこと",
+      "取り出すこと",
+      "移り変わっていくこと"
+    ],
+    "answer": 3,
+    "explanation": "推移（すいい）は、移り変わっていくこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-045",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「変遷」の意味は？",
+    "choices": [
+      "保ち続けること",
+      "取り出すこと",
+      "うつりかわり",
+      "結果としてそうなること"
+    ],
+    "answer": 2,
+    "explanation": "変遷（へんせん）は、うつりかわり。"
+  },
+  {
+    "id": "jp-kanji-imi-100-046",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「顕在」の意味は？",
+    "choices": [
+      "うすいこと",
+      "表に現れていること",
+      "まとめ合わせること",
+      "道理に合わないこと"
+    ],
+    "answer": 1,
+    "explanation": "顕在（けんざい）は、表に現れていること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-047",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「潜在」の意味は？",
+    "choices": [
+      "続けること",
+      "表に出ていないこと",
+      "間違って理解すること",
+      "分かれて発達すること"
+    ],
+    "answer": 1,
+    "explanation": "潜在（せんざい）は、表に出ていないこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-048",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「暗黙」の意味は？",
+    "choices": [
+      "続けること",
+      "物事をまとめた考え",
+      "つじつまが合うこと",
+      "言わなくても了解されること"
+    ],
+    "answer": 3,
+    "explanation": "暗黙（あんもく）は、言わなくても了解されること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-049",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「明示」の意味は？",
+    "choices": [
+      "自分の意見を言うこと",
+      "ひとまとめに含むこと",
+      "はっきり示すこと",
+      "決まりを守ること"
+    ],
+    "answer": 2,
+    "explanation": "明示（めいじ）は、はっきり示すこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-050",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「示唆」の意味は？",
+    "choices": [
+      "はっきり示すこと",
+      "はっきり目立つさま",
+      "それとなく知らせること",
+      "正しいこととして説明すること"
+    ],
+    "answer": 2,
+    "explanation": "示唆（しさ）は、それとなく知らせること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-051",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「指摘」の意味は？",
+    "choices": [
+      "ゆるむこと",
+      "問題点などを示すこと",
+      "はっきりしないさま",
+      "押さえとどめること"
+    ],
+    "answer": 1,
+    "explanation": "指摘（してき）は、問題点などを示すこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-052",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「提唱」の意味は？",
+    "choices": [
+      "変えて作り直すこと",
+      "適切であること",
+      "主張として唱えること",
+      "問題点などを示すこと"
+    ],
+    "answer": 2,
+    "explanation": "提唱（ていしょう）は、主張として唱えること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-053",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「主張」の意味は？",
+    "choices": [
+      "不足を補って完全にすること",
+      "自分の意見を言うこと",
+      "取り出すこと",
+      "つり合いよく整えること"
+    ],
+    "answer": 1,
+    "explanation": "主張（しゅちょう）は、自分の意見を言うこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-054",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「反証」の意味は？",
+    "choices": [
+      "ひとまとめに含むこと",
+      "取り除くこと",
+      "反対を証明すること",
+      "大切に扱うこと"
+    ],
+    "answer": 2,
+    "explanation": "反証（はんしょう）は、反対を証明すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-055",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「論証」の意味は？",
+    "choices": [
+      "そうならざるを得ないこと",
+      "論理で証明すること",
+      "分けて明らかにすること",
+      "問題点などを示すこと"
+    ],
+    "answer": 1,
+    "explanation": "論証（ろんしょう）は、論理で証明すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-056",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「根拠」の意味は？",
+    "choices": [
+      "並べて挙げること",
+      "よく調べ考えること",
+      "よりどころ",
+      "分かれて発達すること"
+    ],
+    "answer": 2,
+    "explanation": "根拠（こんきょ）は、よりどころ。"
+  },
+  {
+    "id": "jp-kanji-imi-100-057",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「妥結」の意味は？",
+    "choices": [
+      "張りつめた状態",
+      "話し合いで折り合うこと",
+      "取り出すこと",
+      "互いに争い合うこと"
+    ],
+    "answer": 1,
+    "explanation": "妥結（だけつ）は、話し合いで折り合うこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-058",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「折衝」の意味は？",
+    "choices": [
+      "一つにまとまること",
+      "厳しさをやわらげること",
+      "交渉して調整すること",
+      "ルールとして定めること"
+    ],
+    "answer": 2,
+    "explanation": "折衝（せっしょう）は、交渉して調整すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-059",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「調整」の意味は？",
+    "choices": [
+      "つり合いよく整えること",
+      "悪い点を正すこと",
+      "よりどころ",
+      "取り出すこと"
+    ],
+    "answer": 0,
+    "explanation": "調整（ちょうせい）は、つり合いよく整えること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-060",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「整合」の意味は？",
+    "choices": [
+      "力で押さえつけること",
+      "つじつまが合うこと",
+      "原因となる要素",
+      "ルールとして定めること"
+    ],
+    "answer": 1,
+    "explanation": "整合（せいごう）は、つじつまが合うこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-061",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「矛盾」の意味は？",
+    "choices": [
+      "つじつまが合わないこと",
+      "なくてはならないこと",
+      "力で押さえつけること",
+      "基準から外れること"
+    ],
+    "answer": 0,
+    "explanation": "矛盾（むじゅん）は、つじつまが合わないこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-062",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「体系」の意味は？",
+    "choices": [
+      "厳しさをやわらげること",
+      "道理に合わないこと",
+      "まとまった仕組み",
+      "続くこと"
+    ],
+    "answer": 2,
+    "explanation": "体系（たいけい）は、まとまった仕組み。"
+  },
+  {
+    "id": "jp-kanji-imi-100-063",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「概念」の意味は？",
+    "choices": [
+      "物事をまとめた考え",
+      "決まりを守ること",
+      "離れはなれること",
+      "取り出すこと"
+    ],
+    "answer": 0,
+    "explanation": "概念（がいねん）は、物事をまとめた考え。"
+  },
+  {
+    "id": "jp-kanji-imi-100-064",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「認識」の意味は？",
+    "choices": [
+      "動きが速いこと",
+      "取り出すこと",
+      "理解して把握すること",
+      "まとまった仕組み"
+    ],
+    "answer": 2,
+    "explanation": "認識（にんしき）は、理解して把握すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-065",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「誤解」の意味は？",
+    "choices": [
+      "取り除くこと",
+      "他に左右されないこと",
+      "はっきり示すこと",
+      "間違って理解すること"
+    ],
+    "answer": 3,
+    "explanation": "誤解（ごかい）は、間違って理解すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-066",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「洞察」の意味は？",
+    "choices": [
+      "心の中で対立すること",
+      "本質を見抜くこと",
+      "理解して把握すること",
+      "並べて挙げること"
+    ],
+    "answer": 1,
+    "explanation": "洞察（どうさつ）は、本質を見抜くこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-067",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「俯瞰」の意味は？",
+    "choices": [
+      "張りつめた状態",
+      "全体を見渡すこと",
+      "まとめ合わせること",
+      "よりどころ"
+    ],
+    "answer": 1,
+    "explanation": "俯瞰（ふかん）は、全体を見渡すこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-068",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「包括」の意味は？",
+    "choices": [
+      "結果としてそうなること",
+      "ひとまとめに含むこと",
+      "全体を見渡すこと",
+      "ルールとして定めること"
+    ],
+    "answer": 1,
+    "explanation": "包括（ほうかつ）は、ひとまとめに含むこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-069",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「網羅」の意味は？",
+    "choices": [
+      "並べて挙げること",
+      "結果としてそうなること",
+      "力で押さえつけること",
+      "もれなく取り上げること"
+    ],
+    "answer": 3,
+    "explanation": "網羅（もうら）は、もれなく取り上げること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-070",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「列挙」の意味は？",
+    "choices": [
+      "決まりを守ること",
+      "保ち続けること",
+      "並べて挙げること",
+      "ゆるむこと"
+    ],
+    "answer": 2,
+    "explanation": "列挙（れっきょ）は、並べて挙げること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-071",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「抽出」の意味は？",
+    "choices": [
+      "取り出すこと",
+      "悪い点を正すこと",
+      "目標にたどり着くこと",
+      "表に出ていないこと"
+    ],
+    "answer": 0,
+    "explanation": "抽出（ちゅうしゅつ）は、取り出すこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-072",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「検討」の意味は？",
+    "choices": [
+      "保ち続けること",
+      "つり合いよく整えること",
+      "分けて明らかにすること",
+      "よく考えること"
+    ],
+    "answer": 3,
+    "explanation": "検討（けんとう）は、よく考えること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-073",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「考察」の意味は？",
+    "choices": [
+      "よく調べ考えること",
+      "並べて挙げること",
+      "他に左右されないこと",
+      "ある事柄に伴って起こること"
+    ],
+    "answer": 0,
+    "explanation": "考察（こうさつ）は、よく調べ考えること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-074",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「分析」の意味は？",
+    "choices": [
+      "分けて明らかにすること",
+      "まとまって落ち着くこと",
+      "他と比べて成り立つこと",
+      "言わなくても了解されること"
+    ],
+    "answer": 0,
+    "explanation": "分析（ぶんせき）は、分けて明らかにすること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-075",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「総合」の意味は？",
+    "choices": [
+      "分かれて発達すること",
+      "問題点などを示すこと",
+      "まとめ合わせること",
+      "つり合いよく整えること"
+    ],
+    "answer": 2,
+    "explanation": "総合（そうごう）は、まとめ合わせること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-076",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「統合」の意味は？",
+    "choices": [
+      "はっきりしないさま",
+      "一つにまとめること",
+      "物事の根本の性質",
+      "心の中で対立すること"
+    ],
+    "answer": 1,
+    "explanation": "統合（とうごう）は、一つにまとめること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-077",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「分化」の意味は？",
+    "choices": [
+      "重要でないとみなすこと",
+      "分かれて発達すること",
+      "保ち続けること",
+      "もれなく取り上げること"
+    ],
+    "answer": 1,
+    "explanation": "分化（ぶんか）は、分かれて発達すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-078",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「対立」の意味は？",
+    "choices": [
+      "分けて明らかにすること",
+      "並べて挙げること",
+      "気がかりなこと",
+      "反対の立場になること"
+    ],
+    "answer": 3,
+    "explanation": "対立（たいりつ）は、反対の立場になること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-079",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「相克」の意味は？",
+    "choices": [
+      "基準から外れること",
+      "ある事柄に伴って起こること",
+      "互いに争い合うこと",
+      "広く共通して当てはまること"
+    ],
+    "answer": 2,
+    "explanation": "相克（そうこく）は、互いに争い合うこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-080",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「葛藤」の意味は？",
+    "choices": [
+      "離れはなれること",
+      "心の中で対立すること",
+      "元の段階へ戻ること",
+      "まとまった仕組み"
+    ],
+    "answer": 1,
+    "explanation": "葛藤（かっとう）は、心の中で対立すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-081",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「緊張」の意味は？",
+    "choices": [
+      "主張として唱えること",
+      "張りつめた状態",
+      "ある事柄に伴って起こること",
+      "分けて明らかにすること"
+    ],
+    "answer": 1,
+    "explanation": "緊張（きんちょう）は、張りつめた状態。"
+  },
+  {
+    "id": "jp-kanji-imi-100-082",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「弛緩」の意味は？",
+    "choices": [
+      "移り変わっていくこと",
+      "反対の立場になること",
+      "ゆるむこと",
+      "ひとまとめに含むこと"
+    ],
+    "answer": 2,
+    "explanation": "弛緩（しかん）は、ゆるむこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-083",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「堅牢」の意味は？",
+    "choices": [
+      "丈夫で壊れにくいこと",
+      "不足を補って完全にすること",
+      "間違って理解すること",
+      "よく考えること"
+    ],
+    "answer": 0,
+    "explanation": "堅牢（けんろう）は、丈夫で壊れにくいこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-084",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「抑圧」の意味は？",
+    "choices": [
+      "力で押さえつけること",
+      "物事をまとめた考え",
+      "目標にたどり着くこと",
+      "丈夫で壊れにくいこと"
+    ],
+    "answer": 0,
+    "explanation": "抑圧（よくあつ）は、力で押さえつけること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-085",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「抑止」の意味は？",
+    "choices": [
+      "思いとどまらせること",
+      "あらかじめこうだと考えること",
+      "互いに争い合うこと",
+      "そうならざるを得ないこと"
+    ],
+    "answer": 0,
+    "explanation": "抑止（よくし）は、思いとどまらせること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-086",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「是正」の意味は？",
+    "choices": [
+      "押さえとどめること",
+      "悪い点を正すこと",
+      "はっきり目立つさま",
+      "広く共通して当てはまること"
+    ],
+    "answer": 1,
+    "explanation": "是正（ぜせい）は、悪い点を正すこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-087",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「改善」の意味は？",
+    "choices": [
+      "本質を見抜くこと",
+      "変えて作り直すこと",
+      "分けて明らかにすること",
+      "よりよくすること"
+    ],
+    "answer": 3,
+    "explanation": "改善（かいぜん）は、よりよくすること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-088",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「改変」の意味は？",
+    "choices": [
+      "まとまった仕組み",
+      "分かれて発達すること",
+      "ある事柄に伴って起こること",
+      "変えて作り直すこと"
+    ],
+    "answer": 3,
+    "explanation": "改変（かいへん）は、変えて作り直すこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-089",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「維持」の意味は？",
+    "choices": [
+      "決まりを守ること",
+      "まとめ合わせること",
+      "他と比べて成り立つこと",
+      "保ち続けること"
+    ],
+    "answer": 3,
+    "explanation": "維持（いじ）は、保ち続けること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-090",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「持続」の意味は？",
+    "choices": [
+      "原因と結果の関係",
+      "問題点などを示すこと",
+      "短く分かりやすいこと",
+      "続くこと"
+    ],
+    "answer": 3,
+    "explanation": "持続（じぞく）は、続くこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-091",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「継続」の意味は？",
+    "choices": [
+      "つり合いよく整えること",
+      "そうならざるを得ないこと",
+      "続けること",
+      "不足を補って完全にすること"
+    ],
+    "answer": 2,
+    "explanation": "継続（けいぞく）は、続けること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-092",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「断絶」の意味は？",
+    "choices": [
+      "大きく進歩すること",
+      "途切れてつながらないこと",
+      "離れはなれること",
+      "大切に扱うこと"
+    ],
+    "answer": 1,
+    "explanation": "断絶（だんぜつ）は、途切れてつながらないこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-093",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「発展」の意味は？",
+    "choices": [
+      "つじつまが合わないこと",
+      "反対を証明すること",
+      "大切に扱うこと",
+      "より盛んになること"
+    ],
+    "answer": 3,
+    "explanation": "発展（はってん）は、より盛んになること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-094",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「退行」の意味は？",
+    "choices": [
+      "進みを早めること",
+      "交渉して調整すること",
+      "結果としてそうなること",
+      "元の段階へ戻ること"
+    ],
+    "answer": 3,
+    "explanation": "退行（たいこう）は、元の段階へ戻ること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-095",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「尊重」の意味は？",
+    "choices": [
+      "続くこと",
+      "丈夫で壊れにくいこと",
+      "くわしく調べること",
+      "大切に扱うこと"
+    ],
+    "answer": 3,
+    "explanation": "尊重（そんちょう）は、大切に扱うこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-096",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「軽視」の意味は？",
+    "choices": [
+      "表に現れていること",
+      "重要でないとみなすこと",
+      "厳しさをやわらげること",
+      "離れはなれること"
+    ],
+    "answer": 1,
+    "explanation": "軽視（けいし）は、重要でないとみなすこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-097",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「合理」の意味は？",
+    "choices": [
+      "続くこと",
+      "道理にかなっていること",
+      "一つにまとめること",
+      "ひとまとめに含むこと"
+    ],
+    "answer": 1,
+    "explanation": "合理（ごうり）は、道理にかなっていること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-098",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「不合理」の意味は？",
+    "choices": [
+      "元の段階へ戻ること",
+      "反対の立場になること",
+      "道理に合わないこと",
+      "ルールとして定めること"
+    ],
+    "answer": 2,
+    "explanation": "不合理（ふごうり）は、道理に合わないこと。"
+  },
+  {
+    "id": "jp-kanji-imi-100-099",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「正当化」の意味は？",
+    "choices": [
+      "決まりを守ること",
+      "正しいこととして説明すること",
+      "表に出ていないこと",
+      "ルールとして定めること"
+    ],
+    "answer": 1,
+    "explanation": "正当化（せいとうか）は、正しいこととして説明すること。"
+  },
+  {
+    "id": "jp-kanji-imi-100-100",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "kanji-imi-100",
+    "question": "「客観」の意味は？",
+    "choices": [
+      "たまたま起こること",
+      "偏らずに見ること",
+      "正しいか確かめること",
+      "よく考えること"
+    ],
+    "answer": 1,
+    "explanation": "客観（きゃっかん）は、偏らずに見ること。"
+  }
+]

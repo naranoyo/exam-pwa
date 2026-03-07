@@ -1,0 +1,202 @@
+[
+  {
+    "id": "jp-kanji-001",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「顕著」の読みは？",
+    "choices": ["けんちょ", "げんちょ", "けんしょ", "けんじょ"],
+    "answer": 0,
+    "explanation": "顕著（けんちょ）は、はっきり目立つこと。"
+  },
+  {
+    "id": "jp-kanji-002",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「乖離」の読みは？",
+    "choices": ["かいり", "かいれ", "がいり", "かいじ"],
+    "answer": 0,
+    "explanation": "乖離（かいり）は、離れ離れになること。"
+  },
+  {
+    "id": "jp-kanji-003",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「漠然」の読みは？",
+    "choices": ["ばくぜん", "はくぜん", "ぼくぜん", "まくぜん"],
+    "answer": 0,
+    "explanation": "漠然（ばくぜん）は、はっきりしないさま。"
+  },
+  {
+    "id": "jp-kanji-004",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「逸脱」の読みは？",
+    "choices": ["いつだつ", "いちだつ", "いっだつ", "いつたつ"],
+    "answer": 0,
+    "explanation": "逸脱（いつだつ）は、基準から外れること。"
+  },
+  {
+    "id": "jp-kanji-005",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「懸念」の読みは？",
+    "choices": ["けねん", "けんねん", "げねん", "けんれん"],
+    "answer": 0,
+    "explanation": "懸念（けねん）は、気がかりなこと。"
+  },
+  {
+    "id": "jp-kanji-006",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「妥当」の読みは？",
+    "choices": ["だとう", "たとう", "だどう", "たどう"],
+    "answer": 0,
+    "explanation": "妥当（だとう）は、適切であること。"
+  },
+  {
+    "id": "jp-kanji-007",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「迅速」の読みは？",
+    "choices": ["じんそく", "しんそく", "じんぞく", "しんぞく"],
+    "answer": 0,
+    "explanation": "迅速（じんそく）は、動きが速いこと。"
+  },
+  {
+    "id": "jp-kanji-008",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「簡潔」の読みは？",
+    "choices": ["かんけつ", "けんけつ", "かんけち", "かんせつ"],
+    "answer": 0,
+    "explanation": "簡潔（かんけつ）は、短く分かりやすいこと。"
+  },
+  {
+    "id": "jp-kanji-009",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「躍進」の読みは？",
+    "choices": ["やくしん", "ようしん", "やくじん", "よくしん"],
+    "answer": 0,
+    "explanation": "躍進（やくしん）は、大きく進歩すること。"
+  },
+  {
+    "id": "jp-kanji-010",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「抑制」の読みは？",
+    "choices": ["よくせい", "おくせい", "あくせい", "ようせい"],
+    "answer": 0,
+    "explanation": "抑制（よくせい）は、押さえとどめること。"
+  },
+  {
+    "id": "jp-kanji-011",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「希薄」の読みは？",
+    "choices": ["きはく", "けはく", "きばく", "けばく"],
+    "answer": 0,
+    "explanation": "希薄（きはく）は、うすいこと。"
+  },
+  {
+    "id": "jp-kanji-012",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「遵守」の読みは？",
+    "choices": ["じゅんしゅ", "そんしゅ", "じゅんじゅ", "じんしゅ"],
+    "answer": 0,
+    "explanation": "遵守（じゅんしゅ）は、決まりを守ること。"
+  },
+  {
+    "id": "jp-kanji-013",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「錯覚」の読みは？",
+    "choices": ["さっかく", "さくかく", "そうかく", "さっがく"],
+    "answer": 0,
+    "explanation": "錯覚（さっかく）は、思い違い。"
+  },
+  {
+    "id": "jp-kanji-014",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「排除」の読みは？",
+    "choices": ["はいじょ", "はいしょ", "ばいじょ", "はいちょ"],
+    "answer": 0,
+    "explanation": "排除（はいじょ）は、取り除くこと。"
+  },
+  {
+    "id": "jp-kanji-015",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「均衡」の読みは？",
+    "choices": ["きんこう", "けんこう", "きんごう", "こんこう"],
+    "answer": 0,
+    "explanation": "均衡（きんこう）は、バランスが取れていること。"
+  },
+  {
+    "id": "jp-kanji-016",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「模索」の読みは？",
+    "choices": ["もさく", "ぼさく", "もじゃく", "もしゃく"],
+    "answer": 0,
+    "explanation": "模索（もさく）は、手探りで探すこと。"
+  },
+  {
+    "id": "jp-kanji-017",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「把握」の読みは？",
+    "choices": ["はあく", "はくあく", "ばあく", "はやく"],
+    "answer": 0,
+    "explanation": "把握（はあく）は、しっかり理解すること。"
+  },
+  {
+    "id": "jp-kanji-018",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「誘発」の読みは？",
+    "choices": ["ゆうはつ", "ゆはつ", "ようはつ", "ゆうばつ"],
+    "answer": 0,
+    "explanation": "誘発（ゆうはつ）は、引き起こすこと。"
+  },
+  {
+    "id": "jp-kanji-019",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「脆弱」の読みは？",
+    "choices": ["ぜいじゃく", "きじゃく", "せいじゃく", "ぜじゃく"],
+    "answer": 0,
+    "explanation": "脆弱（ぜいじゃく）は、もろく弱いこと。"
+  },
+  {
+    "id": "jp-kanji-020",
+    "subject": "japanese",
+    "category": "kanji",
+    "level": "common-test",
+    "question": "「収束」の読みは？",
+    "choices": ["しゅうそく", "しゅうぞく", "しゅそく", "しゅうしょく"],
+    "answer": 0,
+    "explanation": "収束（しゅうそく）は、まとまって落ち着くこと。"
+  }
+]
