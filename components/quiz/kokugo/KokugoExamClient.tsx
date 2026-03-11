@@ -92,8 +92,97 @@ const judgeMark = (chosen: number | null, correct: number) => {
   return isCorrectRow(chosen, correct) ? "〇" : "✖";
 };
 
+function clampPercent(n: number) {
+  if (!Number.isFinite(n)) return 0;
+  return Math.max(0, Math.min(100, n));
+}
+
+function scoreFromHensachi(hensachi: number, mean: number, sd: number) {
+  return mean + ((hensachi - 50) / 10) * sd;
+}
+
+function makeHensachiBand(hensachi: number) {
+  const start = Math.floor(hensachi);
+  const end = start + 0.9;
+
+  return {
+    start,
+    end,
+    label: `${start.toFixed(1)}〜${end.toFixed(1)}`,
+  };
+}
+
+function makeScoreBandFromHensachiBand(
+  band: { start: number; end: number },
+  mean: number,
+  sd: number,
+  maxScore: number
+) {
+  const rawStart = scoreFromHensachi(band.start, mean, sd);
+  const rawEnd = scoreFromHensachi(band.end, mean, sd);
+
+  const start = Math.max(0, Math.min(maxScore, Math.round(rawStart)));
+  const end = Math.max(0, Math.min(maxScore, Math.round(rawEnd)));
+
+  const lo = Math.min(start, end);
+  const hi = Math.max(start, end);
+
+  return {
+    start: lo,
+    end: hi,
+    label: `${lo}〜${hi}点`,
+  };
+}
+
+function getPerformanceJudge(hensachi: number) {
+  if (!Number.isFinite(hensachi)) {
+    return {
+      label: "-",
+      description: "判定不能",
+      tone: "text-black/60 bg-black/5 border-black/10",
+    };
+  }
+
+  if (hensachi >= 62) {
+    return {
+      label: "A",
+      description: "かなり良い",
+      tone: "text-emerald-700 bg-emerald-50 border-emerald-200",
+    };
+  }
+
+  if (hensachi >= 55) {
+    return {
+      label: "B",
+      description: "良い",
+      tone: "text-sky-700 bg-sky-50 border-sky-200",
+    };
+  }
+
+  if (hensachi >= 47) {
+    return {
+      label: "C",
+      description: "標準",
+      tone: "text-amber-700 bg-amber-50 border-amber-200",
+    };
+  }
+
+  if (hensachi >= 40) {
+    return {
+      label: "D",
+      description: "要強化",
+      tone: "text-orange-700 bg-orange-50 border-orange-200",
+    };
+  }
+
+  return {
+    label: "E",
+    description: "基礎固め",
+    tone: "text-rose-700 bg-rose-50 border-rose-200",
+  };
+}
+
 function getExamKey(exam: KokugoExam) {
-  // ✅ 履歴保存や学習ログのキー。年度で分岐できるようにする
   return `kokugo/kyotsu${exam.year}`;
 }
 
@@ -122,7 +211,7 @@ export function KokugoExamClient({ exam }: Props) {
   const TOTAL_SECONDS = 90 * 60;
   const [timerRunning, setTimerRunning] = useState(false);
 
-  // ✅ 結果画面へ移る瞬間に止めるための signal
+  // 結果画面へ移る瞬間に止める signal
   const autoStopSignalRef = useRef(0);
   const [autoStopSignal, setAutoStopSignal] = useState(0);
 
@@ -136,7 +225,7 @@ export function KokugoExamClient({ exam }: Props) {
   const [answers, setAnswers] = useState<AnswerState>({});
   const [pdfPage, setPdfPage] = useState<number>(1);
 
-  // ✅ 保存済みガード（この画面内だけ）
+  // 保存済みガード
   const [savedAttemptId, setSavedAttemptId] = useState<string | null>(null);
 
   const dai = useMemo(
@@ -149,27 +238,30 @@ export function KokugoExamClient({ exam }: Props) {
     return exam.questionIndex[activeQid] ?? null;
   }, [exam.questionIndex, activeQid]);
 
-  // ✅ 本文：旧getPassageById（外部DB）を優先しつつ、ダメならexam内passageから生成
+  // 本文
   const passageView = useMemo(() => {
     if (!activeQ) return { title: "", text: "" };
 
-    // 1) 旧データ（quizData）にある場合
     try {
       const p = activeQ.passageId ? getPassageById(activeQ.passageId) : null;
-      if (p && typeof p.text === "string")
+      if (p && typeof p.text === "string") {
         return { title: p.title ?? "", text: p.text };
+      }
     } catch {
       // ignore
     }
 
-    // 2) exam内passage（blocks）から作る
     const p2 = activeQ.passageId
       ? findPassageInExam(exam, activeQ.passageId)
       : null;
+
     if (p2) {
       return {
         title: p2.title ?? "",
-        text: passageToText(p2, { includeHeading: true, includeNote: true }),
+        text: passageToText(p2, {
+          includeHeading: true,
+          includeNote: true,
+        }),
       };
     }
 
@@ -196,7 +288,6 @@ export function KokugoExamClient({ exam }: Props) {
     return Object.values(answers).filter((a) => a.chosen !== null).length;
   }, [answers]);
 
-  // PDF
   const pdfUrl = pdfMode === "q" ? exam.pdfQUrl : exam.pdfAUrl;
 
   const syncPdfFromQuestion = (q: KokugoQuestion, nextPdfMode?: PdfMode) => {
@@ -211,10 +302,12 @@ export function KokugoExamClient({ exam }: Props) {
     const d = exam.dais.find((x) => x.dai === q.dai);
     if (!d) return;
 
-    if (m === "q" && typeof d.pageHint?.qStart === "number")
+    if (m === "q" && typeof d.pageHint?.qStart === "number") {
       setPdfPage(d.pageHint.qStart);
-    if (m === "a" && typeof d.pageHint?.aStart === "number")
+    }
+    if (m === "a" && typeof d.pageHint?.aStart === "number") {
       setPdfPage(d.pageHint.aStart);
+    }
   };
 
   const selectDai = (daiNo: number) => {
@@ -236,7 +329,6 @@ export function KokugoExamClient({ exam }: Props) {
     }
   };
 
-  // 解答
   const setChoice = (qid: string, choice: number) => {
     setAnswers((prev) => ({
       ...prev,
@@ -244,10 +336,8 @@ export function KokugoExamClient({ exam }: Props) {
     }));
   };
 
-  // 採点
   const grade = useMemo(() => gradeKokugo(exam, answers), [exam, answers]);
 
-  // 偏差値/順位
   const statsView = useMemo(() => {
     const st = exam.stats;
     if (!st) return null;
@@ -255,12 +345,33 @@ export function KokugoExamClient({ exam }: Props) {
 
     const hensachi = calcHensachi(grade.total, st.mean, st.sd);
     const rank = estimateRank(grade.total, st.mean, st.sd, st.examinees);
+
     if (hensachi === null || rank === null) return null;
 
-    return { hensachi, rank: rank.rank, percentile: rank.percentile };
-  }, [exam.stats, grade.total]);
+    const upperPercent = clampPercent(rank.upperPercent);
 
-  // ナビ
+    const currentHensachiBand = makeHensachiBand(hensachi);
+    const currentScoreBand = makeScoreBandFromHensachiBand(
+      currentHensachiBand,
+      st.mean,
+      st.sd,
+      grade.maxTotal
+    );
+
+    const judge = getPerformanceJudge(hensachi);
+
+    return {
+      hensachi,
+      rank: rank.rank,
+      examinees: st.examinees,
+      percentile: rank.percentile,
+      upperPercent,
+      currentHensachiBand,
+      currentScoreBand,
+      judge,
+    };
+  }, [exam.stats, grade.total, grade.maxTotal]);
+
   const currentIndex = activeQ
     ? flatQuestions.findIndex((q) => q.id === activeQ.id)
     : -1;
@@ -319,7 +430,6 @@ export function KokugoExamClient({ exam }: Props) {
     ? (answers[activeQ.id]?.chosen ?? null)
     : null;
 
-  // ✅ 保存：result画面のボタンを押した時だけ
   const saveAttempt = () => {
     if (savedAttemptId) {
       pushToast("この採点結果はすでに保存しています");
@@ -342,13 +452,10 @@ export function KokugoExamClient({ exam }: Props) {
         dai: r.dai,
         no: r.no,
         qid: r.qid,
-
         chosen: r.chosen,
         correctChoice: r.correctChoice,
         got: r.got,
         max: r.max,
-
-        // ✅ 後で詳細ページで見られるように埋める
         prompt: q?.prompt,
         choices: q?.choices,
         explanation: q?.explanation,
@@ -359,20 +466,15 @@ export function KokugoExamClient({ exam }: Props) {
       id,
       createdAt: now,
       dateKey: getDateKey(new Date(now)),
-
-      // ✅ 年度連動（2024/2025両対応）
       examId: examKey,
       examTitle: exam.title,
-
       total: grade.total,
       maxTotal: grade.maxTotal,
       correctCount: grade.correctCount,
       answeredCount: grade.answeredCount,
-
       mean: exam.stats?.mean,
       sd: exam.stats?.sd,
       examinees: exam.stats?.examinees,
-
       details,
     };
 
@@ -384,8 +486,8 @@ export function KokugoExamClient({ exam }: Props) {
     );
   };
 
-  // ✅ useEffect で止めない！「採点へ切替える瞬間」に止める（warning回避）
   const goSolve = () => setMode("solve");
+
   const goResult = () => {
     setTimerRunning(false);
     autoStopSignalRef.current += 1;
@@ -393,13 +495,11 @@ export function KokugoExamClient({ exam }: Props) {
     setMode("result");
   };
 
-  // ✅ result中は必ず走らない（保険）
   const barRunning = mode === "solve" && timerRunning;
 
   return (
     <>
       <section className="mx-auto w-full max-w-5xl px-3 sm:px-4">
-        {/* ヘッダー */}
         <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
           <div>
             <div className="text-xl font-bold">{exam.title}</div>
@@ -437,7 +537,6 @@ export function KokugoExamClient({ exam }: Props) {
               採点する
             </button>
 
-            {/* ✅ result画面でだけ表示 */}
             {mode === "result" ? (
               <>
                 <button
@@ -481,7 +580,6 @@ export function KokugoExamClient({ exam }: Props) {
           </div>
         </div>
 
-        {/* 大問タブ */}
         <div className="flex flex-wrap gap-2 mb-4">
           {exam.dais.map((d, index) => (
             <button
@@ -497,12 +595,10 @@ export function KokugoExamClient({ exam }: Props) {
           ))}
         </div>
 
-        {/* 上：問題 or 結果 */}
         <section className="rounded-2xl bg-white/80 border p-4 mb-4">
           {mode === "solve" ? (
             activeQ ? (
               <>
-                {/* ナビ */}
                 <div className="mb-3">
                   <div className="grid grid-cols-3 gap-2">
                     <button
@@ -547,7 +643,6 @@ export function KokugoExamClient({ exam }: Props) {
                   </div>
                 </div>
 
-                {/* 本文 */}
                 <div className="mb-3">
                   {hasPassage ? (
                     <div className="rounded-xl border bg-white px-3 py-2">
@@ -566,7 +661,6 @@ export function KokugoExamClient({ exam }: Props) {
                   )}
                 </div>
 
-                {/* 問題 */}
                 <div className="rounded-xl border bg-white p-4">
                   <div className="font-bold mb-2">
                     {dai?.title} / 問{activeQ.no}
@@ -590,7 +684,7 @@ export function KokugoExamClient({ exam }: Props) {
                           onClick={() => setChoice(activeQ.id, i)}
                           type="button"
                         >
-                          {`${"①②③④"[i]}  ${c}`}
+                          {`${"①②③④"[i] ?? `${i + 1}.`}  ${c}`}
                         </button>
                       );
                     })}
@@ -623,6 +717,7 @@ export function KokugoExamClient({ exam }: Props) {
                 <div className="text-2xl font-extrabold mt-2">
                   {grade.total} / {grade.maxTotal}
                 </div>
+
                 <div className="text-sm text-black/60 mt-2">
                   正答数 {grade.correctCount}/{grade.answeredCount}
                   （未回答を除く）
@@ -652,7 +747,7 @@ export function KokugoExamClient({ exam }: Props) {
                   <>
                     <div className="text-sm text-black/70">
                       平均点：{exam.stats.mean} / 受験者数：
-                      {exam.stats.examinees}
+                      {exam.stats.examinees.toLocaleString()}
                       {typeof exam.stats.sd === "number"
                         ? ` / 標準偏差：${exam.stats.sd}`
                         : ""}
@@ -669,22 +764,56 @@ export function KokugoExamClient({ exam }: Props) {
 
                         <div className="rounded-xl border px-3 py-2 flex items-center justify-between">
                           <div className="font-semibold">推定順位</div>
-                          <div className="font-extrabold text-xl">
-                            {statsView.rank.toLocaleString()} 位
+                          <div className="flex items-end gap-1">
+                            <span className="font-extrabold text-xl">
+                              {statsView.rank.toLocaleString()}
+                            </span>
+                            <span className="text-sm text-black/60">
+                              / {statsView.examinees.toLocaleString()} 位
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="rounded-xl border px-3 py-2">
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="font-semibold">成績判定</div>
+
+                            <div
+                              className={[
+                                "min-w-16 text-center rounded-xl border px-3 py-1",
+                                "font-extrabold text-2xl",
+                                statsView.judge.tone,
+                              ].join(" ")}
+                            >
+                              {statsView.judge.label}
+                            </div>
+                          </div>
+
+                          <div className="mt-2 text-sm text-black/70">
+                            目安：{statsView.judge.description}
+                          </div>
+
+                          <div className="mt-2 text-sm text-black/70">
+                            下位：{statsView.upperPercent.toFixed(1)}%
+                          </div>
+
+                          <div className="text-sm text-black/70">
+                            偏差値帯：{statsView.currentHensachiBand.label}
+                          </div>
+
+                          <div className="text-sm text-black/70">
+                            得点帯：{statsView.currentScoreBand.label}
                           </div>
                         </div>
 
                         <div className="text-xs text-black/60">
-                          ※正規分布仮定による推定
-                          {typeof statsView.percentile === "number"
-                            ? ` / 上位 ${(100 - statsView.percentile).toFixed(1)}% 付近`
-                            : ""}
+                          ※ 正規分布仮定による推定 /
+                          判定・偏差値帯・得点帯は目安です
                         </div>
                       </div>
                     ) : (
                       <div className="mt-3 text-sm text-black/60">
-                        偏差値/順位には標準偏差（sd）が必要です（stats.sd
-                        を設定）
+                        偏差値/順位には標準偏差（sd）が必要です
                       </div>
                     )}
                   </>
@@ -695,9 +824,9 @@ export function KokugoExamClient({ exam }: Props) {
                 )}
               </div>
 
-              {/* 採点詳細 */}
               <div className="rounded-2xl border bg-white p-4">
                 <div className="font-bold mb-2">採点詳細（解答番号ごと）</div>
+
                 <div className="overflow-x-auto">
                   <table className="min-w-180 w-full border-collapse text-sm">
                     <thead>
@@ -798,10 +927,8 @@ export function KokugoExamClient({ exam }: Props) {
           )}
         </section>
 
-        {/* 解答用紙 */}
         <AnswerSheet exam={exam} answers={answers} onChange={setChoice} />
 
-        {/* PDF */}
         <section className="rounded-2xl bg-white/80 border p-4 mt-4">
           <div className="flex items-center justify-between mb-2">
             <div className="font-bold">
@@ -868,7 +995,6 @@ export function KokugoExamClient({ exam }: Props) {
         <div className="h-28" />
       </section>
 
-      {/* ✅ 経過時間バー：result 画面だけ「今日の学習に追加」を表示 */}
       <ElapsedTimeBar
         running={barRunning}
         totalSeconds={TOTAL_SECONDS}
@@ -883,7 +1009,7 @@ export function KokugoExamClient({ exam }: Props) {
             type: "ADD_STUDY_SECONDS",
             dateKey: todayKey,
             seconds: sec,
-            sessionsDelta: 1, // ← 必要なら
+            sessionsDelta: 1,
           });
 
           pushToast(

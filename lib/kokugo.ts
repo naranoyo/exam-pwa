@@ -16,16 +16,10 @@ export type KokugoPassage = {
     a?: { start: number; end: number };
   };
 
-  /**
-   * ✅ 新形式：blocks（あなたの現在の想定）
-   * ただし 2024 等で旧形式(textのみ)が混ざると p.blocks が undefined になり得るので optional に。
-   */
+  // 新形式
   blocks?: KokugoPassageBlock[];
 
-  /**
-   * ✅ 旧形式：text（passages.json が {text:"..."} だけのとき用）
-   * 2025のblocks形式には不要だけど、互換のために持たせる。
-   */
+  // 旧形式互換
   text?: string;
 };
 
@@ -35,7 +29,7 @@ export type KokugoQuestion = {
   no: number; // 問1,問2...
   passageId: string;
 
-  // ✅ UIで表示する問題文（questions.json の question を入れる）
+  // UI表示文
   prompt: string;
 
   choices: string[];
@@ -43,20 +37,19 @@ export type KokugoQuestion = {
 
   score?: number;
 
-  // ✅ 解答用紙の「解答番号」(questions.json の answerNo)
+  // 解答用紙の解答番号
   answerNo?: number;
 
-  // ✅ 1つの設問が使う解答枠数（通常は1）
+  // 1設問が使う枠数（通常1）
   slots?: number;
 
   pdfPageQ?: number;
   pdfPageA?: number;
   tags?: string[];
 
-  // ✅ 追加（任意）：slotごとの正解
+  // 将来対応用
   correct?: number[];
 
-  // ✅ 解説（任意）
   explanation?: string;
 };
 
@@ -66,7 +59,12 @@ export type KokugoDai = {
   label?: string;
   passage: KokugoPassage | null;
   questions: KokugoQuestion[];
-  pageHint?: { qStart?: number; qEnd?: number; aStart?: number; aEnd?: number };
+  pageHint?: {
+    qStart?: number;
+    qEnd?: number;
+    aStart?: number;
+    aEnd?: number;
+  };
 };
 
 export type ExamStats = {
@@ -92,7 +90,6 @@ export function passageToText(
   const includeHeading = opts?.includeHeading ?? true;
   const includeNote = opts?.includeNote ?? true;
 
-  // ✅ 旧形式(text) または blocksが無い/壊れている場合
   if (!p?.blocks || !Array.isArray(p.blocks)) {
     return (p?.text ?? "").trim();
   }
@@ -101,7 +98,7 @@ export function passageToText(
     .filter((b) => {
       if (b.kind === "heading") return includeHeading;
       if (b.kind === "note") return includeNote;
-      return true; // paragraph/quote
+      return true;
     })
     .map((b) => b.text)
     .join("\n\n")
@@ -109,7 +106,7 @@ export function passageToText(
 }
 
 /** -----------------------------
- * ✅ questions.json の生データ型
+ * questions.json の生データ型
  * ----------------------------- */
 export type RawKokugoQuestion = {
   id: string;
@@ -120,38 +117,30 @@ export type RawKokugoQuestion = {
   question: string;
   choices: string[];
 
-  // 1-based or 0-based 混在許容
+  // 1-based / 0-based 混在許容
   answer: number;
 
   score?: number;
-
-  // ✅ これが解答番号
   answerNo?: number;
-
-  // ✅ 枠数（なければ1）
   slots?: number;
 
-  // 問題PDFページ（旧pdfPage）
+  // 旧 pdfPage にも対応
   pdfPage?: number;
   pdfPageQ?: number;
   pdfPageA?: number;
 
   tags?: string[];
-
-  // ✅ 追加：slotごとの正解（将来対応）
   correct?: number[];
-
-  // ✅ 解説（任意）
   explanation?: string;
 };
 
 function normalizeAnswerIndex(answer: number, choicesLen: number): number {
   if (choicesLen <= 0) return 0;
 
-  // ✅ まず 0-based を優先（0..len-1）
+  // 0-based を優先
   if (answer >= 0 && answer < choicesLen) return answer;
 
-  // ✅ 次に 1-based（1..len）
+  // 1-based
   if (answer >= 1 && answer <= choicesLen) return answer - 1;
 
   return 0;
@@ -166,24 +155,16 @@ function normalizeQuestion(raw: RawKokugoQuestion): KokugoQuestion {
     dai: raw.dai,
     no: raw.no,
     passageId: raw.passageId,
-
-    // ✅ questions.json の question をそのまま prompt に
     prompt: raw.question ?? "",
-
     choices,
     answer,
     correct: Array.isArray(raw.correct) ? raw.correct : undefined,
-
     score: raw.score,
-
-    // ✅ 重要
     answerNo: typeof raw.answerNo === "number" ? raw.answerNo : undefined,
     slots: typeof raw.slots === "number" ? raw.slots : 1,
-
     pdfPageQ: typeof raw.pdfPageQ === "number" ? raw.pdfPageQ : raw.pdfPage,
     pdfPageA: raw.pdfPageA,
     tags: raw.tags,
-
     explanation:
       typeof raw.explanation === "string" ? raw.explanation : undefined,
   };
@@ -197,8 +178,33 @@ function byAnswerNo(a: KokugoQuestion, b: KokugoQuestion) {
   return a.no - b.no;
 }
 
+function getDefaultStats(year: number): ExamStats | undefined {
+  switch (year) {
+    case 2025:
+      return {
+        examinees: 437209,
+        mean: 126.67,
+        sd: 34.9,
+      };
+    case 2024:
+      return {
+        examinees: 433173,
+        mean: 116.5,
+        sd: 35.33,
+      };
+    case 2023:
+      return {
+        examinees: 445358,
+        mean: 105.74,
+        sd: 34.1,
+      };
+    default:
+      return undefined;
+  }
+}
+
 /** -----------------------------
- * ✅ 共通ビルダー（2024/2025で共有）
+ * 共通ビルダー
  * ----------------------------- */
 function buildKokugoExamBase(args: {
   year: number;
@@ -240,7 +246,9 @@ function buildKokugoExamBase(args: {
     });
 
   const questionIndex: Record<string, KokugoQuestion> = {};
-  for (const q of qSorted) questionIndex[q.id] = q;
+  for (const q of qSorted) {
+    questionIndex[q.id] = q;
+  }
 
   return {
     year,
@@ -249,12 +257,12 @@ function buildKokugoExamBase(args: {
     pdfAUrl,
     dais,
     questionIndex,
-    stats,
+    stats: stats ?? getDefaultStats(year),
   };
 }
 
 /** -----------------------------
- * ✅ 2025（今までの互換を維持）
+ * 2025
  * ----------------------------- */
 export function buildKokugoExam2025(args: {
   passages: KokugoPassage[];
@@ -275,7 +283,7 @@ export function buildKokugoExam2025(args: {
 }
 
 /** -----------------------------
- * ✅ 2024（正式追加：完全版）
+ * 2024
  * ----------------------------- */
 export function buildKokugoExam2024(args: {
   passages: KokugoPassage[];
@@ -287,7 +295,6 @@ export function buildKokugoExam2024(args: {
   return buildKokugoExamBase({
     year: 2024,
     title: "共通テスト 2024 国語",
-    // ✅ ここは public/past/ に置くPDF名に合わせて変更してください
     pdfQUrl: "/past/kyotsu-kokugo-2024-q.pdf",
     pdfAUrl: "/past/kyotsu-kokugo-2024-a.pdf",
     passages,
@@ -297,7 +304,7 @@ export function buildKokugoExam2024(args: {
 }
 
 /** -----------------------------
- * ✅ 2023（正式追加）
+ * 2023
  * ----------------------------- */
 export function buildKokugoExam2023(args: {
   passages: KokugoPassage[];

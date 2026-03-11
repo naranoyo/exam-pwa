@@ -12,7 +12,6 @@ export type GradeDetailRow = {
   answerNo: number;
   dai: number;
   no: number;
-
   chosen: number | null; // 0-based
   correctChoice: number; // 0-based
   got: number;
@@ -35,35 +34,28 @@ function clampChoice(v: number, len: number) {
 }
 
 /**
- * answer が 0-based か 1-based かを「全体」から推定
- * - 4択なら 4 が混ざっていたらほぼ 1-based
- * - 0 が混ざっていたらほぼ 0-based
+ * q.answer は kokugo.ts 側で normalize 済みなので、
+ * 基本はそのまま 0-based として扱う。
+ * 念のため異常値だけ丸める。
  */
-function detectAnswerBase(qs: KokugoQuestion[]): 0 | 1 {
-  const lens = qs.map((q) => q.choices?.length ?? 4);
-  const maxLen = Math.max(...lens, 4);
-
-  const answers = qs.map((q) => q.answer);
-  if (answers.some((a) => a === 0)) return 0;
-  if (answers.some((a) => a === maxLen)) return 1;
-
-  // どちらとも断定できない場合は「0-based」を既定に（あなたのデータがこれ）
-  return 0;
-}
-
-function normalizeCorrectChoice(raw: number, len: number, base: 0 | 1): number {
+function normalizeCorrectChoice(raw: number, len: number): number {
   const v = Number(raw);
   if (!Number.isFinite(v)) return 0;
-
-  // 1-based の場合のみ -1
-  const zeroBased = base === 1 ? v - 1 : v;
-  return clampChoice(zeroBased, len);
+  return clampChoice(v, len);
 }
 
 function getQuestionsInAnswerNoOrder(exam: KokugoExam): KokugoQuestion[] {
   const all = exam.dais.flatMap((d) => d.questions);
   const withAnswerNo = all.filter((q) => typeof q.answerNo === "number");
-  withAnswerNo.sort((a, b) => (a.answerNo ?? 0) - (b.answerNo ?? 0));
+
+  withAnswerNo.sort((a, b) => {
+    const aa = a.answerNo ?? 999999;
+    const bb = b.answerNo ?? 999999;
+    if (aa !== bb) return aa - bb;
+    if (a.dai !== b.dai) return a.dai - b.dai;
+    return a.no - b.no;
+  });
+
   return withAnswerNo;
 }
 
@@ -72,7 +64,9 @@ export function gradeKokugo(
   answers: AnswerState
 ): GradeResult {
   const perDai: Record<number, { got: number; max: number }> = {};
-  for (const d of exam.dais) perDai[d.dai] = { got: 0, max: 0 };
+  for (const d of exam.dais) {
+    perDai[d.dai] = { got: 0, max: 0 };
+  }
 
   let total = 0;
   let maxTotal = 0;
@@ -80,9 +74,7 @@ export function gradeKokugo(
   let answeredCount = 0;
 
   const details: GradeDetailRow[] = [];
-
   const qs = getQuestionsInAnswerNoOrder(exam);
-  const base = detectAnswerBase(qs); // ★ここがズレ防止の核心
 
   for (const q of qs) {
     const pts = q.score ?? 1;
@@ -94,20 +86,18 @@ export function gradeKokugo(
     const chosen = answers[q.id]?.chosen ?? null;
     if (chosen !== null) answeredCount += 1;
 
-    // ★ answer の 0/1-based を正規化してから比較
-    const correctChoice = normalizeCorrectChoice(q.answer, len, base);
-    const correct = chosen !== null && chosen === correctChoice;
-
-    const got = correct ? pts : 0;
+    const correctChoice = normalizeCorrectChoice(q.answer, len);
+    const isCorrect = chosen !== null && chosen === correctChoice;
+    const got = isCorrect ? pts : 0;
 
     total += got;
     perDai[q.dai].got += got;
-    if (correct) correctCount += 1;
+    if (isCorrect) correctCount += 1;
 
     details.push({
-      key: `${q.id}-${q.answerNo}`,
+      key: `${q.id}-${q.answerNo ?? 0}`,
       qid: q.id,
-      answerNo: q.answerNo!,
+      answerNo: q.answerNo ?? 0,
       dai: q.dai,
       no: q.no,
       chosen,
@@ -117,7 +107,14 @@ export function gradeKokugo(
     });
   }
 
-  return { total, maxTotal, perDai, details, correctCount, answeredCount };
+  return {
+    total,
+    maxTotal,
+    perDai,
+    details,
+    correctCount,
+    answeredCount,
+  };
 }
 
 /** 偏差値 */
@@ -128,28 +125,61 @@ export function calcHensachi(score: number, mean: number, sd: number) {
   return 50 + ((score - mean) / sd) * 10;
 }
 
-/** 順位推定（正規分布仮定） */
+/** 標準正規分布の CDF 近似 */
+function normalCdf(z: number) {
+  const t = 1 / (1 + 0.2316419 * Math.abs(z));
+  const d = 0.3989422804014327 * Math.exp((-z * z) / 2);
+
+  let p =
+    1 -
+    d *
+      t *
+      (0.31938153 +
+        t *
+          (-0.356563782 +
+            t * (1.781477937 + t * (-1.821255978 + t * 1.330274429))));
+
+  if (z < 0) p = 1 - p;
+  return p;
+}
+
+/**
+ * 順位推定（正規分布仮定）
+ * percentile:
+ *   下から何%か（高得点ほど大きい）
+ * upperPercent:
+ *   上位何%か（小さいほど上位）
+ */
 export function estimateRank(
   score: number,
   mean: number,
   sd: number,
   examinees: number
 ) {
+  if (
+    !Number.isFinite(score) ||
+    !Number.isFinite(mean) ||
+    !Number.isFinite(sd) ||
+    !Number.isFinite(examinees)
+  ) {
+    return null;
+  }
+
   if (sd <= 0 || examinees <= 0) return null;
 
   const z = (score - mean) / sd;
-  // 標準正規分布 CDF 近似（Abramowitz & Stegun）
-  const t = 1 / (1 + 0.2316419 * Math.abs(z));
-  const d = 0.3989423 * Math.exp((-z * z) / 2);
-  let p =
-    d *
-    t *
-    (0.3193815 +
-      t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
-  if (z > 0) p = 1 - p;
+  const percentile = normalCdf(z) * 100; // 下から何%
+  const upperPercent = 100 - percentile; // 上位何%
 
-  const percentile = p * 100; // 下位%（小さいほど上位）
-  const rank = Math.max(1, Math.min(examinees, Math.round(p * examinees)));
+  // 上からの順位（1位が最上位）
+  const rank = Math.max(
+    1,
+    Math.min(examinees, Math.round((upperPercent / 100) * examinees))
+  );
 
-  return { rank, percentile };
+  return {
+    rank,
+    percentile,
+    upperPercent,
+  };
 }
