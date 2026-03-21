@@ -12,7 +12,7 @@ import kanjiYomi100 from "@/data/questions/japanese_kanji_yomi_100.json";
 import kanjiImi100 from "@/data/questions/japanese_kanji_imi_100.json";
 import kanjiPast5 from "@/data/questions/japanese_kanji_past5.json";
 
-// ✅ 共テ国語（2025/2024/2023）※ここでは「一覧に出す」だけなので questions を入れるだけでOK
+// ✅ 共テ国語（2025/2024/2023）
 import kokugo2025Questions from "@/data/questions/kokugo/2025/questions.json";
 import kokugo2024Questions from "@/data/questions/kokugo/2024/questions.json";
 import kokugo2023Questions from "@/data/questions/kokugo/2023/questions.json";
@@ -49,7 +49,10 @@ type PackKey =
   | "jp_yomi_past5"
   | "jp_kokugo_2025"
   | "jp_kokugo_2024"
-  | "jp_kokugo_2023"; // ← ★これを追加
+  | "jp_kokugo_2023"
+  | "kango_2025"
+  | "kango_2024"
+  | "kango_2023";
 
 type PackMode = "practice" | "exam";
 
@@ -72,12 +75,12 @@ type Pack = {
   examSeconds?: number;
   hideCount?: boolean;
 
-  /** ✅ “一覧に出すだけ”で、押したら別ページへ飛ばす */
+  /** 一覧に出すだけで、押したら別ページへ飛ばす */
   route?: string;
 };
 
 /** ====== 科目（大分類） ====== */
-type SubjectGroupKey = "english" | "japanese" | "math";
+type SubjectGroupKey = "english" | "japanese" | "kango" | "math";
 
 type PackGroup = {
   subjectKey: SubjectGroupKey;
@@ -150,11 +153,11 @@ export default function QuizPage() {
   const router = useRouter();
   const { dispatch } = useApp();
 
-  /** ✅ Hydration対策：mounted になるまで固定UI */
+  /** Hydration対策 */
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  // 共テ国語データ（questionsだけ）
+  // 共テ国語データ
   const kokugoQs2025 = useMemo(
     () => asKokugoQuestions(kokugo2025Questions),
     []
@@ -207,8 +210,6 @@ export default function QuizPage() {
             questions: asQuestions(kanjiImi100),
             mode: "practice",
           },
-
-          // ✅ 共テ国語(2025)（一覧に出すだけ→押したら /quiz/kokugo/2025）
           {
             key: "jp_kokugo_2025",
             title: "共テ国語(2025)本番形式",
@@ -227,8 +228,6 @@ export default function QuizPage() {
               initialPage: 0,
             },
           },
-
-          // ✅ 共テ国語(2024)（一覧に出すだけ→押したら /quiz/kokugo/2024）
           {
             key: "jp_kokugo_2024",
             title: "共テ国語(2024)本番形式",
@@ -247,8 +246,6 @@ export default function QuizPage() {
               initialPage: 0,
             },
           },
-
-          // ✅ 共テ国語(2023)（一覧に出すだけ→押したら /quiz/kokugo/2023）
           {
             key: "jp_kokugo_2023",
             title: "共テ国語(2023)本番形式",
@@ -267,7 +264,6 @@ export default function QuizPage() {
               initialPage: 0,
             },
           },
-
           {
             key: "jp_yomi_past5",
             title: "漢字（読み）過去5年",
@@ -276,6 +272,66 @@ export default function QuizPage() {
             level: "kanji-yomi-past5",
             questions: asQuestions(kanjiPast5),
             mode: "practice",
+          },
+        ],
+      },
+      {
+        subjectKey: "kango",
+        title: "看護",
+        packs: [
+          {
+            key: "kango_2025",
+            title: "看護師国家試験 2025(第114回)",
+            subject: "kango" as SubjectId,
+            category: "kango" as CategoryId,
+            level: "kango-2025" as LevelId,
+            questions: [],
+            mode: "exam",
+            examSeconds: 300 * 60,
+            hideCount: true,
+            route: "/quiz/kango/2025",
+            pdf: {
+              url: "/past/kango-2025-q-am.pdf",
+              label: "看護師国家試験 2025(第114回)",
+              height: 420,
+              initialPage: 1,
+            },
+          },
+          {
+            key: "kango_2024",
+            title: "看護師国家試験 2024(第113回)",
+            subject: "kango" as SubjectId,
+            category: "kango" as CategoryId,
+            level: "kango-2024" as LevelId,
+            questions: [],
+            mode: "exam",
+            examSeconds: 300 * 60,
+            hideCount: true,
+            route: "/quiz/kango/2024",
+            pdf: {
+              url: "/past/kango-2024-q-am.pdf",
+              label: "看護師国家試験 2024(第113回)",
+              height: 420,
+              initialPage: 1,
+            },
+          },
+          {
+            key: "kango_2023",
+            title: "看護師国家試験 2023(第112回)",
+            subject: "kango" as SubjectId,
+            category: "kango" as CategoryId,
+            level: "kango-2023" as LevelId,
+            questions: [],
+            mode: "exam",
+            examSeconds: 300 * 60,
+            hideCount: true,
+            route: "/quiz/kango/2023",
+            pdf: {
+              url: "/past/kango-2023-q-am.pdf",
+              label: "看護師国家試験 2023(第112回)",
+              height: 420,
+              initialPage: 1,
+            },
           },
         ],
       },
@@ -307,7 +363,6 @@ export default function QuizPage() {
 
   const [packKey, setPackKey] = useState<PackKey>(initialPackKey);
 
-  // ✅ 練習モード用の出題数
   const [count, setCount] = useState<number>(10);
 
   const pack = useMemo(() => {
@@ -385,13 +440,11 @@ export default function QuizPage() {
     const p = fromPacks.find((x) => x.key === nextPackKey) ?? fromPacks[0];
     const src = p?.questions ?? [];
 
-    // examは順番固定、practiceはシャッフル
     const base = p?.mode === "exam" ? src : shuffle(src).map(normalizeQuestion);
     const n = Math.max(1, Math.min(nextCount, base.length || 1));
     return p?.mode === "exam" ? base : base.slice(0, n);
   }
 
-  /** ✅ Hydration対策：初期stateでランダム生成しない */
   const [quiz, setQuiz] = useState<Question[]>([]);
   const [idx, setIdx] = useState(0);
   const [correct, setCorrect] = useState(0);
@@ -412,7 +465,6 @@ export default function QuizPage() {
     startTimerFromZero();
   }
 
-  /** ✅ mounted後にだけ初回スタート（1回だけ） */
   const didInitRef = useRef(false);
   useEffect(() => {
     if (!mounted) return;
@@ -429,16 +481,12 @@ export default function QuizPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mounted, packs]);
 
-  /** ===========================
-   * ✅ 本番形式は別ページへ遷移
-   * =========================== */
   function goExamRoute(route: string) {
     pauseTimer();
     setIsPaused(false);
     router.push(route);
   }
 
-  /** ====== change handlers ====== */
   function changeSubject(next: SubjectGroupKey) {
     if (isPaused) return;
 
@@ -447,19 +495,25 @@ export default function QuizPage() {
     const first = nextGroup?.packs[0];
     if (!first) return;
 
-    // ✅ 先頭が「本番形式（routeあり）」ならそのまま遷移
-    if (first.route) {
-      setSubjectKey(next);
-      setPackKey(first.key);
-      goExamRoute(first.route);
-      return;
-    }
-
+    // ✅ 科目を押しただけでは別ページへ飛ばない
     setSubjectKey(next);
     setPackKey(first.key);
 
+    // route がある pack でも、ここでは一覧表示だけにする
     resetPdfToPack(first.key, first);
-    startNewRun(nextGroup.packs, first.key, count);
+
+    // 練習問題だけ開始。exam route 用 pack は開始しない
+    if (!first.route) {
+      startNewRun(nextGroup.packs, first.key, count);
+    } else {
+      setQuiz([]);
+      setIdx(0);
+      setCorrect(0);
+      setChosen(null);
+      pauseTimer();
+      setElapsedSec(0);
+      setIsPaused(false);
+    }
   }
 
   function changePack(nextPackKey: PackKey) {
@@ -467,7 +521,6 @@ export default function QuizPage() {
 
     const nextPack = packs.find((p) => p.key === nextPackKey) ?? packs[0];
 
-    // ✅ 本番形式（routeあり）なら専用ページへ
     if (nextPack?.route) {
       setPackKey(nextPackKey);
       goExamRoute(nextPack.route);
@@ -534,11 +587,10 @@ export default function QuizPage() {
     router.push("/dashboard");
   }
 
-  /** ✅ mounted前は固定UI（SSR/CSR一致） */
   if (!mounted) {
     return (
       <main className="mx-auto max-w-xl p-4">
-        <section className="rounded-2xl bg-white/80 shadow-sm p-4 border border-black/5">
+        <section className="rounded-2xl bg-white/80 p-4 shadow-sm border border-black/5">
           <div className="text-sm font-semibold text-black/70">問題</div>
           <div className="mt-2 text-sm text-black/60">読み込み中…</div>
         </section>
@@ -549,7 +601,7 @@ export default function QuizPage() {
   if (!pack) {
     return (
       <main className="mx-auto max-w-xl p-4">
-        <div className="rounded-2xl bg-white/80 shadow-sm p-4 border border-black/5">
+        <div className="rounded-2xl bg-white/80 p-4 shadow-sm border border-black/5">
           <div className="font-bold">出題データがありません</div>
           <div className="mt-2 text-sm text-black/70">
             data/questions の JSON を確認してください。
@@ -562,7 +614,6 @@ export default function QuizPage() {
     );
   }
 
-  /** ====== header values ====== */
   const isExam = pack.mode === "exam";
   const examTotal = pack.examSeconds ?? 0;
   const remaining = isExam ? Math.max(0, examTotal - elapsedSec) : 0;
@@ -570,7 +621,7 @@ export default function QuizPage() {
 
   return (
     <main className="mx-auto max-w-xl p-4 space-y-3 relative">
-      <header className="rounded-2xl bg-white/80 shadow-sm p-4 border border-black/5">
+      <header className="rounded-2xl bg-white/80 p-4 shadow-sm border border-black/5">
         <div className="flex items-center justify-between">
           <div className="text-sm font-semibold text-black/70">問題</div>
 
@@ -584,7 +635,6 @@ export default function QuizPage() {
         </div>
 
         <div className="mt-3 grid gap-2">
-          {/* 科目タブ */}
           <div className="grid grid-cols-2 gap-2">
             {visibleGroups.map((g) => (
               <button
@@ -605,7 +655,6 @@ export default function QuizPage() {
             ))}
           </div>
 
-          {/* 小分類（横スクロール） */}
           <div className="-mx-1 overflow-x-auto">
             <div className="flex gap-2 px-1">
               {packs.map((p) => (
@@ -628,7 +677,6 @@ export default function QuizPage() {
             </div>
           </div>
 
-          {/* ✅ PDF（練習/プレビュー用） */}
           {pack.pdf?.url ? (
             <div className="mt-1 min-w-0">
               <div className="flex items-center justify-between px-1 pb-2">
@@ -636,7 +684,6 @@ export default function QuizPage() {
                   {pack.pdf.label ?? "本文（PDF）"}
                 </div>
 
-                {/* ✅ 本番形式のときは “本番ページへ” ボタンを右上に出す */}
                 {pack.route ? (
                   <button
                     type="button"
@@ -654,13 +701,14 @@ export default function QuizPage() {
                   page={pdfPage}
                   height={pack.pdf.height ?? 420}
                   showControls
-                  onPageChange={(p) => pdfDispatch({ type: "SET", page: p })}
+                  onPageChange={(p: number) =>
+                    pdfDispatch({ type: "SET", page: p })
+                  }
                 />
               </div>
             </div>
           ) : null}
 
-          {/* 出題数 + タイマー */}
           <div className="flex items-center gap-2">
             {!pack.hideCount ? (
               <>
@@ -712,7 +760,7 @@ export default function QuizPage() {
       </header>
 
       {quiz.length === 0 ? (
-        <section className="rounded-2xl bg-white/80 shadow-sm p-4 border border-black/5">
+        <section className="rounded-2xl bg-white/80 p-4 shadow-sm border border-black/5">
           <div className="text-sm text-black/60">問題を準備中…</div>
         </section>
       ) : !finished && q ? (
@@ -726,7 +774,7 @@ export default function QuizPage() {
           disabled={false}
         />
       ) : (
-        <section className="rounded-2xl bg-white/80 shadow-sm p-4 border border-black/5">
+        <section className="rounded-2xl bg-white/80 p-4 shadow-sm border border-black/5">
           <div className="text-base font-bold">おつかれ！</div>
 
           {!isExam && (

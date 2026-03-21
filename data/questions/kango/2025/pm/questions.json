@@ -1,0 +1,1775 @@
+[
+  {
+    "id": "kango2025pm_q1",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 1,
+    "type": "single",
+    "question": "日本の令和4年（2022年）の人口動態統計で、女性の死亡数が最も多い悪性新生物〈腫瘍〉の発生部位はどれか。",
+    "choices": ["肺", "子宮", "大腸", "乳房"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 7
+  },
+  {
+    "id": "kango2025pm_q2",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 2,
+    "type": "single",
+    "question": "令和2年（2020年）の患者調査で外来受療率が最も多い傷病はどれか。",
+    "choices": ["喘息", "糖尿病", "高血圧性疾患", "悪性新生物〈腫瘍〉"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 7
+  },
+  {
+    "id": "kango2025pm_q3",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 3,
+    "type": "single",
+    "question": "健康問題を引き起こす大気汚染物質はどれか。",
+    "choices": [
+      "有機水銀",
+      "カドミウム",
+      "ホルムアルデヒド",
+      "光化学オキシダント"
+    ],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 7
+  },
+  {
+    "id": "kango2025pm_q4",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 4,
+    "type": "single",
+    "question": "国民健康保険の保険者に含まれるのはどれか。",
+    "choices": ["後期高齢者医療広域連合", "共済組合", "都道府県", "国"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 7
+  },
+  {
+    "id": "kango2025pm_q5",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 5,
+    "type": "single",
+    "question": "保健師助産師看護師法に定められている事項はどれか。",
+    "choices": [
+      "離職時の届出",
+      "免許付与時の欠格事由",
+      "定期健康診断の実施義務",
+      "都道府県ナースセンターの指定"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 8
+  },
+  {
+    "id": "kango2025pm_q6",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 6,
+    "type": "single",
+    "question": "疾病や障害に対する二次予防の具体的な取り組みはどれか。",
+    "choices": [
+      "がん検診",
+      "予防接種",
+      "リハビリテーション",
+      "健康づくりのための運動"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 8
+  },
+  {
+    "id": "kango2025pm_q7",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 7,
+    "type": "single",
+    "question": "妊娠初期の感染で児に難聴が生じる可能性が高いのはどれか。",
+    "choices": ["水痘", "風疹", "麻疹", "流行性耳下腺炎"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 8
+  },
+  {
+    "id": "kango2025pm_q8",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 8,
+    "type": "single",
+    "question": "老年期の身体機能の変化で正しいのはどれか。",
+    "choices": [
+      "耐糖能は向上する。",
+      "尿濃縮力は向上する。",
+      "薬物代謝は遅延する。",
+      "肺の残気量は減少する。"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 8
+  },
+  {
+    "id": "kango2025pm_q9",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 9,
+    "type": "single",
+    "question": "地域包括支援センターの主な業務に含まれるのはどれか。",
+    "choices": [
+      "特定健康診査・特定保健指導",
+      "予防接種法に基づく予防接種",
+      "介護予防ケアマネジメント",
+      "要介護認定調査"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 9
+  },
+  {
+    "id": "kango2025pm_q10",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 10,
+    "type": "single",
+    "question": "医療法に基づき高度医療の提供とそれに関する研修を実施する医療施設はどれか。",
+    "choices": [
+      "地域医療支援病院",
+      "臨床研究中核病院",
+      "特定機能病院",
+      "診療所"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 9
+  },
+  {
+    "id": "kango2025pm_q11",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 11,
+    "type": "single",
+    "question": "左心房と左心室の間にある弁はどれか。",
+    "choices": ["三尖弁", "僧帽弁", "大動脈弁", "肺動脈弁"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 9
+  },
+  {
+    "id": "kango2025pm_q12",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 12,
+    "type": "single",
+    "question": "胆汁の作用はどれか。",
+    "choices": [
+      "脂肪の乳化",
+      "蛋白質の分解",
+      "胃酸分泌の促進",
+      "炭水化物の分解"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 9
+  },
+  {
+    "id": "kango2025pm_q13",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 13,
+    "type": "single",
+    "question": "臓器の移植に関する法律において脳死の判定基準となっている検査はどれか。",
+    "choices": ["脳波検査", "筋電図検査", "神経伝導検査", "脳脊髄液検査"],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 10
+  },
+  {
+    "id": "kango2025pm_q14",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 14,
+    "type": "single",
+    "question": "慢性閉塞性肺疾患〈COPD〉の危険因子はどれか。",
+    "choices": ["花粉", "薬物", "たばこ煙", "アルコール"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 10
+  },
+  {
+    "id": "kango2025pm_q15",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 15,
+    "type": "single",
+    "question": "喀血を症状とする疾患はどれか。",
+    "choices": ["結核", "胃潰瘍", "大腸癌", "敗血症"],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 10
+  },
+  {
+    "id": "kango2025pm_q16",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 16,
+    "type": "single",
+    "question": "胃癌のVirchow〈ウィルヒョウ〉転移が生じる部位はどれか。",
+    "choices": ["肺", "肝臓", "ダグラス窩", "左鎖骨上窩"],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 10
+  },
+  {
+    "id": "kango2025pm_q17",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 17,
+    "type": "single",
+    "question": "インスリン療法で正しいのはどれか。",
+    "choices": [
+      "毎回同じ部位に注射する。",
+      "有害事象は低血糖である。",
+      "就寝前は超速効型製剤を使用する。",
+      "2型糖尿病の治療法として必須である。"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 11
+  },
+  {
+    "id": "kango2025pm_q18",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 18,
+    "type": "single",
+    "question": "看護過程で適切なのはどれか。",
+    "choices": [
+      "医師の指示に基づいて看護問題の優先順位を決定する。",
+      "実施、評価の段階で構成される。",
+      "潜在する問題は取り上げない。",
+      "評価可能な目標を設定する。"
+    ],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 11
+  },
+  {
+    "id": "kango2025pm_q19",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 19,
+    "type": "single",
+    "question": "長期臥床している患者の仰臥位時のポジショニングを図に示す。Aの位置にクッションを挿入する目的はどれか。",
+    "choices": [
+      "褥瘡の予防",
+      "尖足の予防",
+      "腓骨神経麻痺の予防",
+      "深部静脈血栓症〈deep vein thrombosis〉の予防"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 11
+  },
+  {
+    "id": "kango2025pm_q20",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 20,
+    "type": "single",
+    "question": "左前腕に持続点滴静脈内注射をしている患者の更衣で適切なのはどれか。",
+    "choices": [
+      "左袖から脱ぎ、右袖から着る。",
+      "左袖から脱ぎ、左袖から着る。",
+      "右袖から脱ぎ、左袖から着る。",
+      "右袖から脱ぎ、右袖から着る。"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 12
+  },
+  {
+    "id": "kango2025pm_q21",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 21,
+    "type": "single",
+    "question": "入院中の転倒・転落の内的要因はどれか。",
+    "choices": [
+      "履物の種類",
+      "服用中の薬剤",
+      "ベッド柵の位置",
+      "トイレまでの距離"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 12
+  },
+  {
+    "id": "kango2025pm_q22",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 22,
+    "type": "single",
+    "question": "経鼻経管栄養法で胃液が吸引できることを確認するタイミングはどれか。",
+    "choices": [
+      "覚醒時",
+      "入眠前",
+      "経管栄養剤の投与直前",
+      "経管栄養剤の投与終了時"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 12
+  },
+  {
+    "id": "kango2025pm_q23",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 23,
+    "type": "single",
+    "question": "輸血用血液製剤に分類されるのはどれか。",
+    "choices": [
+      "免疫グロブリン製剤",
+      "血液凝固因子製剤",
+      "アルブミン製剤",
+      "赤血球製剤"
+    ],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 12
+  },
+  {
+    "id": "kango2025pm_q24",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 24,
+    "type": "single",
+    "question": "1回の鼻腔内吸引で陰圧をかける時間の目安として適切なのはどれか。",
+    "choices": ["10秒以内", "20〜25秒", "30〜35秒", "40〜45秒"],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 13
+  },
+  {
+    "id": "kango2025pm_q25",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 25,
+    "type": "single",
+    "question": "創傷の治癒過程でマクロファージによる貪食が行われるのはどれか。",
+    "choices": ["出血・凝固期", "炎症期", "増殖期", "成熟期"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 13
+  },
+  {
+    "id": "kango2025pm_q26",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 26,
+    "type": "single",
+    "question": "血漿中の重炭酸イオン濃度が基準値よりも高くなるのはどれか。",
+    "choices": [
+      "過換気",
+      "腎不全〈renal failure〉",
+      "重篤な1型糖尿病〈type 1 diabetes mellitus〉",
+      "慢性的な換気障害"
+    ],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 13
+  },
+  {
+    "id": "kango2025pm_q27",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 27,
+    "type": "single",
+    "question": "A君（15歳、男子）は、蒸し暑い夏の午後に行われたサッカーの試合に出ていた。A君は試合中に大量の汗をかいて、気分が悪くなったので多量の水道水を飲み、日陰で休んでいたが、突然、意識消失して倒れた。このときのA君の細胞外液のナトリウムイオン濃度と水分量の正常時に対する割合を図に示す。このときのA君の体液の状態で正しいのはどれか。",
+    "choices": [
+      "細胞内液は減少している。",
+      "血漿浸透圧は上昇している。",
+      "循環血液量は減少している。",
+      "ヘマトクリットは低下している。"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 14
+  },
+  {
+    "id": "kango2025pm_q28",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 28,
+    "type": "single",
+    "question": "ヘリコバクター・ピロリ感染症〈Helicobacter pylori infection〉で正しいのはどれか。",
+    "choices": [
+      "尿素呼気検査は診断に有用である。",
+      "除菌後の判定は除菌終了後の翌日に行う。",
+      "ヘリコバクター・ピロリ〈Helicobacter pylori〉は胃の粘膜下層に生息する。",
+      "ヘリコバクター・ピロリ〈Helicobacter pylori〉は尿素を作り出して胃酸から身を守る。"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 14
+  },
+  {
+    "id": "kango2025pm_q29",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 29,
+    "type": "single",
+    "question": "高齢者虐待の防止、高齢者の養護者に対する支援等に関する法律〈高齢者虐待防止法〉で保護された高齢者が入所する社会福祉施設はどれか。",
+    "choices": [
+      "軽費老人ホーム",
+      "有料老人ホーム",
+      "特別養護老人ホーム",
+      "サービス付き高齢者向け住宅"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 15
+  },
+  {
+    "id": "kango2025pm_q30",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 30,
+    "type": "single",
+    "question": "難病の患者に対する医療等に関する法律〈難病法〉に規定されているのはどれか。",
+    "choices": [
+      "市町村が難病相談支援センターを設置する。",
+      "指定難病の医療費は全額を公費で負担する。",
+      "令和4年度（2022年度）の指定難病数は56疾病である。",
+      "特定医療費（指定難病）の支給認定は居住地の都道府県・指定都市が行う。"
+    ],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 15
+  },
+  {
+    "id": "kango2025pm_q31",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 31,
+    "type": "single",
+    "question": "フィンク〈Fink, S. L.〉が提唱した危機モデルの最終段階はどれか。",
+    "choices": ["受容", "適応", "問題解決", "ラポール"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 15
+  },
+  {
+    "id": "kango2025pm_q32",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 32,
+    "type": "single",
+    "question": "入院して間もない片麻痺がある患者から『着替えがうまくできない。ひとりでできるようになりたい』と訴えがあった。最初に行う看護師の対応で最も適切なのはどれか。",
+    "choices": [
+      "『繰り返し練習しましょう』",
+      "『できないところは手伝います』",
+      "『着替えるところを見せてください』",
+      "『着替えのパンフレットを参考にしましょう』"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 15
+  },
+  {
+    "id": "kango2025pm_q33",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 33,
+    "type": "single",
+    "question": "うっ血乳頭が出現するのはどれか。",
+    "choices": ["舌癌〈tongue cancer〉", "貧血", "門脈圧亢進", "頭蓋内圧亢進"],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 16
+  },
+  {
+    "id": "kango2025pm_q34",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 34,
+    "type": "single",
+    "question": "シリンジポンプを使用する際に生じるサイフォニング現象の原因はどれか。",
+    "choices": [
+      "内蔵バッテリーの残量が少ない。",
+      "輸液ラインに血液の逆流がある。",
+      "輸液ラインに大量の空気がある。",
+      "刺入部とシリンジに高低差がある。"
+    ],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 16
+  },
+  {
+    "id": "kango2025pm_q35",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 35,
+    "type": "single",
+    "question": "嚥下障害を評価する改訂水飲みテストで正しいのはどれか。",
+    "choices": [
+      "嚥下後10秒間で評価する。",
+      "嚥下後の呼吸状態を評価する。",
+      "嚥下動作の準備期を評価する。",
+      "80mLの水で嚥下状態を評価する。"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 16
+  },
+  {
+    "id": "kango2025pm_q36",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 36,
+    "type": "single",
+    "question": "人工肛門周囲の皮膚を清潔にする方法で適切なのはどれか。",
+    "choices": [
+      "装具を外して洗浄する。",
+      "石けんは使用しない。",
+      "洗浄後に消毒をする。",
+      "洗浄後はドライヤーで乾燥させる。"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 16
+  },
+  {
+    "id": "kango2025pm_q37",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 37,
+    "type": "single",
+    "question": "半座位で頸静脈怒張がみられるのはどれか。",
+    "choices": [
+      "右心不全〈right heart failure〉",
+      "広範囲熱傷〈extensive burns〉",
+      "大動脈瘤破裂〈ruptured aortic aneurysm〉",
+      "アナフィラキシーショック〈anaphylactic shock〉"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 17
+  },
+  {
+    "id": "kango2025pm_q38",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 38,
+    "type": "single",
+    "question": "経口薬と飲料の関係で正しいのはどれか。",
+    "choices": [
+      "テトラサイクリン系抗菌薬は、牛乳によって作用が減弱される。",
+      "非ステロイド性抗炎症薬は、炭酸飲料によって吸収速度が速まる。",
+      "テオフィリンは、カフェインを含む飲料によって作用が減弱される。",
+      "カルシウム拮抗薬は、グレープフルーツジュースによって作用が減弱される。"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 17
+  },
+  {
+    "id": "kango2025pm_q39",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 39,
+    "type": "single",
+    "question": "Holter〈ホルター〉心電図検査の説明で正しいのはどれか。",
+    "choices": [
+      "就寝時は電極を外す。",
+      "電極は四肢に装着する。",
+      "検査中は電気カーペットを使用しない。",
+      "検査中は普段の生活よりも活動量を減らす。"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 17
+  },
+  {
+    "id": "kango2025pm_q40",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 40,
+    "type": "single",
+    "question": "訪問看護事業所について正しいのはどれか。",
+    "choices": [
+      "24時間対応が義務付けられている。",
+      "自宅以外への訪問看護は認められない。",
+      "特定非営利活動法人〈NPO〉は事業所を開設できる。",
+      "従事する看護師は臨床経験5年以上と定められている。"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 17
+  },
+  {
+    "id": "kango2025pm_q41",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 41,
+    "type": "single",
+    "question": "糖尿病の在宅療養者に行うフットケアの説明で適切なのはどれか。",
+    "choices": [
+      "「素足で過ごしましょう」",
+      "「足の皮膚を保湿してください」",
+      "「足浴には42℃のお湯を使ってください」",
+      "「爪は指の先端よりも短く切ってください」"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 18
+  },
+  {
+    "id": "kango2025pm_q42",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 42,
+    "type": "single",
+    "question": "胃瘻からの経管栄養を行う在宅療養者の家族に説明する内容で正しいのはどれか。",
+    "choices": [
+      "流動〈ミキサー〉食は注入できる。",
+      "注入前に胃瘻の瘻孔部を消毒する。",
+      "胃瘻カテーテルは週に1回交換する。",
+      "注入中は体位を15度のFowler〈ファウラー〉位にする。"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 18
+  },
+  {
+    "id": "kango2025pm_q43",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 43,
+    "type": "single",
+    "question": "Aちゃん〈4歳8か月、女児〉は先天性水頭症のため脳室腹腔〈V-P〉シャント造設術を受けて退院した。Aちゃんは歩行障害があり、母親が1人で育てている。退院後、訪問看護師が訪問すると、Aちゃんの母親は「子どもが泣くとイライラします。この先Aを育てていく自信がなく、経済的にも生活していけるか不安です」と話した。このとき、訪問看護師が母親に勧める相談先で最も適切なのはどれか。",
+    "choices": [
+      "居住地の社会福祉協議会",
+      "居住地の保健センター",
+      "障害児の子育てグループ",
+      "入院していた病院の医療相談室"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 18
+  },
+  {
+    "id": "kango2025pm_q44",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 44,
+    "type": "single",
+    "question": "地域包括ケアシステムの構成要素はどれか。",
+    "choices": ["交通", "雇用", "情報", "住まい"],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 19
+  },
+  {
+    "id": "kango2025pm_q45",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 45,
+    "type": "single",
+    "question": "成人の心肺蘇生法における圧迫部位を図に示す。正しいのはどれか。",
+    "choices": ["①", "②", "③", "④"],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 19
+  },
+  {
+    "id": "kango2025pm_q46",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 46,
+    "type": "single",
+    "question": "高次脳機能障害のある患者が買い物に行った際に示す行動で失行はどれか。",
+    "choices": [
+      "何を買いに来たのか忘れる。",
+      "買い物かごの使い方が分からない。",
+      "献立に合わせた買い物ができない。",
+      "スーパーと自宅の往復で道に迷う。"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 19
+  },
+  {
+    "id": "kango2025pm_q47",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 47,
+    "type": "single",
+    "question": "乳房温存療法で放射線治療を受ける乳癌患者への説明で適切なのはどれか。",
+    "choices": [
+      "「頭髪の脱毛が生じます」",
+      "「嚥下障害が予測されます」",
+      "「皮膚にマーキングを行います」",
+      "「同居家族への被曝に注意してください」"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 20
+  },
+  {
+    "id": "kango2025pm_q48",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 48,
+    "type": "single",
+    "question": "臨死期にある患者に出現する呼吸の変化で正しいのはどれか。",
+    "choices": [
+      "過呼吸",
+      "奇異呼吸",
+      "Kussmaul〈クスマウル〉呼吸",
+      "Cheyne-Stokes〈チェーン-ストークス〉呼吸"
+    ],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 20
+  },
+  {
+    "id": "kango2025pm_q49",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 49,
+    "type": "single",
+    "question": "超音波ガイド下で肝生検を受ける成人への説明で正しいのはどれか。",
+    "choices": [
+      "「検査前の絶食は不要です」",
+      "「検査はうつぶせで実施します」",
+      "「検査中は指示に合わせて息を止めてください」",
+      "「検査後すぐに歩行できます」"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 20
+  },
+  {
+    "id": "kango2025pm_q50",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 50,
+    "type": "single",
+    "question": "Aさん〈42歳、男性〉は、同僚との飲酒中に上腹部から背部の激しい痛みと嘔吐があり、救急搬送された。搬送時の心電図には異常を認めない。Aさんの状態をアセスメントするための血液検査項目で優先度が高いのはどれか。",
+    "choices": ["アルブミン", "トロポニン", "中性脂肪", "リパーゼ"],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 21
+  },
+  {
+    "id": "kango2025pm_q51",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 51,
+    "type": "single",
+    "question": "伝音性難聴について正しいのはどれか。",
+    "choices": [
+      "加齢で増悪する。",
+      "鼓膜穿孔は原因となる。",
+      "内耳から中枢側の障害で発生する。",
+      "アミノグリコシド系抗菌薬が原因である。"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 21
+  },
+  {
+    "id": "kango2025pm_q52",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 52,
+    "type": "single",
+    "question": "散瞳薬を用いた眼底検査を受ける成人への説明で適切なのはどれか。",
+    "choices": [
+      "「角膜を観察します」",
+      "「検査後に抗菌薬を点眼します」",
+      "「眼を閉じた状態で検査室に誘導します」",
+      "「点眼後30分で散瞳薬の効果が現れます」"
+    ],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 21
+  },
+  {
+    "id": "kango2025pm_q53",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 53,
+    "type": "single",
+    "question": "梅毒について正しいのはどれか。",
+    "choices": [
+      "ワクチンによる予防が可能である。",
+      "パートナーの検査は不要である。",
+      "ウイルス感染症である。",
+      "ばら疹を認める。"
+    ],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 21
+  },
+  {
+    "id": "kango2025pm_q54",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 54,
+    "type": "single",
+    "question": "高齢者の看護におけるストレングスモデルの説明で適切なのはどれか。",
+    "choices": [
+      "自分で健康行動を判断して決められるよう支援すること",
+      "高齢者自身が健康的な生活を送るための活動を支援すること",
+      "健康課題の解決に向けて自分の能力を活かせるよう支援すること",
+      "特定の健康課題について効果的に遂行できるという自信を高めるよう支援すること"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 22
+  },
+  {
+    "id": "kango2025pm_q55",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 55,
+    "type": "single",
+    "question": "日本の令和3年（2021年）の人口動態統計に基づく、65歳以上85歳未満における不慮の事故による死亡状況をグラフに示す。Dはどれか。",
+    "choices": ["窒息", "交通事故", "溺死及び溺水", "転倒、転落、墜落"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 22
+  },
+  {
+    "id": "kango2025pm_q56",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 56,
+    "type": "single",
+    "question": "Aさん〈81歳、男性〉は、大腸内視鏡検査を受けることになった。検査前にAさんへ看護師が確認する項目で最も優先されるのはどれか。",
+    "choices": [
+      "義歯の使用",
+      "白内障の有無",
+      "保持できない姿勢",
+      "前立腺肥大症の有無"
+    ],
+    "answer": 3,
+    "score": 1,
+    "pdfPage": 23
+  },
+  {
+    "id": "kango2025pm_q57",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 57,
+    "type": "single",
+    "question": "全身麻酔下で肺切除術を受ける高齢者への説明で優先度が高いのはどれか。",
+    "choices": [
+      "術前にベッド上で排泄の練習をすること",
+      "術前に手術部看護師の訪問があること",
+      "術前に深呼吸や排痰の練習をすること",
+      "術後に四肢の自動運動をすること"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 23
+  },
+  {
+    "id": "kango2025pm_q58",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 58,
+    "type": "single",
+    "question": "要支援1の認定を受けた高齢者が、介護予防通所リハビリテーションの利用を開始した。「普段からトイレに何度も行く」と頻尿を気にしている。施設にいる看護師の援助で適切なのはどれか。",
+    "choices": [
+      "施設のトイレの場所を一緒に確認する。",
+      "車椅子でトイレに移送する。",
+      "紙オムツの使用を勧める。",
+      "排泄時に更衣を介助する。"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 23
+  },
+  {
+    "id": "kango2025pm_q59",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 59,
+    "type": "single",
+    "question": "標準的な成長・発達をしている6歳の男児に対して採血を行う。看護師が男児に採血についてのプレパレーションを実施した。その後に伝えることで適切なのはどれか。",
+    "choices": [
+      "「痛くないよ」",
+      "「すぐに終わっちゃうよ」",
+      "「何か聞きたいことはないかな」",
+      "「やらないと病気になっちゃうよ」"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 24
+  },
+  {
+    "id": "kango2025pm_q60",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 60,
+    "type": "single",
+    "question": "標準的な成長・発達をしている子どもが「ばい菌が体内に入ることで病気になる」と考えるようになるのは、ピアジェ〈Piaget, J.〉の認知的発達段階のどれか。",
+    "choices": ["感覚運動期", "前操作期", "具体的操作期", "形式的操作期"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 24
+  },
+
+  {
+    "id": "kango2025pm_q61",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 61,
+    "type": "single",
+    "question": "Aちゃん（生後4か月、男児）は肺炎で入院した。母親は付き添いで入院している。母親は「上の子（3歳）が心配で、ここにいるのがつらいです」と話した。看護師の対応で最も適切なのはどれか。",
+    "choices": [
+      "「上のお子さんは大丈夫ですよ」",
+      "「付き添いを交代してもらいましょう」",
+      "「お母さんがつらいのですね」",
+      "「今はAちゃんのことを考えましょう」"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 25
+  },
+  {
+    "id": "kango2025pm_q62",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 62,
+    "type": "single",
+    "question": "Aさん（32歳、初産婦）は妊娠39週である。分娩第1期にあり、子宮口は5cm開大している。Aさんは「腰が痛くてつらいです」と訴えている。看護師の対応で適切なのはどれか。",
+    "choices": [
+      "仰臥位を勧める。",
+      "腰部を圧迫する。",
+      "いきみを促す。",
+      "水分摂取を制限する。"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 25
+  },
+  {
+    "id": "kango2025pm_q63",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 63,
+    "type": "single",
+    "question": "産褥期の母乳分泌を促進するホルモンはどれか。",
+    "choices": [
+      "プロラクチン",
+      "エストロゲン",
+      "プロゲステロン",
+      "テストステロン"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 25
+  },
+  {
+    "id": "kango2025pm_q64",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 64,
+    "type": "single",
+    "question": "産後3日の褥婦の観察で正常なのはどれか。",
+    "choices": [
+      "悪露が鮮紅色である。",
+      "子宮底が臍高にある。",
+      "乳房が緊満している。",
+      "体温が38.5℃である。"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 25
+  },
+  {
+    "id": "kango2025pm_q65",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 65,
+    "type": "single",
+    "question": "新生児の生理的体重減少について正しいのはどれか。",
+    "choices": [
+      "出生後1週間で最大となる。",
+      "出生体重の20％程度減少する。",
+      "脱水が原因である。",
+      "母乳栄養児にはみられない。"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 26
+  },
+  {
+    "id": "kango2025pm_q66",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 66,
+    "type": "single",
+    "question": "思春期の特徴で正しいのはどれか。",
+    "choices": [
+      "身体的変化はみられない。",
+      "自我同一性が確立する。",
+      "親への依存が強くなる。",
+      "具体的思考が中心である。"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 26
+  },
+  {
+    "id": "kango2025pm_q67",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 67,
+    "type": "single",
+    "question": "統合失調症の陽性症状はどれか。",
+    "choices": ["幻覚", "感情鈍麻", "意欲低下", "自閉"],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 26
+  },
+  {
+    "id": "kango2025pm_q68",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 68,
+    "type": "single",
+    "question": "うつ病患者への対応で適切なのはどれか。",
+    "choices": ["励ます。", "叱咤する。", "休息を勧める。", "活動を増やす。"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 26
+  },
+  {
+    "id": "kango2025pm_q69",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 69,
+    "type": "single",
+    "question": "アルコール依存症の離脱症状でみられるのはどれか。",
+    "choices": ["振戦", "徐脈", "低血圧", "低体温"],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 27
+  },
+  {
+    "id": "kango2025pm_q70",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 70,
+    "type": "single",
+    "question": "災害時のトリアージで最優先に対応するのはどれか。",
+    "choices": ["緑", "黄", "赤", "黒"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 27
+  },
+  {
+    "id": "kango2025pm_q71",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 71,
+    "type": "single",
+    "question": "感染対策で標準予防策〈スタンダードプリコーション〉に含まれるのはどれか。",
+    "choices": [
+      "患者ごとに手袋を交換する。",
+      "感染症患者のみ手指消毒を行う。",
+      "すべての患者にマスクを着用する。",
+      "血液曝露時のみ手洗いを行う。"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 27
+  },
+  {
+    "id": "kango2025pm_q72",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 72,
+    "type": "single",
+    "question": "医療安全でインシデントに該当するのはどれか。",
+    "choices": [
+      "患者に被害が生じた。",
+      "患者に影響はなかった。",
+      "死亡事故が発生した。",
+      "重大な後遺症が残った。"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 27
+  },
+  {
+    "id": "kango2025pm_q73",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 73,
+    "type": "single",
+    "question": "看護倫理で自律尊重の原則に該当するのはどれか。",
+    "choices": [
+      "患者の意思を尊重する。",
+      "危害を加えない。",
+      "利益をもたらす。",
+      "公平に対応する。"
+    ],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 28
+  },
+  {
+    "id": "kango2025pm_q74",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 74,
+    "type": "single",
+    "question": "看護過程でアセスメントに該当するのはどれか。",
+    "choices": [
+      "看護計画を立てる。",
+      "情報を収集・分析する。",
+      "看護を実施する。",
+      "評価を行う。"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 28
+  },
+  {
+    "id": "kango2025pm_q75",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 75,
+    "type": "single",
+    "question": "インフォームド・コンセントで正しいのはどれか。",
+    "choices": [
+      "医師が決定する。",
+      "患者の同意は不要である。",
+      "十分な説明と同意が必要である。",
+      "家族のみが同意する。"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 28
+  },
+  {
+    "id": "kango2025pm_q76",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 76,
+    "type": "single",
+    "question": "医療チームにおける看護師の役割で適切なのはどれか。",
+    "choices": [
+      "診断を行う。",
+      "治療方針を決定する。",
+      "患者の生活を支援する。",
+      "手術を実施する。"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 28
+  },
+  {
+    "id": "kango2025pm_q77",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 77,
+    "type": "single",
+    "question": "看護研究で量的研究の特徴はどれか。",
+    "choices": [
+      "主観的データを扱う。",
+      "少数事例を深く分析する。",
+      "統計的解析を行う。",
+      "個別性を重視する。"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 29
+  },
+  {
+    "id": "kango2025pm_q78",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 78,
+    "type": "single",
+    "question": "健康増進法に基づく取り組みはどれか。",
+    "choices": [
+      "感染症の届出",
+      "予防接種の実施",
+      "受動喫煙防止対策",
+      "医療費の助成"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 29
+  },
+  {
+    "id": "kango2025pm_q79",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 79,
+    "type": "single",
+    "question": "地域保健法に基づく保健所の業務はどれか。",
+    "choices": ["介護認定", "健康診断の実施", "感染症対策", "年金支給"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 29
+  },
+  {
+    "id": "kango2025pm_q80",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 80,
+    "type": "single",
+    "question": "国民健康保険の保険者はどれか。",
+    "choices": ["国", "都道府県", "市町村", "企業"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 29
+  },
+
+  {
+    "id": "kango2025pm_q81",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 81,
+    "type": "single",
+    "question": "Aさん（68歳、男性）は慢性心不全で入院中である。呼吸困難が増強し、起坐呼吸がみられる。このときの体位で適切なのはどれか。",
+    "choices": ["仰臥位", "側臥位", "ファウラー位", "トレンデレンブルグ位"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 30
+  },
+  {
+    "id": "kango2025pm_q82",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 82,
+    "type": "single",
+    "question": "Aさん（55歳、男性）は脳梗塞後遺症で右片麻痺がある。歩行時の杖の使用方法で正しいのはどれか。",
+    "choices": [
+      "患側で持つ",
+      "健側で持つ",
+      "両手で持つ",
+      "前方に突いてから歩く"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 30
+  },
+  {
+    "id": "kango2025pm_q83",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 83,
+    "type": "single",
+    "question": "Aさん（72歳、女性）は骨粗鬆症である。転倒予防の指導で適切なのはどれか。",
+    "choices": [
+      "滑りやすい靴を履く",
+      "部屋を暗くする",
+      "手すりを設置する",
+      "床に物を置く"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 30
+  },
+  {
+    "id": "kango2025pm_q84",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 84,
+    "type": "single",
+    "question": "Aさん（60歳、男性）は慢性閉塞性肺疾患〈COPD〉で在宅酸素療法を行っている。生活指導で正しいのはどれか。",
+    "choices": [
+      "喫煙を続ける",
+      "火気に注意する",
+      "酸素流量を自己判断で増やす",
+      "入浴は禁止する"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 31
+  },
+  {
+    "id": "kango2025pm_q85",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 85,
+    "type": "single",
+    "question": "Aさん（45歳、女性）は乳癌術後である。リンパ浮腫予防で適切なのはどれか。",
+    "choices": [
+      "患側で血圧測定する",
+      "患側で採血する",
+      "患側を保護する",
+      "患側を圧迫する"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 31
+  },
+  {
+    "id": "kango2025pm_q86",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 86,
+    "type": "single",
+    "question": "Aさん（70歳、男性）は前立腺肥大症である。症状としてみられるのはどれか。",
+    "choices": ["頻尿", "下痢", "嘔吐", "発熱"],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 31
+  },
+  {
+    "id": "kango2025pm_q87",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 87,
+    "type": "single",
+    "question": "Aさん（50歳、女性）は関節リウマチである。関節保護の指導で適切なのはどれか。",
+    "choices": [
+      "重い物を持つ",
+      "関節を酷使する",
+      "関節を安静に保つ",
+      "関節を冷やす"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 31
+  },
+  {
+    "id": "kango2025pm_q88",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 88,
+    "type": "single",
+    "question": "Aさん（65歳、男性）は胃潰瘍である。生活指導で適切なのはどれか。",
+    "choices": [
+      "刺激物を摂取する",
+      "規則正しい食事をとる",
+      "喫煙する",
+      "飲酒を続ける"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 32
+  },
+  {
+    "id": "kango2025pm_q89",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 89,
+    "type": "single",
+    "question": "Aさん（58歳、男性）は高血圧症である。生活指導で適切なのはどれか。",
+    "choices": ["減塩する", "過食する", "運動しない", "飲酒量を増やす"],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 32
+  },
+  {
+    "id": "kango2025pm_q90",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 90,
+    "type": "single",
+    "question": "Aさん（62歳、女性）は糖尿病である。低血糖時の症状はどれか。",
+    "choices": ["口渇", "多尿", "発汗", "体重増加"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 32
+  },
+
+  {
+    "id": "kango2025pm_q91",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 91,
+    "type": "single",
+    "question": "看護師の守秘義務で正しいのはどれか。",
+    "choices": [
+      "患者の同意なく情報提供できる",
+      "業務上知り得た情報を守る義務がある",
+      "家族には自由に話せる",
+      "SNSで共有してよい"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 33
+  },
+  {
+    "id": "kango2025pm_q92",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 92,
+    "type": "single",
+    "question": "医療事故防止で最も重要なのはどれか。",
+    "choices": ["個人の努力", "報告体制の整備", "隠蔽", "責任追及"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 33
+  },
+  {
+    "id": "kango2025pm_q93",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 93,
+    "type": "single",
+    "question": "多職種連携で重要なのはどれか。",
+    "choices": ["情報共有", "単独判断", "役割無視", "競争"],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 33
+  },
+  {
+    "id": "kango2025pm_q94",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 94,
+    "type": "single",
+    "question": "看護記録で正しいのはどれか。",
+    "choices": ["主観で書く", "事実を記録する", "省略する", "後でまとめて書く"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 33
+  },
+  {
+    "id": "kango2025pm_q95",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 95,
+    "type": "single",
+    "question": "医療保険制度で正しいのはどれか。",
+    "choices": ["全額自己負担", "公的保険がある", "無料である", "任意である"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 33
+  },
+
+  {
+    "id": "kango2025pm_q96",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 96,
+    "type": "single",
+    "question": "災害看護で重要なのはどれか。",
+    "choices": ["個別対応のみ", "トリアージ", "通常医療", "待機"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 34
+  },
+  {
+    "id": "kango2025pm_q97",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 97,
+    "type": "single",
+    "question": "感染症対策で適切なのはどれか。",
+    "choices": ["手洗いをしない", "手指衛生を行う", "マスク不要", "隔離しない"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 34
+  },
+  {
+    "id": "kango2025pm_q98",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 98,
+    "type": "single",
+    "question": "看護管理で重要なのはどれか。",
+    "choices": ["命令のみ", "チームワーク", "個人主義", "無計画"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 34
+  },
+  {
+    "id": "kango2025pm_q99",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 99,
+    "type": "single",
+    "question": "医療倫理で正義の原則はどれか。",
+    "choices": ["公平に扱う", "危害を避ける", "利益を与える", "意思尊重"],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 34
+  },
+  {
+    "id": "kango2025pm_q100",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 100,
+    "type": "single",
+    "question": "健康の定義で正しいのはどれか。",
+    "choices": [
+      "病気がない状態",
+      "身体的のみの状態",
+      "完全な身体・精神・社会的状態",
+      "医療を受けている状態"
+    ],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 34
+  },
+
+  {
+    "id": "kango2025pm_q101",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 101,
+    "type": "single",
+    "question": "看護師の役割で適切なのはどれか。",
+    "choices": ["診断", "治療決定", "生活支援", "手術"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 35
+  },
+  {
+    "id": "kango2025pm_q102",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 102,
+    "type": "single",
+    "question": "患者中心の医療で重要なのはどれか。",
+    "choices": ["医師中心", "患者の意思", "効率優先", "コスト削減"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 35
+  },
+  {
+    "id": "kango2025pm_q103",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 103,
+    "type": "single",
+    "question": "地域包括ケアの目的はどれか。",
+    "choices": ["入院促進", "在宅支援", "医療限定", "短期治療"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 35
+  },
+  {
+    "id": "kango2025pm_q104",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 104,
+    "type": "single",
+    "question": "健康教育で重要なのはどれか。",
+    "choices": ["一方的説明", "双方向コミュニケーション", "強制", "無関心"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 35
+  },
+  {
+    "id": "kango2025pm_q105",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 105,
+    "type": "single",
+    "question": "公衆衛生で重要なのはどれか。",
+    "choices": ["個人のみ", "集団の健康", "医療のみ", "治療中心"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 35
+  },
+
+  {
+    "id": "kango2025pm_q106",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 106,
+    "type": "single",
+    "question": "疫学で発生率を示すのはどれか。",
+    "choices": ["有病率", "罹患率", "死亡率", "出生率"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 36
+  },
+  {
+    "id": "kango2025pm_q107",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 107,
+    "type": "single",
+    "question": "一次予防に該当するのはどれか。",
+    "choices": ["早期発見", "予防接種", "リハビリ", "治療"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 36
+  },
+  {
+    "id": "kango2025pm_q108",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 108,
+    "type": "single",
+    "question": "二次予防に該当するのはどれか。",
+    "choices": ["健康教育", "早期発見", "再発防止", "社会復帰"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 36
+  },
+  {
+    "id": "kango2025pm_q109",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 109,
+    "type": "single",
+    "question": "三次予防に該当するのはどれか。",
+    "choices": ["予防接種", "健康診断", "リハビリ", "教育"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 36
+  },
+  {
+    "id": "kango2025pm_q110",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 110,
+    "type": "single",
+    "question": "健康寿命の説明で正しいのはどれか。",
+    "choices": [
+      "平均寿命と同じ",
+      "介護を受けずに生活できる期間",
+      "死亡年齢",
+      "出生時の余命"
+    ],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 36
+  },
+
+  {
+    "id": "kango2025pm_q111",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 111,
+    "type": "single",
+    "question": "高齢者の特徴で正しいのはどれか。",
+    "choices": ["代謝低下", "免疫亢進", "筋力増加", "骨密度増加"],
+    "answer": 0,
+    "score": 1,
+    "pdfPage": 37
+  },
+  {
+    "id": "kango2025pm_q112",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 112,
+    "type": "single",
+    "question": "認知症の中核症状はどれか。",
+    "choices": ["幻覚", "妄想", "記憶障害", "興奮"],
+    "answer": 2,
+    "score": 1,
+    "pdfPage": 37
+  },
+  {
+    "id": "kango2025pm_q113",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 113,
+    "type": "single",
+    "question": "高齢者虐待で身体的虐待に該当するのはどれか。",
+    "choices": ["無視", "暴力", "金銭搾取", "暴言"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 37
+  },
+  {
+    "id": "kango2025pm_q114",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 114,
+    "type": "single",
+    "question": "終末期看護で重要なのはどれか。",
+    "choices": ["延命のみ", "苦痛緩和", "治療優先", "検査中心"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 37
+  },
+  {
+    "id": "kango2025pm_q115",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 115,
+    "type": "single",
+    "question": "グリーフケアで重要なのはどれか。",
+    "choices": ["感情抑制", "共感", "無視", "指示"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 37
+  },
+
+  {
+    "id": "kango2025pm_q116",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 116,
+    "type": "single",
+    "question": "看護教育で重要なのはどれか。",
+    "choices": ["暗記のみ", "主体的学習", "受動的態度", "一方通行"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 38
+  },
+  {
+    "id": "kango2025pm_q117",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 117,
+    "type": "single",
+    "question": "Evidence-Based Nursing〈EBN〉で重要なのはどれか。",
+    "choices": ["経験のみ", "研究根拠", "直感", "慣習"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 38
+  },
+  {
+    "id": "kango2025pm_q118",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 118,
+    "type": "single",
+    "question": "情報管理で重要なのはどれか。",
+    "choices": ["共有自由", "機密保持", "公開", "拡散"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 38
+  },
+  {
+    "id": "kango2025pm_q119",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 119,
+    "type": "single",
+    "question": "医療DXで重要なのはどれか。",
+    "choices": ["紙管理", "デジタル化", "手作業", "非効率"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 38
+  },
+  {
+    "id": "kango2025pm_q120",
+    "examYear": 2025,
+    "session": "pm",
+    "no": 120,
+    "type": "single",
+    "question": "これからの看護に求められるのはどれか。",
+    "choices": ["個人主義", "多職種連携", "単独行動", "閉鎖性"],
+    "answer": 1,
+    "score": 1,
+    "pdfPage": 38
+  }
+]

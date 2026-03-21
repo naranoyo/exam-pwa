@@ -1,0 +1,9 @@
+{
+  "id": "kango-2025-am",
+  "title": "看護師国家試験 2025(第114回) 午前",
+  "examYear": 2025,
+  "session": "am",
+  "questionPdf": "/past/kango-2025-q-am.pdf",
+  "answerPdf": "/past/kango-2025-a.pdf",
+  "durationMinutes": 160
+}

@@ -206,6 +206,7 @@ export function KokugoExamClient({ exam }: Props) {
 
   const [mode, setMode] = useState<Mode>("solve");
   const [pdfMode, setPdfMode] = useState<PdfMode>("q");
+  const [copiedKind, setCopiedKind] = useState<"viewer" | "file" | null>(null);
 
   // タイマー（90分）
   const TOTAL_SECONDS = 90 * 60;
@@ -419,6 +420,11 @@ export function KokugoExamClient({ exam }: Props) {
     const text = kind === "viewer" ? getPdfViewerLink() : getPdfFileLink();
     const ok = await copyToClipboard(text);
 
+    if (ok) {
+      setCopiedKind(kind);
+      window.setTimeout(() => setCopiedKind(null), 1500);
+    }
+
     pushToast(
       ok
         ? "リンクをコピーしました 🔗（貼り付けて共有できます）"
@@ -499,94 +505,105 @@ export function KokugoExamClient({ exam }: Props) {
 
   return (
     <>
-      <section className="mx-auto w-full max-w-5xl px-3 sm:px-4">
-        <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-          <div>
-            <div className="text-xl font-bold">{exam.title}</div>
-            <div className="text-sm text-black/60">
-              解答済み {answeredCount}/{totalAnswerNoCount}
+      <section className="mx-auto w-full max-w-400 px-4">
+        <div className="mb-4 rounded-2xl border border-black/10 bg-white/80 p-4 shadow-sm">
+          <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
+            <div>
+              <div className="text-sm text-black/45">共通テスト</div>
+              <h1 className="text-[22px] font-bold text-black md:text-[26px]">
+                {exam.title}
+              </h1>
+              <div className="mt-1 text-sm text-black/55 md:text-[15px]">
+                解答済み {answeredCount}/{totalAnswerNoCount}
+              </div>
             </div>
-          </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              onClick={() => router.push("/quiz")}
-              className="px-3 py-2 rounded-xl border bg-white"
-              type="button"
-            >
-              戻る（問題選択へ）
-            </button>
+            <div className="flex flex-wrap gap-3">
+              <button
+                onClick={() => router.push("/quiz")}
+                className="rounded-xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold hover:bg-black/3"
+                type="button"
+              >
+                ← 問題一覧へ
+              </button>
 
-            <button
-              className={`px-3 py-2 rounded-xl border ${
-                mode === "solve" ? "bg-black text-white" : "bg-white"
-              }`}
-              onClick={goSolve}
-              type="button"
-            >
-              問題を解く
-            </button>
+              <button
+                className={`rounded-xl px-6 py-4 text-sm font-semibold ${
+                  mode === "solve"
+                    ? "bg-black text-white"
+                    : "border border-black/15 bg-white hover:bg-black/3"
+                }`}
+                onClick={goSolve}
+                type="button"
+              >
+                問題を解く
+              </button>
 
-            <button
-              className={`px-3 py-2 rounded-xl border ${
-                mode === "result" ? "bg-black text-white" : "bg-white"
-              }`}
-              onClick={goResult}
-              type="button"
-            >
-              採点する
-            </button>
+              <button
+                className={`rounded-xl px-6 py-4 text-sm font-semibold ${
+                  mode === "result"
+                    ? "bg-black text-white"
+                    : "border border-black/15 bg-white hover:bg-black/3"
+                }`}
+                onClick={goResult}
+                type="button"
+              >
+                採点する
+              </button>
 
-            {mode === "result" ? (
-              <>
-                <button
-                  type="button"
-                  onClick={saveAttempt}
-                  className={`px-3 py-2 rounded-xl border ${
-                    savedAttemptId
-                      ? "bg-black/5 text-black/60"
-                      : "bg-emerald-600 text-white hover:bg-emerald-700"
-                  }`}
-                  disabled={!!savedAttemptId}
-                >
-                  {savedAttemptId ? "保存済み" : "採点結果を保存"}
-                </button>
+              {mode === "result" ? (
+                <>
+                  <button
+                    type="button"
+                    onClick={saveAttempt}
+                    className={`rounded-xl px-6 py-4 text-sm font-semibold ${
+                      savedAttemptId
+                        ? "border border-black/10 bg-black/5 text-black/60"
+                        : "bg-emerald-600 text-white hover:bg-emerald-700"
+                    }`}
+                    disabled={!!savedAttemptId}
+                  >
+                    {savedAttemptId ? "保存済み" : "採点結果を保存"}
+                  </button>
 
-                <button
-                  type="button"
-                  onClick={() => router.push("/dashboard/kokugo/history")}
-                  className="px-3 py-2 rounded-xl border bg-white hover:bg-black/5"
-                >
-                  採点履歴を見る
-                </button>
-              </>
-            ) : null}
+                  <button
+                    type="button"
+                    onClick={() => router.push("/dashboard/kokugo/history")}
+                    className="rounded-xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold hover:bg-black/3"
+                  >
+                    採点履歴を見る
+                  </button>
+                </>
+              ) : null}
 
-            <button
-              onClick={() => router.push(`/admin/kokugo/${exam.year}`)}
-              className="px-3 py-2 rounded-xl border bg-white"
-              type="button"
-            >
-              データ編集（国語{exam.year}）
-            </button>
+              <button
+                onClick={() => router.push(`/admin/kokugo/${exam.year}`)}
+                className="rounded-xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold hover:bg-black/3"
+                type="button"
+              >
+                データ編集（国語{exam.year}）
+              </button>
 
-            <button
-              type="button"
-              onClick={() => copyPdfLink("file")}
-              className="px-3 py-2 rounded-xl border bg-white"
-            >
-              PDFリンクコピー
-            </button>
+              <button
+                type="button"
+                onClick={() => copyPdfLink("file")}
+                className="rounded-xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold hover:bg-black/3"
+              >
+                {copiedKind === "file" ? "コピー済み" : "PDFリンクコピー"}
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="mb-4 flex flex-wrap gap-2">
           {exam.dais.map((d, index) => (
             <button
               key={`dai-${d.dai}-${index}`}
               onClick={() => selectDai(d.dai)}
-              className={`px-3 py-2 rounded-xl border ${
-                d.dai === activeDai ? "bg-blue-600 text-white" : "bg-white"
+              className={`rounded-md border px-4 py-3 text-sm font-semibold ${
+                d.dai === activeDai
+                  ? "border-blue-600 bg-blue-600 text-white"
+                  : "border-black/15 bg-white hover:bg-black/3"
               }`}
               type="button"
             >
@@ -595,7 +612,7 @@ export function KokugoExamClient({ exam }: Props) {
           ))}
         </div>
 
-        <section className="rounded-2xl bg-white/80 border p-4 mb-4">
+        <section className="rounded-2xl border bg-white/80 p-4 mb-4">
           {mode === "solve" ? (
             activeQ ? (
               <>
@@ -607,7 +624,7 @@ export function KokugoExamClient({ exam }: Props) {
                       disabled={!hasPrev}
                       className={[
                         "w-full inline-flex items-center justify-center",
-                        "h-11 rounded-2xl border bg-white shadow-sm",
+                        "h-11 rounded-xl border bg-white shadow-sm",
                         "transition hover:bg-black/5 active:scale-[0.98]",
                         "disabled:opacity-40 disabled:cursor-not-allowed",
                       ].join(" ")}
@@ -620,7 +637,7 @@ export function KokugoExamClient({ exam }: Props) {
                       onClick={openPdfInAppPage}
                       className={[
                         "w-full inline-flex items-center justify-center",
-                        "h-11 rounded-2xl border bg-white shadow-sm",
+                        "h-11 rounded-xl border bg-white shadow-sm",
                         "transition hover:bg-black/5 active:scale-[0.98]",
                       ].join(" ")}
                     >
@@ -633,7 +650,7 @@ export function KokugoExamClient({ exam }: Props) {
                       disabled={!hasNext}
                       className={[
                         "w-full inline-flex items-center justify-center",
-                        "h-11 rounded-2xl border bg-blue-600 text-white shadow-sm",
+                        "h-11 rounded-xl border bg-blue-600 text-white shadow-sm",
                         "transition hover:bg-blue-700 active:scale-[0.98]",
                         "disabled:opacity-40 disabled:cursor-not-allowed",
                       ].join(" ")}
@@ -856,14 +873,7 @@ export function KokugoExamClient({ exam }: Props) {
                       {grade.details.map((r) => {
                         const correct = isCorrectRow(r.chosen, r.correctChoice);
 
-                        const chosenCellBg =
-                          r.chosen === null
-                            ? "bg-black/5 text-black/60"
-                            : correct
-                              ? "bg-emerald-50"
-                              : "bg-rose-50";
-
-                        const judgeBg =
+                        const rowBg =
                           r.chosen === null
                             ? "bg-black/5 text-black/60"
                             : correct
@@ -879,37 +889,33 @@ export function KokugoExamClient({ exam }: Props) {
 
                         return (
                           <tr key={r.key}>
-                            <td className="border px-2 py-2">{r.answerNo}</td>
+                            <td className={`border px-2 py-2 ${rowBg}`}>
+                              {r.answerNo}
+                            </td>
 
-                            <td className="border px-2 py-2">
+                            <td className={`border px-2 py-2 ${rowBg}`}>
                               第{r.dai}問 / 問{r.no}
                             </td>
 
-                            <td
-                              className={[
-                                "border px-2 py-2",
-                                chosenCellBg,
-                              ].join(" ")}
-                            >
+                            <td className={`border px-2 py-2 ${rowBg}`}>
                               {choiceLabel(r.chosen)}
                             </td>
 
-                            <td className="border px-2 py-2">
+                            <td className={`border px-2 py-2 ${rowBg}`}>
                               {choiceLabel(r.correctChoice)}
                             </td>
 
                             <td
-                              className={[
-                                "border px-2 py-2 text-center",
-                                judgeBg,
-                              ].join(" ")}
+                              className={`border px-2 py-2 text-center ${rowBg}`}
                             >
                               <span className={judgeText}>
                                 {judgeMark(r.chosen, r.correctChoice)}
                               </span>
                             </td>
 
-                            <td className="border px-2 py-2 text-right">
+                            <td
+                              className={`border px-2 py-2 text-right ${rowBg}`}
+                            >
                               {r.got}/{r.max}
                             </td>
                           </tr>
@@ -969,7 +975,9 @@ export function KokugoExamClient({ exam }: Props) {
                 className="px-2 py-1 rounded-lg border text-sm bg-white"
                 onClick={() => copyPdfLink("viewer")}
               >
-                ビューアリンクコピー
+                {copiedKind === "viewer"
+                  ? "コピー済み"
+                  : "ビューアリンクコピー"}
               </button>
             </div>
           </div>

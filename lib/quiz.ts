@@ -1,11 +1,9 @@
 // lib/quiz.ts
-export type SubjectId = "english" | "japanese" | "math"; // math 追加（将来用）
 
-// ✅ ここに kokugo を追加
-export type CategoryId = "vocab" | "kanji" | "grammar" | "kokugo";
+export type SubjectId = "english" | "japanese" | "math" | "kango";
 
-// ✅ ここに今回使っている level を追加
-// ※ 既存 "basic" | "common-test" を残したまま拡張
+export type CategoryId = "vocab" | "kanji" | "grammar" | "kokugo" | "kango";
+
 export type LevelId =
   | "basic"
   | "common-test"
@@ -13,7 +11,10 @@ export type LevelId =
   | "kanji-yomi-100"
   | "kanji-imi-100"
   | "kanji-yomi-past5"
-  | "kokugo-2025";
+  | "kokugo-2025"
+  | "kokugo-2024"
+  | "kokugo-2023"
+  | "kango-2025-am";
 
 export type Question = {
   id: string;
@@ -25,7 +26,7 @@ export type Question = {
   answer: number; // 0..choices.length-1
   explanation?: string;
 
-  // ✅（任意）共テ系で「年度」や「大問/ページ」など拡張したくなった時用
+  // 任意の追加情報
   meta?: Record<string, unknown>;
 };
 
@@ -43,6 +44,5 @@ export type QuizResult = {
 };
 
 export function createResultId(): string {
-  // 例: "qr_1700000000000_ab12"
   return `qr_${Date.now()}_${Math.random().toString(16).slice(2, 6)}`;
 }

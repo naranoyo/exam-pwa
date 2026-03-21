@@ -1,0 +1,9 @@
+{
+  "id": "kango-2023-pm",
+  "title": "看護師国家試験 2023(第112回) 午後",
+  "examYear": 2023,
+  "session": "pm",
+  "questionPdf": "/past/kango-2023-q-pm.pdf",
+  "answerPdf": "/past/kango-2023-a.pdf",
+  "durationMinutes": 160
+}

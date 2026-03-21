@@ -9,14 +9,7 @@ type Props = {
   exam: KokugoExam;
   answers: AnswerState;
   onChange: (qid: string, choice: number) => void;
-
-  /** ✅ 結果画面のときだけ true */
   showResultColors?: boolean;
-
-  /**
-   * ✅ 採点結果（grade.details）を渡す
-   * AnswerSheet側で正解判定を再計算しない（ズレ再発防止）
-   */
   details?: GradeDetailRow[];
 };
 
@@ -24,10 +17,8 @@ type Row = {
   key: string;
   q: KokugoQuestion;
   answerNo: number;
-
   showDaiLabel: boolean;
   daiRowSpan: number;
-
   showNoLabel: boolean;
   noRowSpan: number;
 };
@@ -41,8 +32,6 @@ export function AnswerSheet({
 }: Props) {
   const rows: Row[] = useMemo(() => {
     const all = exam.dais.flatMap((d) => d.questions);
-
-    // ✅ answerNoがあるものだけ（本番の解答用紙どおり）
     const qs = all.filter((q) => typeof q.answerNo === "number");
     qs.sort((a, b) => (a.answerNo ?? 0) - (b.answerNo ?? 0));
 
@@ -53,12 +42,10 @@ export function AnswerSheet({
       const cur = qs[i];
       const curDai = cur.dai;
 
-      // 大問 span
       let daiEnd = i;
       while (daiEnd < qs.length && qs[daiEnd].dai === curDai) daiEnd++;
       const daiSpan = daiEnd - i;
 
-      // 大問内を問単位で分割
       let j = i;
       while (j < daiEnd) {
         const curNo = qs[j].no;
@@ -88,7 +75,6 @@ export function AnswerSheet({
     return out;
   }, [exam]);
 
-  // ✅ 採点結果を qid → 判定 に変換（AnswerSheet側で正解を再計算しない）
   const judgeByQid = useMemo(() => {
     if (!details) return null;
     const map = new Map<string, { answered: boolean; correct: boolean }>();
@@ -102,21 +88,21 @@ export function AnswerSheet({
 
   return (
     <section className="rounded-2xl bg-white/80 border p-4">
-      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <div className="text-lg font-bold">解答用紙（マーク式）</div>
 
         {showResultColors ? (
           <div className="flex items-center gap-3 text-xs text-black/60">
             <span className="inline-flex items-center gap-1">
-              <span className="inline-block w-3 h-3 rounded bg-emerald-100 border border-emerald-200" />
+              <span className="inline-block h-3 w-3 rounded bg-emerald-100 border border-emerald-200" />
               正解
             </span>
             <span className="inline-flex items-center gap-1">
-              <span className="inline-block w-3 h-3 rounded bg-rose-100 border border-rose-200" />
+              <span className="inline-block h-3 w-3 rounded bg-rose-100 border border-rose-200" />
               不正解
             </span>
             <span className="inline-flex items-center gap-1">
-              <span className="inline-block w-3 h-3 rounded bg-gray-100 border border-gray-200" />
+              <span className="inline-block h-3 w-3 rounded bg-gray-100 border border-gray-200" />
               未回答
             </span>
             <span className="ml-2">※解答番号（answerNo）順</span>
@@ -150,42 +136,40 @@ export function AnswerSheet({
             {rows.map((r) => {
               const chosen = answers[r.q.id]?.chosen ?? null;
 
-              // ✅ 結果画面のときだけ背景色を付ける（判定は details 追従）
-              let rowBg = "";
+              let cellBg = "";
               if (showResultColors && judgeByQid) {
                 const j = judgeByQid.get(r.q.id);
-                if (!j || !j.answered) rowBg = "bg-gray-50";
-                else rowBg = j.correct ? "bg-emerald-50" : "bg-rose-50";
+                if (!j || !j.answered) cellBg = "bg-gray-50";
+                else cellBg = j.correct ? "bg-emerald-50" : "bg-rose-50";
               }
 
               return (
-                <tr key={r.key} className={rowBg}>
-                  {r.showDaiLabel ? (
-                    <td
-                      className="border px-3 py-2 font-bold text-center align-middle"
-                      rowSpan={r.daiRowSpan}
-                    >
-                      第{r.q.dai}問
-                    </td>
-                  ) : null}
+                <tr key={r.key}>
+                  <td
+                    className={`border px-3 py-2 font-bold text-center align-middle ${cellBg}`}
+                  >
+                    第{r.q.dai}問
+                  </td>
 
-                  {r.showNoLabel ? (
-                    <td
-                      className="border px-3 py-2 font-bold text-center align-middle"
-                      rowSpan={r.noRowSpan}
-                    >
-                      問{r.q.no}
-                    </td>
-                  ) : null}
+                  <td
+                    className={`border px-3 py-2 font-bold text-center align-middle ${cellBg}`}
+                  >
+                    問{r.q.no}
+                  </td>
 
-                  <td className="border px-3 py-2 text-center font-semibold">
+                  <td
+                    className={`border px-3 py-2 text-center font-semibold ${cellBg}`}
+                  >
                     {r.answerNo}
                   </td>
 
                   {r.q.choices.slice(0, 4).map((_, i) => {
                     const checked = chosen === i;
                     return (
-                      <td key={i} className="border px-3 py-2 text-center">
+                      <td
+                        key={i}
+                        className={`border px-3 py-2 text-center ${cellBg}`}
+                      >
                         <button
                           type="button"
                           onClick={() => onChange(r.q.id, i)}
