@@ -103,20 +103,19 @@ export function AnswerSheet({
           <thead>
             <tr>
               {/* 大問 */}
-              <th className="w-7 border bg-black/5 px-0 py-1 text-center text-[9px] sm:w-10 sm:px-2 sm:py-2 sm:text-xs">
+              <th className="w-7 border bg-black/5 px-0 py-1 text-center text-[10px] sm:w-10 sm:px-2 sm:py-2 sm:text-sm">
                 大問
               </th>
 
               {/* 設問 */}
-              <th className="w-5 border bg-black/5 px-0 py-1 text-center text-[9px] sm:w-9 sm:px-2 sm:py-2 sm:text-xs">
+              <th className="w-5 border bg-black/5 px-0 py-1 text-center text-[10px] sm:w-9 sm:px-2 sm:py-2 sm:text-sm">
                 設問
               </th>
 
               {/* 解答 */}
-              <th className="w-4 border bg-black/5 px-0 py-1 text-center text-[9px] sm:w-8 sm:px-2 sm:py-2 sm:text-xs">
+              <th className="w-4 border bg-black/5 px-0 py-1 text-center text-[10px] sm:w-8 sm:px-2 sm:py-2 sm:text-sm">
                 解答
               </th>
-
               {/* 🔥 ①②さらに細く */}
               <th className="w-9 border bg-black/5 px-0 py-1.5 text-center text-[10px] sm:px-3 sm:py-2 sm:text-sm">
                 ①
@@ -147,19 +146,19 @@ export function AnswerSheet({
               return (
                 <tr key={r.key}>
                   <td
-                    className={`w-7 border px-0 py-1 text-center text-[9px] font-bold sm:w-10 sm:px-2 sm:py-2 sm:text-sm ${cellBg}`}
+                    className={`w-7 border px-0 py-1 text-center text-[11px] font-bold sm:w-10 sm:px-2 sm:py-2 sm:text-base ${cellBg}`}
                   >
                     第{r.q.dai}問
                   </td>
 
                   <td
-                    className={`w-5 border px-0 py-1 text-center text-[9px] font-bold sm:w-9 sm:px-2 sm:py-2 sm:text-sm ${cellBg}`}
+                    className={`w-5 border px-0 py-1 text-center text-[11px] font-bold sm:w-9 sm:px-2 sm:py-2 sm:text-base ${cellBg}`}
                   >
                     問{r.q.no}
                   </td>
 
                   <td
-                    className={`w-4 border px-0 py-1 text-center text-[9px] font-semibold sm:w-8 sm:px-2 sm:py-2 sm:text-xs ${cellBg}`}
+                    className={`w-4 border px-0 py-1 text-center text-[11px] font-semibold sm:w-8 sm:px-2 sm:py-2 sm:text-base ${cellBg}`}
                   >
                     {r.answerNo}
                   </td>
