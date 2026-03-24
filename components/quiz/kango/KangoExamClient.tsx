@@ -401,16 +401,18 @@ export function KangoExamClient({ exam }: Props) {
           </div>
         </div>
 
-        <div className="mb-4 flex flex-wrap gap-2">
+        <div className="mb-4 grid grid-cols-5 gap-2 sm:flex sm:flex-wrap">
           {questions.map((q, idx) => (
             <button
               key={q.id}
               onClick={() => jumpTo(idx)}
-              className={`rounded-md border px-4 py-3 text-sm font-semibold ${
+              className={[
+                "rounded-md border px-2 py-2 text-center text-sm font-semibold",
+                "min-w-0",
                 idx === safeIndex
                   ? "border-blue-600 bg-blue-600 text-white"
-                  : "border-black/15 bg-white hover:bg-gray-50"
-              }`}
+                  : "border-black/15 bg-white hover:bg-gray-50",
+              ].join(" ")}
               type="button"
             >
               {sessionLabel} {q.no}
