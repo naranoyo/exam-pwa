@@ -13,17 +13,17 @@ type Props = {
   onChoose: (chosen: number, msSpent: number) => void;
   onNext: () => void;
 
-  /** ✅ 一時停止などで操作不可にする */
+  /** 一時停止などで操作不可にする */
   disabled?: boolean;
 
-  /** ✅ 共テ国語：ヘッダー表示用（任意） */
+  /** 共テ国語：ヘッダー表示用（任意） */
   kokugoMeta?: {
     daiTitle: string; // 例: 第1問
     daiLabel?: string; // 例: 評論
     no: number; // 問番号
   };
 
-  /** ✅ 解答表示（解答一覧/復習で使う） */
+  /** 解答表示（解答一覧/復習で使う） */
   showAnswer?: boolean;
 };
 
@@ -56,19 +56,16 @@ export function QuizCard({
     return chosen === q.answer;
   }, [chosen, q.answer]);
 
-  // 指示文（共テ国語は固定）
   const instruction = useMemo(() => {
     if (isKokugo) return "本文を踏まえて、最も適切なものを選びなさい。";
     return "正しい答えを選びなさい。";
   }, [isKokugo]);
 
-  // 選択肢ラベル（共テ国語は①②③④）
   const choiceLabel = (i: number, text: string) => {
     if (isKokugo) return `${circled[i] ?? `${i + 1}`}　${text}`;
     return `${"ABCD"[i] ?? i + 1}. ${text}`;
   };
 
-  // 解答表示用
   const correctLabel = isKokugo
     ? (circled[q.answer] ?? `${q.answer + 1}`)
     : `${"ABCD"[q.answer] ?? q.answer + 1}`;
@@ -83,11 +80,11 @@ export function QuizCard({
   return (
     <section
       className={[
-        "rounded-2xl bg-white/80 shadow-sm p-4 border border-black/5 space-y-4",
+        "space-y-4 rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm",
         disabled ? "opacity-75" : "",
       ].join(" ")}
     >
-      {/* 上部（共テ国語は過去問風に） */}
+      {/* 上部 */}
       <div className="flex items-center justify-between text-xs text-black/60">
         <div>
           {index + 1} / {total}
@@ -106,52 +103,37 @@ export function QuizCard({
         )}
       </div>
 
-      {/* ✅ 指示文 */}
+      {/* 指示文 */}
       <div className="text-sm font-semibold text-black/70">{instruction}</div>
 
-      {/* ✅ 問題文（共テ国語は「問1 …」の行を太めに） */}
-      <div
-        className={
-          isKokugo
-            ? "text-lg font-bold leading-snug"
-            : "text-lg font-bold leading-snug"
-        }
-      >
-        {questionText}
-      </div>
+      {/* 問題文 */}
+      <div className="text-lg font-bold leading-snug">{questionText}</div>
 
-      {/* ✅ 選択肢（過去問風：縦並び・余白・番号） */}
+      {/* 選択肢 */}
       <div className="grid gap-2">
         {q.choices.map((c, i) => {
           const selected = chosen === i;
           const alreadyAnswered = chosen !== null;
-
-          // 解答表示時：正解・誤答を強調（押せない）
           const correct = i === q.answer;
-          const wrongPicked =
-            showAnswer && chosen !== null && selected && !correct;
 
           return (
             <ChoiceButton
               key={i}
               label={choiceLabel(i, c)}
-              disabled={disabled || alreadyAnswered || showAnswer}
+              disabled={disabled || (!showAnswer && alreadyAnswered)}
               selected={selected}
+              correct={correct}
+              showResultState={showAnswer}
               onClick={() => onChoose(i, 0)}
-              // ChoiceButton 側に className 受け口がない場合は無視されます（あれば活用）
-              className={[
-                isKokugo ? "text-left py-4" : "",
-                showAnswer && correct ? "ring-2 ring-emerald-500" : "",
-                showAnswer && wrongPicked ? "ring-2 ring-red-500" : "",
-              ].join(" ")}
+              className={[isKokugo ? "py-4 text-left" : ""].join(" ")}
             />
           );
         })}
       </div>
 
-      {/* ✅ 解答表示（answers/review用） */}
+      {/* 解答表示 */}
       {showAnswer && (
-        <div className="rounded-xl bg-black/5 p-3 space-y-1">
+        <div className="space-y-1 rounded-xl bg-black/5 p-3">
           <div className="text-sm">
             正解：<b>{correctLabel}</b>
             {"　／　"}
@@ -173,7 +155,7 @@ export function QuizCard({
         </div>
       )}
 
-      {/* ✅ 解くモード：回答後に次へ */}
+      {/* 解くモード：回答後に次へ */}
       {!showAnswer && chosen !== null && (
         <button
           type="button"
@@ -181,7 +163,7 @@ export function QuizCard({
           disabled={disabled}
           className={[
             "w-full rounded-xl bg-black px-3 py-3 text-sm font-semibold text-white",
-            disabled ? "opacity-50 pointer-events-none" : "",
+            disabled ? "pointer-events-none opacity-50" : "",
           ].join(" ")}
         >
           次へ

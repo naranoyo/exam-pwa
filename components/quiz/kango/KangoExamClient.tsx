@@ -497,6 +497,11 @@ export function KangoExamClient({ exam }: Props) {
                 ) : "choices" in current ? (
                   <div className="grid gap-2">
                     {current.choices.map((c, i) => {
+                      const isMultiLike =
+                        current.type === "multi" ||
+                        (current.type === "case" &&
+                          Array.isArray(current.answer));
+
                       const selected = isArrayAnswer(currentPicked)
                         ? currentPicked.includes(i)
                         : isNumberAnswer(currentPicked)
@@ -506,32 +511,35 @@ export function KangoExamClient({ exam }: Props) {
                       return (
                         <button
                           key={i}
-                          className={`w-full rounded-lg border px-4 py-3 text-left ${
-                            selected
-                              ? "border-black bg-gray-100"
-                              : "border-black/10 bg-white hover:bg-gray-50"
-                          }`}
-                          onClick={() => choose(i)}
                           type="button"
+                          onClick={() => choose(i)}
+                          className={[
+                            "w-full rounded-2xl border px-4 py-4 text-left transition",
+                            "flex items-center justify-between gap-3",
+                            selected
+                              ? "border-black bg-gray-100 shadow-sm"
+                              : "border-black/10 bg-white hover:bg-gray-50",
+                          ].join(" ")}
                         >
-                          <div className="flex items-start gap-3">
-                            <div className="min-w-8 font-semibold">
-                              {current.type === "multi" ||
-                              (current.type === "case" &&
-                                Array.isArray(current.answer))
-                                ? selected
-                                  ? "☑"
-                                  : "☐"
-                                : `${i + 1}`}
+                          <div className="flex min-w-0 flex-1 items-start gap-3">
+                            <div className="min-w-8 pt-0.5 font-semibold text-black/70">
+                              {isMultiLike ? `${i + 1}` : `${i + 1}`}
                             </div>
-                            <div className="flex-1">
-                              {current.type === "multi" ||
-                              (current.type === "case" &&
-                                Array.isArray(current.answer))
-                                ? `${i + 1}  ${c}`
-                                : c}
-                            </div>
+
+                            <div className="flex-1 leading-relaxed">{c}</div>
                           </div>
+
+                          <span
+                            className={[
+                              "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-sm font-bold",
+                              selected
+                                ? "border-blue-600 bg-blue-600 text-white"
+                                : "border-black/15 bg-white text-transparent",
+                            ].join(" ")}
+                            aria-hidden="true"
+                          >
+                            ✓
+                          </span>
                         </button>
                       );
                     })}

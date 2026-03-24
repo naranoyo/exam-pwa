@@ -690,18 +690,39 @@ export function KokugoExamClient({ exam }: Props) {
                   <div className="grid gap-2">
                     {activeQ.choices.map((c, i) => {
                       const selected = chosenOnQuestionView === i;
+
                       return (
                         <button
                           key={i}
-                          className={`w-full rounded-2xl border px-4 py-3 text-left ${
-                            selected
-                              ? "border-black bg-black/5"
-                              : "border-black/10"
-                          }`}
-                          onClick={() => setChoice(activeQ.id, i)}
                           type="button"
+                          onClick={() => setChoice(activeQ.id, i)}
+                          className={[
+                            "w-full rounded-2xl border px-4 py-4 text-left transition",
+                            "flex items-center justify-between gap-3",
+                            selected
+                              ? "border-black bg-black/5 shadow-sm"
+                              : "border-black/10 bg-white hover:bg-black/5",
+                          ].join(" ")}
                         >
-                          {`${"①②③④"[i] ?? `${i + 1}.`}  ${c}`}
+                          <div className="flex min-w-0 flex-1 items-start gap-3">
+                            <div className="min-w-8 pt-0.5 font-semibold text-black/70">
+                              {"①②③④"[i] ?? `${i + 1}.`}
+                            </div>
+
+                            <div className="flex-1 leading-relaxed">{c}</div>
+                          </div>
+
+                          <span
+                            className={[
+                              "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-sm font-bold",
+                              selected
+                                ? "border-blue-600 bg-blue-600 text-white"
+                                : "border-black/15 bg-white text-transparent",
+                            ].join(" ")}
+                            aria-hidden="true"
+                          >
+                            ✓
+                          </span>
                         </button>
                       );
                     })}
