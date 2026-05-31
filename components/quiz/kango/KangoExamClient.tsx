@@ -21,6 +21,8 @@ import {
 } from "@/lib/kango";
 import { useApp } from "@/lib/state";
 import { getDateKey } from "@/lib/date";
+import { saveKangoHistory } from "@/lib/kangoHistory";
+import { useToast } from "@/lib/toast";
 
 type Props = {
   exam: KangoExam;
@@ -180,6 +182,7 @@ function getQuestionInstruction(question: KangoQuestion) {
 export function KangoExamClient({ exam }: Props) {
   const router = useRouter();
   const { dispatch } = useApp();
+  const { pushToast } = useToast();
 
   const questions = exam.questions;
 
@@ -296,6 +299,53 @@ export function KangoExamClient({ exam }: Props) {
     setMode("result");
   }
 
+  function handleSaveHistory() {
+    const ok = window.confirm(
+      "この採点結果を履歴に保存します。よろしいですか？"
+    );
+
+    if (!ok) return;
+
+    saveKangoHistory({
+      id: crypto.randomUUID(),
+      examId: exam.meta.id,
+      title: exam.meta.title,
+      year: exam.meta.examYear,
+      session: exam.meta.session ?? "am",
+      score: result.correct,
+      total: result.gradable,
+      percent:
+        result.gradable > 0
+          ? Math.round((result.correct / result.gradable) * 100)
+          : 0,
+      createdAt: new Date().toISOString(),
+
+      answers: questions.map((q) => {
+        const picked = answers[q.id] ?? null;
+        const answered = isAnsweredValue(picked);
+
+        return {
+          questionId: q.id,
+          no: q.no,
+          question: q.question,
+          userAnswer: picked,
+          correctAnswer:
+            q.type === "text"
+              ? (q.answerText ?? "")
+              : Array.isArray(q.answer)
+                ? q.answer
+                : typeof q.answer === "number"
+                  ? q.answer
+                  : "",
+          isCorrect: answered ? isCorrectAnswer(q, picked) : false,
+          explanation: "explanation" in q ? q.explanation : undefined,
+        };
+      }),
+    });
+
+    pushToast("採点結果を保存しました");
+  }
+
   function resetAll() {
     if (!window.confirm("解答をすべてリセットしますか？")) return;
     setAnswers(createInitialKangoAnswers(questions));
@@ -389,6 +439,26 @@ export function KangoExamClient({ exam }: Props) {
               >
                 採点する
               </button>
+
+              {mode === "result" && (
+                <>
+                  <button
+                    type="button"
+                    onClick={handleSaveHistory}
+                    className="rounded-xl bg-emerald-600 px-6 py-4 text-sm font-semibold text-white hover:bg-emerald-700"
+                  >
+                    採点結果を保存
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => router.push("/dashboard/kango/history")}
+                    className="rounded-xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold hover:bg-gray-50"
+                  >
+                    採点履歴を見る
+                  </button>
+                </>
+              )}
 
               <button
                 type="button"
@@ -578,6 +648,14 @@ export function KangoExamClient({ exam }: Props) {
               <div className="rounded-xl border border-black/10 bg-white p-4">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-lg font-bold">採点結果</div>
+
+                  <button
+                    type="button"
+                    onClick={handleSaveHistory}
+                    className="rounded-xl bg-emerald-600 px-4 py-2 text-sm font-bold text-white hover:bg-emerald-700"
+                  >
+                    採点結果を保存
+                  </button>
                 </div>
 
                 <div className="mt-2 text-2xl font-extrabold">

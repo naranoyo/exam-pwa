@@ -7,15 +7,16 @@ import { useRouter } from "next/navigation";
 
 import englishVocab from "@/data/questions/english_vocab.json";
 
-// ✅ 国語（漢字）
 import kanjiYomi100 from "@/data/questions/japanese_kanji_yomi_100.json";
 import kanjiImi100 from "@/data/questions/japanese_kanji_imi_100.json";
 import kanjiPast5 from "@/data/questions/japanese_kanji_past5.json";
 
-// ✅ 共テ国語（2025/2024/2023）
 import kokugo2025Questions from "@/data/questions/kokugo/2025/questions.json";
 import kokugo2024Questions from "@/data/questions/kokugo/2024/questions.json";
 import kokugo2023Questions from "@/data/questions/kokugo/2023/questions.json";
+
+// ✅ 日本史
+import nihonshi2025Questions from "@/data/questions/nihonshi/2025/questions.json";
 
 import { getDateKey } from "@/lib/date";
 import type {
@@ -41,7 +42,6 @@ function asKokugoQuestions(x: unknown): KokugoQuestion[] {
   return (x as KokugoQuestion[]) ?? [];
 }
 
-/** ====== パック（小分類） ====== */
 type PackKey =
   | "eng_vocab"
   | "jp_yomi_100"
@@ -50,6 +50,7 @@ type PackKey =
   | "jp_kokugo_2025"
   | "jp_kokugo_2024"
   | "jp_kokugo_2023"
+  | "nihonshi_2025"
   | "kango_2025"
   | "kango_2024"
   | "kango_2023";
@@ -63,24 +64,19 @@ type Pack = {
   category: CategoryId;
   level: LevelId;
   questions: Question[];
-
   pdf?: {
     url: string;
     label?: string;
     height?: number;
-    initialPage?: number; // 0-based
+    initialPage?: number;
   };
-
   mode?: PackMode;
   examSeconds?: number;
   hideCount?: boolean;
-
-  /** 一覧に出すだけで、押したら別ページへ飛ばす */
   route?: string;
 };
 
-/** ====== 科目（大分類） ====== */
-type SubjectGroupKey = "english" | "japanese" | "kango" | "math";
+type SubjectGroupKey = "english" | "japanese" | "nihonshi" | "kango" | "math";
 
 type PackGroup = {
   subjectKey: SubjectGroupKey;
@@ -88,7 +84,6 @@ type PackGroup = {
   packs: Pack[];
 };
 
-/** ====== util ====== */
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -112,9 +107,10 @@ function shuffleChoices(
     [entries[i], entries[j]] = [entries[j], entries[i]];
   }
 
-  const newChoices = entries.map((e) => e.text);
-  const newAnswer = entries.findIndex((e) => e.isAnswer);
-  return { choices: newChoices, answer: newAnswer };
+  return {
+    choices: entries.map((e) => e.text),
+    answer: entries.findIndex((e) => e.isAnswer),
+  };
 }
 
 function normalizeQuestion(q: Question): Question {
@@ -126,13 +122,9 @@ function formatMMSS(totalSec: number) {
   const t = Math.max(0, totalSec);
   const m = Math.floor(t / 60);
   const s = t % 60;
-  const ss = String(s).padStart(2, "0");
-  return `${m}:${ss}`;
+  return `${m}:${String(s).padStart(2, "0")}`;
 }
 
-/** ===========================
- * PDFページ：packKey とセットで管理
- * =========================== */
 type PdfState = { packKey: PackKey; page: number };
 type PdfAction =
   | { type: "RESET"; packKey: PackKey; initialPage: number }
@@ -153,11 +145,9 @@ export default function QuizPage() {
   const router = useRouter();
   const { dispatch } = useApp();
 
-  /** Hydration対策 */
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  // 共テ国語データ
   const kokugoQs2025 = useMemo(
     () => asKokugoQuestions(kokugo2025Questions),
     []
@@ -276,6 +266,30 @@ export default function QuizPage() {
         ],
       },
       {
+        subjectKey: "nihonshi",
+        title: "日本史",
+        packs: [
+          {
+            key: "nihonshi_2025",
+            title: "共テ日本史探究(2025)本番形式",
+            subject: "japanese" as SubjectId,
+            category: "nihonshi" as CategoryId,
+            level: "nihonshi-2025" as LevelId,
+            questions: asQuestions(nihonshi2025Questions),
+            mode: "exam",
+            examSeconds: 60 * 60,
+            hideCount: true,
+            route: "/quiz/nihonshi/2025",
+            pdf: {
+              url: "/past/kyotsu-nihonshi-2025-q.pdf",
+              label: "2025 共通テスト（歴史総合，日本史探究）問題",
+              height: 420,
+              initialPage: 0,
+            },
+          },
+        ],
+      },
+      {
         subjectKey: "kango",
         title: "看護",
         packs: [
@@ -290,12 +304,6 @@ export default function QuizPage() {
             examSeconds: 300 * 60,
             hideCount: true,
             route: "/quiz/kango/2025",
-            pdf: {
-              url: "/past/kango-2025-q-am.pdf",
-              label: "看護師国家試験 2025(第114回)",
-              height: 420,
-              initialPage: 1,
-            },
           },
           {
             key: "kango_2024",
@@ -308,12 +316,6 @@ export default function QuizPage() {
             examSeconds: 300 * 60,
             hideCount: true,
             route: "/quiz/kango/2024",
-            pdf: {
-              url: "/past/kango-2024-q-am.pdf",
-              label: "看護師国家試験 2024(第113回)",
-              height: 420,
-              initialPage: 1,
-            },
           },
           {
             key: "kango_2023",
@@ -326,12 +328,6 @@ export default function QuizPage() {
             examSeconds: 300 * 60,
             hideCount: true,
             route: "/quiz/kango/2023",
-            pdf: {
-              url: "/past/kango-2023-q-am.pdf",
-              label: "看護師国家試験 2023(第112回)",
-              height: 420,
-              initialPage: 1,
-            },
           },
         ],
       },
@@ -347,11 +343,12 @@ export default function QuizPage() {
 
   const [subjectKey, setSubjectKey] = useState<SubjectGroupKey>("english");
 
-  const currentGroup = useMemo(() => {
-    return (
-      visibleGroups.find((g) => g.subjectKey === subjectKey) ?? visibleGroups[0]
-    );
-  }, [visibleGroups, subjectKey]);
+  const currentGroup = useMemo(
+    () =>
+      visibleGroups.find((g) => g.subjectKey === subjectKey) ??
+      visibleGroups[0],
+    [visibleGroups, subjectKey]
+  );
 
   const packs = useMemo(() => currentGroup?.packs ?? [], [currentGroup]);
 
@@ -362,26 +359,28 @@ export default function QuizPage() {
   }, [visibleGroups]);
 
   const [packKey, setPackKey] = useState<PackKey>(initialPackKey);
-
   const [count, setCount] = useState<number>(10);
 
-  const pack = useMemo(() => {
-    return packs.find((p) => p.key === packKey) ?? packs[0];
-  }, [packs, packKey]);
+  const pack = useMemo(
+    () => packs.find((p) => p.key === packKey) ?? packs[0],
+    [packs, packKey]
+  );
 
-  /** ====== PDF ページ（本番形式プレビュー用） ====== */
   const [pdfState, pdfDispatch] = useReducer(pdfReducer, {
     packKey: initialPackKey,
     page: 0,
   });
+
   const pdfPage = pdfState.page;
 
   function resetPdfToPack(nextPackKey: PackKey, nextPack?: Pack) {
-    const init = nextPack?.pdf?.initialPage ?? 0;
-    pdfDispatch({ type: "RESET", packKey: nextPackKey, initialPage: init });
+    pdfDispatch({
+      type: "RESET",
+      packKey: nextPackKey,
+      initialPage: nextPack?.pdf?.initialPage ?? 0,
+    });
   }
 
-  /** ====== timer ====== */
   const committedRef = useRef(false);
   const runningRef = useRef(false);
   const sessionSecRef = useRef(0);
@@ -395,6 +394,7 @@ export default function QuizPage() {
       sessionSecRef.current += 1;
       setElapsedSec(sessionSecRef.current);
     }, 1000);
+
     return () => window.clearInterval(id);
   }, []);
 
@@ -420,18 +420,14 @@ export default function QuizPage() {
     const sec = sessionSecRef.current;
     if (sec <= 0) return;
 
-    const dateKey = getDateKey(new Date());
-    const subjectKey2 = `${pack.subject}/${pack.category}/${pack.level}`;
-
     dispatch({
       type: "ADD_STUDY_SECONDS",
-      dateKey,
+      dateKey: getDateKey(new Date()),
       seconds: sec,
-      subjectKey: subjectKey2,
+      subjectKey: `${pack.subject}/${pack.category}/${pack.level}`,
     });
   }
 
-  /** ====== quiz build ====== */
   function buildQuiz(
     fromPacks: Pack[],
     nextPackKey: PackKey,
@@ -442,6 +438,7 @@ export default function QuizPage() {
 
     const base = p?.mode === "exam" ? src : shuffle(src).map(normalizeQuestion);
     const n = Math.max(1, Math.min(nextCount, base.length || 1));
+
     return p?.mode === "exam" ? base : base.slice(0, n);
   }
 
@@ -495,14 +492,10 @@ export default function QuizPage() {
     const first = nextGroup?.packs[0];
     if (!first) return;
 
-    // ✅ 科目を押しただけでは別ページへ飛ばない
     setSubjectKey(next);
     setPackKey(first.key);
-
-    // route がある pack でも、ここでは一覧表示だけにする
     resetPdfToPack(first.key, first);
 
-    // 練習問題だけ開始。exam route 用 pack は開始しない
     if (!first.route) {
       startNewRun(nextGroup.packs, first.key, count);
     } else {
@@ -538,7 +531,6 @@ export default function QuizPage() {
     startNewRun(packs, packKey, nextCount);
   }
 
-  /** ====== answer ====== */
   function onChoose(ch: number, msSpent: number) {
     if (isPaused) return;
     if (!q || chosen !== null || !pack) return;
@@ -548,10 +540,9 @@ export default function QuizPage() {
     const isCorrect = ch === q.answer;
     if (isCorrect) setCorrect((x) => x + 1);
 
-    const dateKey = getDateKey(new Date());
     const result: QuizResult = {
       id: createResultId(),
-      dateKey,
+      dateKey: getDateKey(new Date()),
       subject: pack.subject,
       category: pack.category,
       level: pack.level,
@@ -695,17 +686,15 @@ export default function QuizPage() {
                 ) : null}
               </div>
 
-              <div className={isPaused ? "pointer-events-none opacity-75" : ""}>
-                <PdfViewer
-                  url={pack.pdf.url}
-                  page={pdfPage}
-                  height={pack.pdf.height ?? 420}
-                  showControls
-                  onPageChange={(p: number) =>
-                    pdfDispatch({ type: "SET", page: p })
-                  }
-                />
-              </div>
+              <PdfViewer
+                url={pack.pdf.url}
+                page={pdfPage}
+                height={pack.pdf.height ?? 420}
+                showControls
+                onPageChange={(p: number) =>
+                  pdfDispatch({ type: "SET", page: p })
+                }
+              />
             </div>
           ) : null}
 
@@ -717,10 +706,7 @@ export default function QuizPage() {
                   value={count}
                   onChange={(e) => changeCount(Number(e.target.value))}
                   disabled={isPaused}
-                  className={[
-                    "rounded-lg border border-black/10 bg-white/80 px-2 py-2 text-sm",
-                    isPaused ? "opacity-50" : "",
-                  ].join(" ")}
+                  className="rounded-lg border border-black/10 bg-white/80 px-2 py-2 text-sm"
                 >
                   {[5, 10, 15, 20].map((n) => (
                     <option key={n} value={n}>
@@ -761,11 +747,13 @@ export default function QuizPage() {
 
       {quiz.length === 0 ? (
         <section className="rounded-2xl bg-white/80 p-4 shadow-sm border border-black/5">
-          <div className="text-sm text-black/60">問題を準備中…</div>
+          <div className="text-sm text-black/60">
+            本番ページへ進んでください。
+          </div>
         </section>
       ) : !finished && q ? (
         <QuizCard
-          q={q as unknown as Question}
+          q={q}
           index={idx}
           total={quiz.length}
           chosen={chosen}
@@ -782,14 +770,6 @@ export default function QuizPage() {
               正解：{correct} / {quiz.length}
             </div>
           )}
-
-          <div className="mt-2 text-sm text-black/70">
-            {isExam ? (
-              <>残り時間：{formatMMSS(remaining)}</>
-            ) : (
-              <>経過時間：{formatMMSS(elapsedSec)}</>
-            )}
-          </div>
 
           <button
             type="button"
@@ -816,15 +796,6 @@ export default function QuizPage() {
           </button>
         </section>
       )}
-
-      <footer className="text-[11px] text-black/45">
-        ※ 練習問題は選択肢を毎回ランダム（正解位置も更新）／
-        勉強時間は「保存して戻る」時のみ加算
-      </footer>
-
-      <div className="hidden">
-        <Link href="/dashboard">dashboard</Link>
-      </div>
     </main>
   );
 }

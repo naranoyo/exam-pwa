@@ -1,8 +1,15 @@
 // lib/quiz.ts
 
-export type SubjectId = "english" | "japanese" | "math" | "kango";
+export type SubjectId = "english" | "japanese" | "math" | "kango" | "nihonshi";
 
-export type CategoryId = "vocab" | "kanji" | "grammar" | "kokugo" | "kango";
+export type CategoryId =
+  | "vocab"
+  | "kanji"
+  | "grammar"
+  | "kokugo"
+  | "kango"
+  | "nihonshi"
+  | "kyotsu-nihonshi";
 
 export type LevelId =
   | "basic"
@@ -14,7 +21,16 @@ export type LevelId =
   | "kokugo-2025"
   | "kokugo-2024"
   | "kokugo-2023"
-  | "kango-2025-am";
+  | "kango-2025"
+  | "kango-2025-am"
+  | "kango-2025-pm"
+  | "kango-2024"
+  | "kango-2024-am"
+  | "kango-2024-pm"
+  | "kango-2023"
+  | "kango-2023-am"
+  | "kango-2023-pm"
+  | "nihonshi-2025";
 
 export type Question = {
   id: string;
@@ -23,16 +39,14 @@ export type Question = {
   level: LevelId;
   question: string;
   choices: string[];
-  answer: number; // 0..choices.length-1
+  answer: number;
   explanation?: string;
-
-  // 任意の追加情報
   meta?: Record<string, unknown>;
 };
 
 export type QuizResult = {
-  id: string; // result id
-  dateKey: string; // YYYY-MM-DD
+  id: string;
+  dateKey: string;
   subject: SubjectId;
   category: CategoryId;
   level: LevelId;
@@ -41,6 +55,15 @@ export type QuizResult = {
   chosen: number;
   correct: number;
   msSpent: number;
+
+  // 日本史・本番形式の履歴用
+  attemptId?: string;
+  examTitle?: string;
+  score?: number;
+  maxScore?: number;
+  percent?: number;
+  hensachi?: number;
+  createdAt?: string;
 };
 
 export function createResultId(): string {

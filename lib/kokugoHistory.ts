@@ -86,3 +86,14 @@ export function getKokugoHistoryByYear(year: number) {
 export function getKokugoHistoryById(id: string) {
   return loadKokugoHistory().find((x) => x.id === id) ?? null;
 }
+
+/** idで1件削除 */
+export function deleteKokugoHistory(id: string) {
+  const next = loadKokugoHistory().filter((x) => x.id !== id);
+  saveKokugoHistory(next);
+}
+
+/** 全履歴削除 */
+export function deleteAllKokugoHistory() {
+  saveKokugoHistory([]);
+}

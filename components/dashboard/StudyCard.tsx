@@ -19,13 +19,12 @@ function formatDurationShortJP(sec: number) {
 
 export function StudyCard({
   summary,
-  onStartTimer,
 }: {
   summary: StudySummary;
-  onStartTimer: () => void;
+  onStartTimer?: () => void;
 }) {
   return (
-    <section className="rounded-2xl bg-white/80 shadow-sm p-4 border border-black/5">
+    <section className="rounded-2xl bg-white/80 p-4 shadow-sm border border-black/5">
       <div className="flex items-center justify-between">
         <div className="text-sm font-semibold tracking-wide text-black/70">
           今日の学習
@@ -63,25 +62,16 @@ export function StudyCard({
 
       <Link
         href="/quiz"
-        className="mt-3 block w-full rounded-xl px-3 py-3 text-sm font-semibold text-center text-white active:scale-[0.99]"
+        className="mt-4 flex min-h-20 w-full items-center justify-center rounded-2xl px-4 py-5 text-base font-bold text-center text-white active:scale-[0.99]"
         style={{
-          background: "linear-gradient(to right, #ed2c00 0%, #ff8000 100%)",
+          //background: "linear-gradient(to right, #ed2c00 0%, #ff8000 100%)", //オレンジ
+          background: "linear-gradient(to right, #2563eb 0%, #06b6d4 100%)", //青
+          //background: "linear-gradient(to right, #059669 0%, #22c55e 100%)", //緑
+          //background: "linear-gradient(to right, #d81b60 0%, #ff4fa3 100%)", //ピンク
         }}
       >
         学習を始める
       </Link>
-
-      <button
-        type="button"
-        onClick={onStartTimer}
-        className="mt-2 w-full rounded-xl px-3 py-3 text-sm font-semibold bg-black text-white active:scale-[0.99]"
-      >
-        タイマーを開始（次で実装）
-      </button>
-
-      <div className="mt-2 text-[11px] text-black/45">
-        ※ 次にポモドーロ実装でここに連携します
-      </div>
     </section>
   );
 }

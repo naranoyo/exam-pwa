@@ -4,6 +4,10 @@
 import { useMemo, useState } from "react";
 import { useApp, type KokugoAttempt } from "@/lib/state";
 import { useRouter } from "next/navigation";
+import {
+  deleteKokugoHistory,
+  deleteAllKokugoHistory,
+} from "@/lib/kokugoHistory";
 
 export default function Page() {
   const { state } = useApp();
@@ -11,12 +15,38 @@ export default function Page() {
 
   const [yearFilter, setYearFilter] = useState<number | "all">("all");
 
-  const attempts = state.kokugoAttempts;
+  const [deletedIds, setDeletedIds] = useState<string[]>([]);
+
+  const histories = useMemo(() => {
+    return state.kokugoAttempts.filter((a) => !deletedIds.includes(a.id));
+  }, [state.kokugoAttempts, deletedIds]);
 
   const filtered = useMemo((): KokugoAttempt[] => {
-    if (yearFilter === "all") return attempts;
-    return attempts.filter((a) => a.examId.includes(String(yearFilter)));
-  }, [attempts, yearFilter]);
+    if (yearFilter === "all") return histories;
+
+    return histories.filter((a) => a.examId.includes(String(yearFilter)));
+  }, [histories, yearFilter]);
+
+  const handleDelete = (id: string) => {
+    if (!window.confirm("この採点履歴を削除しますか？")) return;
+
+    deleteKokugoHistory(id);
+    setDeletedIds((prev) => [...prev, id]);
+
+    window.alert("削除しました");
+  };
+
+  const handleDeleteAll = () => {
+    if (!window.confirm("国語の採点履歴をすべて削除しますか？")) {
+      return;
+    }
+
+    deleteAllKokugoHistory();
+
+    setDeletedIds(state.kokugoAttempts.map((x) => x.id));
+
+    window.alert("すべて削除しました");
+  };
 
   return (
     <div className="max-w-4xl mx-auto p-4 space-y-4">
@@ -32,6 +62,7 @@ export default function Page() {
           >
             ← 前に戻る
           </button>
+
           <button
             type="button"
             onClick={() => router.push("/dashboard")}
@@ -79,6 +110,14 @@ export default function Page() {
         >
           2023
         </button>
+
+        <button
+          type="button"
+          onClick={handleDeleteAll}
+          className="px-3 py-2 rounded-xl border border-red-300 bg-red-50 font-semibold text-red-600 hover:bg-red-100"
+        >
+          🗑 全履歴削除
+        </button>
       </div>
 
       {/* 一覧 */}
@@ -93,12 +132,25 @@ export default function Page() {
               onClick={() => router.push(`/dashboard/kokugo/history/${a.id}`)}
             >
               <div className="font-semibold">{a.examTitle}</div>
+
               <div className="text-sm text-black/60">
                 {new Date(a.createdAt).toLocaleString()}
               </div>
+
               <div className="text-lg font-bold mt-1">
                 {a.total} / {a.maxTotal}
               </div>
+
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleDelete(a.id);
+                }}
+                className="mt-3 rounded-lg border border-red-200 bg-red-50 px-3 py-1 text-xs font-bold text-red-600 hover:bg-red-100"
+              >
+                削除
+              </button>
             </div>
           ))
         )}

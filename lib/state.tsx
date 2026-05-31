@@ -13,21 +13,12 @@ import type { QuizResult } from "@/lib/quiz";
 import { EXAM_TYPES, type ExamTypeId } from "@/lib/exams";
 import { loadFromStorage, saveToStorage } from "@/lib/storage";
 
-/* ================================
-   型定義（Dashboardで使う）
-================================ */
-
-/**
- * ✅ StudyCard が使ってる形に合わせる
- * （合計秒 / 今日やった科目数（=セッション数））
- */
 export type StudySummary = {
   dateKey: string;
   totalSeconds: number;
   sessions: number;
 };
 
-/** 志望（大学/英検など） */
 export type ExamProfile = {
   university: string;
   faculty: string;
@@ -39,30 +30,23 @@ export type Wish = {
   profile: ExamProfile;
 };
 
-/** Goals（DaysLeftCard が参照） */
 export type GoalValue = string | string[] | undefined;
 export type Goals = Record<string, GoalValue>;
 
-/** 試験日（dateKey -> ISO文字列） */
 export type ExamDatesState = Record<string, string>;
-
-/** DaysLeftCard の左右選択 */
 export type DaysLeftSelection = { left: ExamTypeId; right: ExamTypeId };
 
-/** TODO */
 export type TodoItem = {
   id: string;
   title: string;
   done: boolean;
   createdAt: number;
 };
+
 export type TodoDay = { dateKey: string; items: TodoItem[] };
-
 export type DailyTodo = TodoDay;
-
 export type TodosByDate = Record<string, TodoDay>;
 
-/** 勉強（科目別内訳も持つ） */
 export type StudySubjectStat = {
   seconds: number;
   sessions: number;
@@ -71,20 +55,44 @@ export type StudySubjectStat = {
 export type StudyDay = {
   dateKey: string;
   totalSeconds: number;
-
-  /** その日の「学習セッション数」(あなたのUIでは “今日やった科目数” 表示に利用) */
   sessions: number;
-
-  /** ✅ 例: "japanese/kokugo/kokugo-2024" -> {seconds,sessions} */
   bySubject: Record<string, StudySubjectStat>;
 };
 
 export type StudyLogEntry = StudyDay;
-
 export type StudyByDate = Record<string, StudyDay>;
 
-/** 国語 本番（採点履歴） */
 export type KokugoAttemptDetail = {
+  answerNo: number;
+  dai: number;
+  no: number;
+  qid: string;
+  chosen: number | null;
+  correctChoice: number;
+  got: number;
+  max: number;
+  prompt?: string;
+  choices?: string[];
+  explanation?: string;
+};
+
+export type KokugoAttempt = {
+  id: string;
+  createdAt: number;
+  dateKey: string;
+  examId: string;
+  examTitle: string;
+  total: number;
+  maxTotal: number;
+  correctCount: number;
+  answeredCount: number;
+  mean?: number;
+  sd?: number;
+  examinees?: number;
+  details: KokugoAttemptDetail[];
+};
+
+export type NihonshiAttemptDetail = {
   answerNo: number;
   dai: number;
   no: number;
@@ -95,43 +103,34 @@ export type KokugoAttemptDetail = {
   got: number;
   max: number;
 
-  prompt?: string;
+  question?: string;
   choices?: string[];
   explanation?: string;
 };
 
-export type KokugoAttempt = {
+export type NihonshiAttempt = {
   id: string;
   createdAt: number;
   dateKey: string;
-
   examId: string;
   examTitle: string;
-
   total: number;
   maxTotal: number;
   correctCount: number;
   answeredCount: number;
-
+  percent: number;
+  hensachi?: number;
   mean?: number;
   sd?: number;
   examinees?: number;
-
-  details: KokugoAttemptDetail[];
+  details: NihonshiAttemptDetail[];
 };
 
-/* ================================
-   AppState
-================================ */
-
 export type AppState = {
-  // 練習クイズ（英単語/漢字など）
   quizResults: QuizResult[];
-
-  // 国語 本番（採点履歴）
   kokugoAttempts: KokugoAttempt[];
+  nihonshiAttempts: NihonshiAttempt[];
 
-  // ダッシュボード
   wishes: Wish[];
   currentHensachi: number | null;
 
@@ -140,60 +139,36 @@ export type AppState = {
 
   goals: Goals;
 
-  // todo / study
   todosByDate: TodosByDate;
   studyByDate: StudyByDate;
 };
 
-/* ================================
-   Action（DashboardPageのdispatch名に合わせる）
-================================ */
-
 export type Action =
-  // Quiz
   | { type: "QUIZ_ADD_RESULT"; payload: QuizResult }
-
-  // Wishes
   | { type: "SET_WISH_PROFILE"; wishId: 1 | 2 | 3; patch: Partial<ExamProfile> }
   | { type: "SET_CURRENT_HENSACHI"; value: number | null }
-
-  // Exam dates / selection
   | { type: "EXAM_DATE_SET"; dateKey: string; iso: string }
   | {
       type: "SET_DAYSLEFT_SELECTION";
       value: { left: ExamTypeId; right: ExamTypeId };
     }
-
-  // Goals
   | { type: "GOAL_SET"; key: string; value: GoalValue }
-
-  // Study
   | {
       type: "ADD_STUDY_SECONDS";
       dateKey: string;
       seconds: number;
       sessionsDelta?: number;
-
-      /** ✅ 追加：科目内訳キー（任意） */
       subjectKey?: string;
     }
-
-  // Todo
   | { type: "ADD_TODO"; dateKey: string; title: string }
   | { type: "TOGGLE_TODO"; dateKey: string; id: string }
   | { type: "DELETE_TODO"; dateKey: string; id: string }
-
-  // Kokugo
   | { type: "KOKUGO_ATTEMPT_ADD"; payload: KokugoAttempt }
   | { type: "KOKUGO_ATTEMPT_CLEAR" }
-
-  // Persist
+  | { type: "NIHONSHI_ATTEMPT_ADD"; payload: NihonshiAttempt }
+  | { type: "NIHONSHI_ATTEMPT_CLEAR" }
   | { type: "HYDRATE"; payload: Partial<AppState> }
   | { type: "RESET_ALL" };
-
-/* ================================
-   util
-================================ */
 
 function uid() {
   return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
@@ -206,14 +181,11 @@ function safeDefaultDaysLeftSelection(): DaysLeftSelection {
   return { left, right };
 }
 
-/* ================================
-   初期状態
-================================ */
-
 function createInitialState(): AppState {
   return {
     quizResults: [],
     kokugoAttempts: [],
+    nihonshiAttempts: [],
 
     wishes: [
       { id: 1, profile: { university: "", faculty: "", department: "" } },
@@ -232,10 +204,6 @@ function createInitialState(): AppState {
   };
 }
 
-/* ================================
-   merge（HYDRATE用）
-================================ */
-
 function mergeState(base: AppState, patch: Partial<AppState>): AppState {
   return {
     ...base,
@@ -248,6 +216,7 @@ function mergeState(base: AppState, patch: Partial<AppState>): AppState {
 
     quizResults: patch.quizResults ?? base.quizResults,
     kokugoAttempts: patch.kokugoAttempts ?? base.kokugoAttempts,
+    nihonshiAttempts: patch.nihonshiAttempts ?? base.nihonshiAttempts,
     wishes: patch.wishes ?? base.wishes,
 
     daysLeftSelection: (() => {
@@ -259,10 +228,6 @@ function mergeState(base: AppState, patch: Partial<AppState>): AppState {
     })(),
   };
 }
-
-/* ================================
-   Reducer
-================================ */
 
 function reducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -289,12 +254,13 @@ function reducer(state: AppState, action: Action): AppState {
       };
 
     case "SET_DAYSLEFT_SELECTION": {
+      const safe = safeDefaultDaysLeftSelection();
       const left = EXAM_TYPES[action.value.left]
         ? action.value.left
-        : safeDefaultDaysLeftSelection().left;
+        : safe.left;
       const right = EXAM_TYPES[action.value.right]
         ? action.value.right
-        : safeDefaultDaysLeftSelection().right;
+        : safe.right;
 
       return { ...state, daysLeftSelection: { left, right } };
     }
@@ -316,9 +282,8 @@ function reducer(state: AppState, action: Action): AppState {
         } satisfies StudyDay);
 
       const sessionsDelta = action.sessionsDelta ?? 0;
-
-      // ✅ 科目内訳を更新
       const bySubject = { ...(prev.bySubject ?? {}) };
+
       if (action.subjectKey) {
         const cur = bySubject[action.subjectKey] ?? { seconds: 0, sessions: 0 };
         bySubject[action.subjectKey] = {
@@ -345,6 +310,7 @@ function reducer(state: AppState, action: Action): AppState {
         dateKey: action.dateKey,
         items: [],
       };
+
       const next: TodoDay = {
         ...day,
         items: [
@@ -357,6 +323,7 @@ function reducer(state: AppState, action: Action): AppState {
           ...day.items,
         ],
       };
+
       return {
         ...state,
         todosByDate: { ...state.todosByDate, [action.dateKey]: next },
@@ -366,12 +333,14 @@ function reducer(state: AppState, action: Action): AppState {
     case "TOGGLE_TODO": {
       const day = state.todosByDate[action.dateKey];
       if (!day) return state;
+
       const next: TodoDay = {
         ...day,
         items: day.items.map((it) =>
           it.id === action.id ? { ...it, done: !it.done } : it
         ),
       };
+
       return {
         ...state,
         todosByDate: { ...state.todosByDate, [action.dateKey]: next },
@@ -381,10 +350,12 @@ function reducer(state: AppState, action: Action): AppState {
     case "DELETE_TODO": {
       const day = state.todosByDate[action.dateKey];
       if (!day) return state;
+
       const next: TodoDay = {
         ...day,
         items: day.items.filter((it) => it.id !== action.id),
       };
+
       return {
         ...state,
         todosByDate: { ...state.todosByDate, [action.dateKey]: next },
@@ -400,6 +371,15 @@ function reducer(state: AppState, action: Action): AppState {
     case "KOKUGO_ATTEMPT_CLEAR":
       return { ...state, kokugoAttempts: [] };
 
+    case "NIHONSHI_ATTEMPT_ADD":
+      return {
+        ...state,
+        nihonshiAttempts: [action.payload, ...state.nihonshiAttempts],
+      };
+
+    case "NIHONSHI_ATTEMPT_CLEAR":
+      return { ...state, nihonshiAttempts: [] };
+
     case "HYDRATE":
       return mergeState(state, action.payload);
 
@@ -411,10 +391,6 @@ function reducer(state: AppState, action: Action): AppState {
   }
 }
 
-/* ================================
-   Context + Persist
-================================ */
-
 type AppContextType = {
   state: AppState;
   dispatch: React.Dispatch<Action>;
@@ -425,7 +401,6 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 export function AppProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(reducer, undefined, createInitialState);
 
-  // 起動時Hydrate
   useEffect(() => {
     let cancelled = false;
 
@@ -433,6 +408,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       try {
         const maybe = await loadFromStorage<Partial<AppState> | undefined>();
         if (cancelled) return;
+
         if (maybe && typeof maybe === "object") {
           dispatch({ type: "HYDRATE", payload: maybe });
         }
@@ -446,7 +422,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  // 保存
   useEffect(() => {
     saveToStorage(state);
   }, [state]);

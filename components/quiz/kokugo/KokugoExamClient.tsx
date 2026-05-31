@@ -510,15 +510,17 @@ export function KokugoExamClient({ exam }: Props) {
           <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
             <div>
               <div className="text-sm text-black/45">共通テスト</div>
-              <h1 className="text-[22px] font-bold text-black md:text-[26px]">
+
+              <h1 className="text-[22px] font-bold text-black whitespace-nowrap md:text-[26px]">
                 {exam.title}
               </h1>
+
               <div className="mt-1 text-sm text-black/55 md:text-[15px]">
                 解答済み {answeredCount}/{totalAnswerNoCount}
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap justify-end gap-3">
               <button
                 onClick={() => router.push("/quiz")}
                 className="rounded-xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold hover:bg-black/3"

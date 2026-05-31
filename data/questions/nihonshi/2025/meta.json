@@ -1,0 +1,12 @@
+{
+  "id": "kyotsu-nihonshi-2025",
+  "title": "共通テスト 2025 歴史総合，日本史探究",
+  "examYear": 2025,
+  "subject": "nihonshi",
+  "category": "kyotsu-nihonshi",
+  "level": "nihonshi-2025",
+  "durationMinutes": 60,
+  "totalScore": 100,
+  "questionPdf": "/past/kyotsu-nihonshi-2025-q.pdf",
+  "answerPdf": "/past/kyotsu-nihonshi-2025-a.pdf"
+}
