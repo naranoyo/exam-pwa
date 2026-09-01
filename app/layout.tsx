@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from "next";
 import React from "react";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { AppProvider } from "@/lib/state";
 import { ToastProvider } from "@/lib/toast";
 import { ToastHost } from "@/components/ui/ToastHost";
@@ -47,6 +48,8 @@ export default function RootLayout({
             <ToastHost placement="top-center" durationMs={8000} />
           </AppProvider>
         </ToastProvider>
+
+        <Analytics />
       </body>
     </html>
   );

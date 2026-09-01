@@ -10,6 +10,7 @@
     "add:slots2025": "node scripts/addSlots2025.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "idb-keyval": "^6.2.2",
     "next": "16.1.1",
     "pdfjs-dist": "^5.4.530",
